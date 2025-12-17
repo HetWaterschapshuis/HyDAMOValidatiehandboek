@@ -1281,7 +1281,7 @@
 					"result_variable": "pomp_pompcapaciteit_m3s",
 					"function": {
 						"divide": {
-							"left": "pompcapaciteit_m3min",
+							"left": "pomp_pompcapaciteit_m3min",
 							"right": 60
 						}
 					}
