@@ -313,250 +313,7 @@
 			]
 		},
 		{
-			"object": "regelmiddel",
-			"general_rules": [
-				{
-					"id": 0,
-					"result_variable": "kunstwerkopening_hoogstedoorstroomhoogte",
-					"function": {
-						"join_parameter": {
-							"join_object": "kunstwerkopening",
-							"join_parameter": "hoogstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 1,
-					"result_variable": "kunstwerkopening_laagstedoorstroomhoogte",
-					"function": {
-						"join_parameter": {
-							"join_object": "kunstwerkopening",
-							"join_parameter": "laagstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 2,
-					"result_variable": "kunstwerkopening_hoogte_m",
-					"function": {
-						"difference": {
-							"left": "kunstwerkopening_hoogstedoorstroomhoogte",
-							"right": "kunstwerkopening_laagstedoorstroomhoogte"
-						}
-					}
-				}
-			],
-			"validation_rules": [
-				{
-					"id": 0,
-					"name": "minimalehoogtebovenkant plausibel (-8m - 325m)",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "minimalehoogtebovenkant_plausibel",
-					"error_message": "minimalehoogtebovenkant niet plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "minimalehoogtebovenkant",
-							"min": -8,
-							"max": 325,
-							"inclusive": false
-						}
-					}
-				},
-				{
-					"id": 1,
-					"name": "maximalehoogtebovenkant plausibel (-8m - 325m)",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "maximalehoogtebovenkant_plausibel",
-					"error_message": "maximalehoogtebovenkant niet plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "maximalehoogtebovenkant",
-							"min": -8,
-							"max": 325,
-							"inclusive": false
-						}
-					}
-				},
-				{
-					"id": 2,
-					"name": "hoogte plausibel (10cm - 10m)",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "hoogte_plausibel",
-					"error_message": "hoogte niet plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "hoogte",
-							"min": 0.1,
-							"max": 10,
-							"inclusive": false
-						}
-					}
-				},
-				{
-					"id": 3,
-					"name": "breedte plausibel (30cm - 50m)",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "breedte_plausibel",
-					"error_message": "breedte niet plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "breedte",
-							"min": 0.3,
-							"max": 50,
-							"inclusive": false
-						}
-					}
-				},
-				{
-					"id": 4,
-					"name": "De minimale hoogteopening van een regelmiddel is groter of gelijk aan nul",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "hoogteopening_plausibel",
-					"error_message": "hoogteopening niet plausibel",
-					"active": true,
-					"function": {
-						"GE": {
-							"left": "hoogteopening",
-							"right": 0
-						}
-					}
-				},
-				{
-					"id": 5,
-					"name": "De maximalehoogteopening bij een onderlaat zou kleiner of gelijk zijn aan de hoogte van de kunstwerkopening laagstedoormstroomhoogte",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "maximalehoogteopening_plausibel",
-					"error_message": "maximalehoogteopeningniet plausibel",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "overlaatonderlaat",
-							"array": [
-								"Onderlaat"
-							]
-						}
-					},
-					"function": {
-						"LE": {
-							"left": "maximalehoogteopening",
-							"right": "kunstwerkopening_hoogte_m"
-						}
-					}
-				},
-				{
-					"id": 6,
-					"name": "De minimale hoogte van een overlaat zou hoger moeten zijn dan de laagstedoorstroomhoogte van de kunstwerkopening",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "minimalehoogteoverlaat_plausibel",
-					"error_message": "minimalehoogteoverlaat niet plausibel",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "overlaatonderlaat",
-							"array": [
-								"overlaat"
-							]
-						}
-					},
-					"function": {
-						"GE": {
-							"left": "minimalehoogtebovenkant",
-							"right": "kunstwerkopening_laagstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 7,
-					"name": "De maximale hoogte van een overlaat zou lager moeten zijn dan de hoogstedoorstroomhoogte van de kunstwerkopening",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "maximalehoogteoverlaat_plausibel",
-					"error_message": "maximalehoogteoverlaat niet plausibel",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "overlaatonderlaat",
-							"array": [
-								"overlaat"
-							]
-						}
-					},
-					"function": {
-						"LE": {
-							"left": "maximalehoogtebovenkant",
-							"right": "kunstwerkopening_hoogstedoorstroomhoogte"
-						}
-					}
-				}
-			]
-		},
-		{
 			"object": "kunstwerkopening",
-			"general_rules": [
-				{
-					"id": 0,
-					"result_variable": "regelmiddel_minimalehoogtebovenkant",
-					"function": {
-						"object_relation": {
-							"statistic": "min",
-							"related_object": "regelmiddel",
-							"related_parameter": "minimalehoogtebovenkant"
-						}
-					}
-				},
-				{
-					"id": 1,
-					"result_variable": "regelmiddel_soortregelmiddel",
-					"function": {
-						"object_relation": {
-							"statistic": "majority",
-							"related_object": "regelmiddel",
-							"related_parameter": "soortregelmiddel"
-						}
-					}
-				},
-				{
-					"id": 2,
-					"result_variable": "regelmiddel_maximalehoogtebovenkant",
-					"function": {
-						"object_relation": {
-							"statistic": "max",
-							"related_object": "regelmiddel",
-							"related_parameter": "maximalehoogtebovenkant"
-						}
-					}
-				},
-				{
-					"id": 3,
-					"result_variable": "regelmiddel_aantal_regelmiddelen",
-					"function": {
-						"object_relation": {
-							"statistic": "count",
-							"related_object": "regelmiddel",
-							"fill_value": 0
-						}
-					}
-				}
-			],
 			"validation_rules": [
 				{
 					"id": 0,
@@ -713,17 +470,6 @@
 					}
 				},
 				{
-					"id": 4,
-					"result_variable": "kunstwerkopening_regelmiddel_soortregelmiddel",
-					"function": {
-						"object_relation": {
-							"statistic": "majority",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "regelmiddel_soortregelmiddel"
-						}
-					}
-				},
-				{
 					"id": 5,
 					"result_variable": "kunstwerkopening_laagstedoorstroomhoogte",
 					"function": {
@@ -731,18 +477,6 @@
 							"statistic": "min",
 							"related_object": "kunstwerkopening",
 							"related_parameter": "laagstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 6,
-					"result_variable": "kunstwerkopening_regelmiddel_aantal_regelmiddelen",
-					"function": {
-						"object_relation": {
-							"statistic": "sum",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "regelmiddel_aantal_regelmiddelen",
-							"fill_value": 0
 						}
 					}
 				}
@@ -859,31 +593,6 @@
 					"function": {
 						"distant_to_others": {
 							"distance": 1
-						}
-					}
-				},
-				{
-					"id": 7,
-					"name": "Een regelbare stuw heeft minimaal 1 kunstwerkopening waaraan een regelmiddel is gekoppeld",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "aantal_regelmiddelen_gt_zero",
-					"error_message": "aantal regelmiddelen = 1",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "soortregelbaarheid",
-							"array": [
-								"regelbaar, automatisch",
-								"regelbaar, niet automatisch"
-							]
-						}
-					},
-					"function": {
-						"GT": {
-							"left": "kunstwerkopening_regelmiddel_aantal_regelmiddelen",
-							"right": 0
 						}
 					}
 				},
@@ -1288,39 +997,6 @@
 							"right": 60
 						}
 					}
-				},
-				{
-					"id": 2,
-					"result_variable": "hoogteopening",
-					"function": {
-						"join_parameter": {
-							"join_object": "regelmiddel",
-							"join_parameter": "hoogteopening",
-							"fill_value": 0
-						}
-					}
-				},
-				{
-					"id": 3,
-					"result_variable": "minimalehoogtebovenkant",
-					"function": {
-						"join_parameter": {
-							"join_object": "regelmiddel",
-							"join_parameter": "minimalehoogtebovenkant",
-							"fill_value": 0
-						}
-					}
-				},
-				{
-					"id": 4,
-					"result_variable": "maximalehoogtebovenkant",
-					"function": {
-						"join_parameter": {
-							"join_object": "regelmiddel",
-							"join_parameter": "maximalehoogtebovenkant",
-							"fill_value": 0
-						}
-					}
 				}
 			],
 			"validation_rules": [
@@ -1356,26 +1032,6 @@
 					"function": {
 						"join_object_exists": {
 							"join_object": "pomp"
-						}
-					}
-				},
-				{
-					"id": 2,
-					"name": "het regelmiddel moet bestaan",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "regelmiddel_bestaat",
-					"error_message": "0 regelmiddelen",
-					"active": true,
-					"filter": {
-						"NOTNA": {
-							"parameter": "regelmiddelid"
-						}
-					},
-					"function": {
-						"join_object_exists": {
-							"join_object": "regelmiddel"
 						}
 					}
 				},
@@ -1424,56 +1080,6 @@
 					}
 				},
 				{
-					"id": 5,
-					"name": "vaste waarde onderlaat zal binnen het fysieke bereik van de stuurvariabele passen",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "vastewaarde_onderlaat_binnen_bereik",
-					"error_message": "vaste waarde onderlaat buiten bereik",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "stuurvariabele",
-							"array": [
-								"hoogte opening"
-							]
-						}
-					},
-					"function": {
-						"LE": {
-							"left": "vastewaarde",
-							"right": "hoogteopening"
-						}
-					}
-				},
-				{
-					"id": 6,
-					"name": "vaste waarde overlaat zal binnen het fysieke bereik van de stuurvariabele passen",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "vastewaarde_overlaat_binnen_bereik",
-					"error_message": "vaste waarde overlaat buiten bereik",
-					"active": true,
-					"filter": {
-						"ISIN": {
-							"parameter": "stuurvariabele",
-							"array": [
-								"bovenkant afsluitmiddel,"
-							]
-						}
-					},
-					"function": {
-						"BE": {
-							"parameter": "vastewaarde",
-							"min": "minimalehoogtebovenkant",
-							"max": "maximalehoogtebovenkant",
-							"inclusive": true
-						}
-					}
-				},
-				{
 					"id": 7,
 					"name": "gestuurde pomp heeft juiste stuurvariabele",
 					"type": "logic",
@@ -1492,30 +1098,6 @@
 							"parameter": "stuurvariabele",
 							"array": [
 								"pompdebiet"
-							]
-						}
-					}
-				},
-				{
-					"id": 8,
-					"name": "gestuurde regelmiddel heeft juiste stuurvariabele",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "regelmiddel_juiste_stuurvariabele",
-					"error_message": "stuurvariabele regelmiddel onjuist",
-					"active": true,
-					"filter": {
-						"NOTNA": {
-							"parameter": "regelmiddelid"
-						}
-					},
-					"function": {
-						"ISIN": {
-							"parameter": "stuurvariabele",
-							"array": [
-								"bovenkant afsluitmiddel,",
-								"hoogte opening"
 							]
 						}
 					}
