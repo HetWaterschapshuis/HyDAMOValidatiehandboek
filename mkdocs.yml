@@ -6,7 +6,8 @@ repo_name: HetWaterschapshuis/HyDAMOValidatiehandboek
 theme:
   name: material
   language: nl
-  favicon: assets/favicon-hwh.png
+  favicon: assets/favicon-hwh-logo-01.png
+  logo: assets/logo-het-waterschapshuis.png
   features:
     - navigation.tabs
     - navigation.sections
@@ -17,7 +18,7 @@ theme:
     - toc.follow
   palette:
     - scheme: default
-      primary: indigo
+      primary: blue
       accent: orange
 
 plugins:
@@ -37,8 +38,7 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - Home: index.md
-  - Start:
+  - Home:
       - Aan de slag: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
       - Gebruikersregistratie: "HyDAMO Validatietool/02 Gebruikersregistratie.md"
       - Known issues en tips: "HyDAMO Validatietool/03 Known issues en tips.md"
