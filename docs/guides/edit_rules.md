@@ -1,40 +1,55 @@
-# Edit ValidationRules
-In ValidationRules you define the (topo)logic rules that should be executed on your HyDAMO data. To edit rules you need two jsons:
+# Validatieregels bewerken
 
-1. The actual validation-rules as specified in: [ValidationRules.json](../../validation_rules/ValidationRules.json)
-2. The [JSON-schema](../../schemas/rules_0.9.0.json) defining the structure of the ValidationRules.json.
+In `ValidationRules` definieer je de topologische en logische regels die op HyDAMO-data worden uitgevoerd. Voor het aanpassen van regels heb je steeds twee bestanden nodig:
 
-Below we explain how you can edit ValidationRules with two packages that support JSON-schema validation:
+1. een `ValidationRules_*.json`-bestand met de daadwerkelijke regels;
+2. een `rules_*.json`-schema dat de structuur van dat bestand definieert.
 
-* Altova XMLSpy
-* JSON Editor Online
+Voor de meest recente set in deze repository kun je direct deze bestanden gebruiken:
+
+- [ValidationRules_1.5.json](../downloads/ValidationRules_1.5.json)
+- [rules_1.5.json](../downloads/rules_1.5.json)
+
+Dezelfde bestanden voor oudere versies staan op [Bestanden en versies](../resources.md).
+
+## Geschikte editors
+
+Onderstaande werkwijze gebruikt tools die JSON-schema-validatie ondersteunen:
+
+- Altova XMLSpy
+- JSON Editor Online
 
 ## Altova XMLSpy
-For this you need a license to and a copy of [Altova XMLSpy] https://www.altova.com/xmlspy-xml-editor
 
-The adantage of Altova XMLSpy: a text (top-image) and grid (bottom-image) view. The latter allows quick editting.
+Hiervoor heb je een licentie en installatie van [Altova XMLSpy](https://www.altova.com/xmlspy-xml-editor) nodig.
+
+Het voordeel van XMLSpy is de combinatie van een tekstweergave en een rasterweergave, waardoor regels sneller te controleren en aan te passen zijn.
+
 ![](images/altova_text.png "Altova Text-view")
 ![](images/altova_grid.png "Altova Grid-view")
 
-### Assign schema
+### Schema koppelen
 
-1. Go to `Info` -> `JSON` -> and specify your JSON-schema with `Select JSON Schema`
-2. Start editting. If you save you'll see if your ValidationRules.json is valid.
+1. Open het gewenste `ValidationRules_*.json`-bestand.
+2. Ga naar `Info` -> `JSON`.
+3. Kies `Select JSON Schema` en wijs het juiste `rules_*.json`-bestand toe.
+4. Bewerk de regels en sla op. XMLSpy controleert daarbij meteen of de JSON nog aan het schema voldoet.
 
-![](images/altova_assign_schema.png "assign schema")
+![](images/altova_assign_schema.png "Assign schema")
 
-## Edit Online
-Simply browse the website: [JSON Editor Online](https://jsoneditoronline.org)
+## JSON Editor Online
 
-The adantage of JSON Editor Online: it's free!
+Gebruik hiervoor [JSON Editor Online](https://jsoneditoronline.org).
+
+Het voordeel van JSON Editor Online is eenvoud: je kunt snel bestanden openen en het schema toewijzen zonder lokale installatie.
 
 ![](images/jsoneditonline_startup.png "JSON Editor Online startup")
 
-### Assign schema
+### Schema koppelen
 
-1. Open your ValidationRules.json left: `open` -> `from disk`
-2. Open your JSON-schema right: `open` -> `from disk`
-3. Assign your JSON schema to ValidationRules: `Settings` -> `JSON-schema` -> `Document` -> select your rules-document
-4. Start editing
+1. Open links je `ValidationRules_*.json` via `Open` -> `From disk`.
+2. Open rechts het bijbehorende `rules_*.json` via `Open` -> `From disk`.
+3. Koppel het schema via `Settings` -> `JSON schema` -> `Document`.
+4. Bewerk vervolgens de regels en controleer de validatiemeldingen.
 
-![](images/jsoneditoronline_assign_schema.png "assign schema")
+![](images/jsoneditoronline_assign_schema.png "Assign schema")

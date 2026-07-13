@@ -1,0 +1,128 @@
+:root {
+  --hydamo-primary: #18407f;
+  --hydamo-primary-dark: #102f61;
+  --hydamo-accent: #f18900;
+  --hydamo-green: #76b82a;
+  --hydamo-surface: #f7fafc;
+  --hydamo-border: rgba(24, 64, 127, 0.16);
+  --hydamo-shadow: 0 18px 40px rgba(24, 64, 127, 0.12);
+  --md-primary-fg-color: #18407f;
+  --md-primary-fg-color--light: #2a5aa2;
+  --md-primary-fg-color--dark: #102f61;
+  --md-accent-fg-color: #f18900;
+}
+
+.md-header,
+.md-tabs {
+  background: var(--hydamo-primary);
+}
+
+.md-main {
+  background:
+    radial-gradient(circle at top right, rgba(241, 137, 0, 0.12), transparent 22rem),
+    linear-gradient(180deg, #f9fbfb 0%, #ffffff 20rem);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  letter-spacing: 0;
+}
+
+.hero {
+  margin: 0 0 2rem;
+  padding: 2.5rem;
+  border: 1px solid var(--hydamo-border);
+  border-radius: 8px;
+  background:
+    linear-gradient(135deg, rgba(24, 64, 127, 0.96), rgba(16, 47, 97, 0.96)),
+    linear-gradient(135deg, rgba(118, 184, 42, 0.18), rgba(255, 255, 255, 0));
+  box-shadow: var(--hydamo-shadow);
+  color: #ffffff;
+}
+
+.hero__content {
+  max-width: 48rem;
+}
+
+.hero__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.hero h1 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.hero__lead {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.hero .md-button {
+  border-radius: 4px;
+}
+
+.hero .md-button--primary {
+  background-color: var(--hydamo-accent);
+  border-color: var(--hydamo-accent);
+  color: #1f2a2e;
+}
+
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid.cards > ol > li {
+  border-radius: 8px;
+  border: 1px solid var(--hydamo-border);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(24, 64, 127, 0.06);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: 8px;
+}
+
+.md-typeset a,
+.md-nav__link--active,
+.md-nav__link:focus,
+.md-nav__link:hover {
+  color: var(--hydamo-primary);
+}
+
+.md-typeset .md-button:focus,
+.md-typeset .md-button:hover {
+  background-color: var(--hydamo-green);
+  border-color: var(--hydamo-green);
+  color: #ffffff;
+}
+
+@media screen and (max-width: 76.2344em) {
+  .hero {
+    padding: 2rem;
+  }
+}
+
+@media screen and (max-width: 44.9844em) {
+  .hero {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .hero__lead {
+    font-size: 1rem;
+  }
+}
