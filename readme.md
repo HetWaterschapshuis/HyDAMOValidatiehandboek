@@ -9,7 +9,7 @@ Deze repository bevat de MkDocs-documentatie voor het HyDAMO Validatiehandboek.
 
 
 ## Bouw environment en serve de site
-Voer alles in 1x uit via PowerShell met `serve_docs.ps1`, of volg deze instructie:
+Voer alles in 1x uit via PowerShell met `serve_handboek.ps1`, of volg deze instructie:
 
 1. Maak vanuit de repository-root een virtual environment aan:
    ```powershell
