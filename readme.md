@@ -8,23 +8,31 @@ Deze repository bevat de MkDocs-documentatie voor het HyDAMO Validatiehandboek.
    - Windows PowerShell: `winget install --id Astral-sh.uv -e`
    - Of via pip: `pip install uv`
 
-2. Maak een lokale Python-omgeving in de repository-root:
+2. Maak vanuit de repository-root een virtual environment aan:
    ```powershell
-   uv venv .venv
+   uv venv
+   ```
+
+   Hierdoor wordt een map `.venv` aangemaakt in de root van de repository.
+
+3. Activeer de virtual environment:
+   ```powershell
    .\.venv\Scripts\Activate.ps1
    ```
 
-3. Installeer de benodigde packages:
+4. Synchroniseer de omgeving met de vereiste packages:
    ```powershell
-   uv pip install -r requirements.txt
+   uv pip sync requirements.txt
    ```
 
-4. Bouw de documentatie:
+   Dit zorgt ervoor dat iedereen met dezelfde dependency-versies werkt.
+
+5. Bouw de documentatie:
    ```powershell
    mkdocs build -f mkdocs.yml
    ```
 
-5. Start de lokale preview-server:
+6. Start de lokale preview-server:
    ```powershell
    mkdocs serve -f mkdocs.yml
    ```
