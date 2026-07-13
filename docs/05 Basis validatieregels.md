@@ -1,10 +1,10 @@
 # Basis validatieregels
 
 Download hieronder de laatste versie van het Json bestand met Validatieregels:
-- [ValidationRules_1.4.json](../downloads/ValidationRules_1.4.json) 
-- [HyDAMO_2.4.json](../downloads/HyDAMO_2.4.json)
+- [ValidationRules_1.4.json](https://raw.githubusercontent.com/HetWaterschapshuis/HyDAMOValidatiehandboek/documentatie_pagina/validation_rules/ValidationRules_1.4.json) 
+- [HyDAMO_2.4.json](downloads/HyDAMO_2.4.json)
 
-Onderstaande tabel geeft een overzicht van deze validatieregels met toelichting. Deze tabel is hieronder ook te downloaden als [Excel bestand](../downloads/Validatieregels_HyDAMO.xlsx).  
+Onderstaande tabel geeft een overzicht van deze validatieregels met toelichting. Deze tabel is hieronder ook te downloaden als [Excel bestand](downloads/Validatieregels_HyDAMO.xlsx).  
 
 |                  |                        |                                                                    |                                                                                                                          |                                                                                                                                                                                        |
 |:-----------------|:-----------------------|:-------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

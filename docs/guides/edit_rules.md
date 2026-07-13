@@ -7,8 +7,8 @@ In `ValidationRules` definieer je de topologische en logische regels die op HyDA
 
 Voor de meest recente set in deze repository kun je direct deze bestanden gebruiken:
 
-- [ValidationRules_1.5.json](../downloads/ValidationRules_1.5.json)
-- [rules_1.5.json](../downloads/rules_1.5.json)
+- [ValidationRules_1.5.json](https://raw.githubusercontent.com/HetWaterschapshuis/HyDAMOValidatiehandboek/documentatie_pagina/validation_rules/ValidationRules_1.5.json)
+- [rules_1.5.json](https://raw.githubusercontent.com/HetWaterschapshuis/HyDAMOValidatiehandboek/documentatie_pagina/schemas/rules_1.5.json)
 
 Dezelfde bestanden voor oudere versies staan op [Bestanden en versies](../resources.md).
 
