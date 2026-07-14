@@ -43,7 +43,7 @@ jobs:
         run: uv venv
 
       - name: Sync dependencies
-        run: uv pip sync requirements.txt
+        run: uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Show installed packages2
         run: .venv/bin/pip list
