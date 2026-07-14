@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap");
+
+:root {
+  --hwh-primary: #18407f;
+  --hwh-primary-dark: #12315f;
+  --hwh-accent: #f18900;
+  --hwh-accent-soft: #fff3e3;
+  --hwh-surface: #f4f4f4;
+  --hwh-text: #333333;
+  --md-text-font: "Asap";
+  --md-code-font: "Consolas";
+  --md-primary-fg-color: var(--hwh-primary);
+  --md-primary-fg-color--light: #4268a0;
+  --md-primary-fg-color--dark: var(--hwh-primary-dark);
+  --md-accent-fg-color: var(--hwh-accent);
+  --md-accent-fg-color--transparent: rgb(241 137 0 / 0.12);
+  --md-default-fg-color: var(--hwh-text);
+  --md-typeset-a-color: var(--hwh-primary);
+}
+
+body {
+  color: var(--hwh-text);
+}
+
+.md-header {
+  box-shadow: 0 2px 4px rgb(0 0 0 / 0.1);
+}
+
+.md-header,
+.md-tabs {
+  background-color: var(--hwh-primary);
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.2rem;
+  width: auto;
+}
+
+.md-tabs {
+  border-top: 6px solid var(--hwh-accent);
+}
+
+.md-tabs__link--active,
+.md-tabs__link:hover,
+.md-nav__link--active,
+.md-nav__link:hover,
+.md-typeset a:hover {
+  color: var(--hwh-accent);
+}
+
+.md-search__form {
+  border-radius: 0.25rem;
+}
+
+.md-search__input::placeholder {
+  color: rgb(51 51 51 / 0.75);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  color: var(--hwh-primary);
+  font-weight: 700;
+}
+
+.md-typeset .button,
+.md-typeset .md-button {
+  border-color: var(--hwh-accent);
+  color: var(--hwh-accent);
+}
+
+.md-typeset .md-button--primary {
+  background-color: var(--hwh-accent);
+  border-color: var(--hwh-accent);
+  color: #ffffff;
+}
+
+.md-typeset .md-button:hover,
+.md-typeset .md-button--primary:hover {
+  background-color: #d97700;
+  border-color: #d97700;
+  color: #ffffff;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--hwh-primary);
+  color: #ffffff;
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+  background-color: var(--hwh-surface);
+}
+
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: rgb(24 64 127 / 0.2);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+  background-color: rgb(24 64 127 / 0.08);
+}
+
+.md-footer {
+  background-color: var(--hwh-primary);
+}
+
+.md-footer-meta {
+  background-color: var(--hwh-primary-dark);
+}
+
+.md-top {
+  background-color: #ffffff;
+  color: var(--hwh-primary);
+}

@@ -1,10 +1,67 @@
-site_name: HyDAMO Validation rules
+site_name: HyDAMO Validatiehandboek
+site_description: Documentatie voor de HyDAMO Validatietool, validatieregels en ondersteunende bestanden.
+repo_url: https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek
+repo_name: HetWaterschapshuis/HyDAMOValidatiehandboek
+
 theme:
-  name: "material"
-  language: en
+  name: material
+  language: nl
+  favicon: assets/favicon-hwh-logo-01.png
+  logo: assets/logo-het-waterschapshuis.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: blue
+      accent: orange
+
 plugins:
   - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra_css:
+  - stylesheets/extra.css
+
 nav:
-    - Home: index.md
-    - Guides:
-        - Edit Rules: guides/edit_rules.md
+  - Home:
+      - Aan de slag: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
+      - Gebruikersregistratie: "HyDAMO Validatietool/02 Gebruikersregistratie.md"
+      - Known issues en tips: "HyDAMO Validatietool/03 Known issues en tips.md"
+      - Versie overzicht: "HyDAMO Validatietool/04 Versie overzicht.md"
+  - Validatieregels:
+      - Basis validatieregels: "HyDAMO Validatietool/05 Basis validatieregels.md"
+  - Webclient:
+      - Overzicht: "HyDAMO Validatietool/06 HyDAMO validatie Webclient.md"
+      - Starten en inloggen: "HyDAMO Validatietool/HyDAMO validatie Webclient/01 Starten en inloggen.md"
+      - Opbouw van de schermen: "HyDAMO Validatietool/HyDAMO validatie Webclient/02 Opbouw van de schermen.md"
+      - Beheren van validatietaken: "HyDAMO Validatietool/HyDAMO validatie Webclient/03 Beheren van validatietaken.md"
+      - Kaartresultaten: "HyDAMO Validatietool/HyDAMO validatie Webclient/04 Bekijken van validatie resultaten op een kaart.md"
+      - Tabelresultaten: "HyDAMO Validatietool/HyDAMO validatie Webclient/05 Bekijken van validatie resultaten in tabel.md"
+  - API:
+      - Overzicht: "HyDAMO Validatietool/07 HyDAMO validatie-API.md"
+      - API definitie: "HyDAMO Validatietool/HyDAMO validatie-API/01 API definitie.md"
+      - Voorbeelden gebruik API: "HyDAMO Validatietool/HyDAMO validatie-API/02 Voorbeelden gebruik API.md"
+  - Validatiemodule:
+      - Overzicht: "HyDAMO Validatietool/08 HyDAMO Validatiemodule.md"
+      - Uitvoeren van een validatie: "HyDAMO Validatietool/HyDAMO Validatiemodule/01 Uitvoeren van een validatie.md"
+      - Validatieregels: "HyDAMO Validatietool/HyDAMO Validatiemodule/02 Validatieregels.md"
+      - Functies: "HyDAMO Validatietool/HyDAMO Validatiemodule/Validatieregels/01 Functies.md"
+      - Resultaten: "HyDAMO Validatietool/HyDAMO Validatiemodule/03 Resultaten.md"
+  - Ondersteuning:
+      - Mee-ontwikkelen: "HyDAMO Validatietool/09 Mee-ontwikkelen.md"
+      - Gebruikersmiddag: "HyDAMO Validatietool/10 Gebruikersmiddag HyDAMO Validatietool.md"
