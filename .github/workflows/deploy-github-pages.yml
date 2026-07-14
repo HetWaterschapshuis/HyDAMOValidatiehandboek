@@ -45,6 +45,9 @@ jobs:
       - name: Sync dependencies
         run: uv pip sync requirements.txt
 
+      - name: Show installed packages2
+        run: .venv/bin/pip list
+
       - name: Build MkDocs site
         run: .venv/bin/mkdocs build --strict
 
