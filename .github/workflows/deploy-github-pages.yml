@@ -42,6 +42,12 @@ jobs:
       - name: Build virtual environment
         run: uv venv
 
+      - name: Show files2
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 2 -type f | sort
+
       - name: Sync dependencies
         run: uv pip install --python .venv/bin/python -r requirements.txt
 
