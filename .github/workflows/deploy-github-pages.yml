@@ -51,7 +51,7 @@ jobs:
         run: uv pip install --python .venv/bin/python -r requirements.txt
 
       - name: Show installed packages2
-        run: .venv/bin/pyhton -m pip list
+        run: .venv/bin/python
 
       - name: Build MkDocs site
         run: .venv/bin/mkdocs build --strict
