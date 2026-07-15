@@ -25,6 +25,6 @@ Starten met de HyDAMO validatiemodule als lokale Python installatie:
 
 Alle overige informatie voor het gebruik van een lokale installatie van de HyDAMO Validatiemodule vindt u op deze paginas:
 
-- [Uitvoeren van een validatie](HyDAMO%20Validatiemodule\01%20Uitvoeren%20van%20een%20validatie.md)
-- [Validatieregels](HyDAMO%20Validatiemodule\02%20Validatieregels.md) en [Functies](HyDAMO%20Validatiemodule\Validatieregels\01%20Functies.md)
-- [Resultaten](HyDAMO%20Validatiemodule\03%20Resultaten.md)
+- [Uitvoeren van een validatie](HyDAMO%20Validatiemodule/01%20Uitvoeren%20van%20een%20validatie.md)
+- [Validatieregels](HyDAMO%20Validatiemodule/02%20Validatieregels.md) en [Functies](HyDAMO%20Validatiemodule/Validatieregels/01%20Functies.md)
+- [Resultaten](HyDAMO%20Validatiemodule/03%20Resultaten.md)

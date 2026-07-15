@@ -64,7 +64,7 @@ bepaalt attribuut-naam samen met id: *general\_{id}\_{result\_variable}*
 
 ### **function-general**
 
-de functie waarmee de result\_variable wordt berekend. Deze functies vormen de kern van de general\_rules en staan beschreven in [Functies](Validatieregels\01%20Functies.md).
+de functie waarmee de result\_variable wordt berekend. Deze functies vormen de kern van de general\_rules en staan beschreven in [Functies](Validatieregels/01%20Functies.md).
 
 ## validation\_rules (optioneel)
 
@@ -118,4 +118,4 @@ optie om een validatieregel mee te nemen/uit te sluiten in validatie
 
 de functie waarmee de validatie wordt uitgevoerd. Deze functies formen de kern van de validation\_rules en worden afhankelijk van het [type](#type) (logic/topology) uitgevoerd met de functies beschreven in:
 
-- [Functies](Validatieregels\01%20Functies.md)
+- [Functies](Validatieregels/01%20Functies.md)

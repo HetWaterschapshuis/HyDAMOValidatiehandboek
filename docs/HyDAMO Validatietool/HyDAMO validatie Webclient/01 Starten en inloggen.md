@@ -6,7 +6,7 @@ https://validatietool.hydamo.nl/
 
 De Webclient start met een inlogscherm. De HyDAMO Validatietool is alleen toegankelijke voor geregistreerde gebruikers!
 
-![loginscherm](../../images\aa9f3fc0-daa4-409e-b747-e755bc049284.png)
+![loginscherm](../../images/aa9f3fc0-daa4-409e-b747-e755bc049284.png)
 
 Voer uw gebruikersnaam/emailadres in en daarna uw wachtwoord. Klik op de knop 'Log in' om toegang te verkrijgen tot de HyDAMO validatie Webclient.
 
