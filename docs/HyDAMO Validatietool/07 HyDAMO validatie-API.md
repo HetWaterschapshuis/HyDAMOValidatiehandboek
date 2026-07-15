@@ -32,8 +32,8 @@ In de HyDAMO validatie-API hebben we onderscheid gemaakt in:
 
   - Het validatie resultaat kan (in verschillende bestandformaten) worden gedownload (GET).
 
-[API definitie](HyDAMO%20validatie-API\01%20API%20definitie.md) vindt u de OAS3 API specificatie van de HyDAMO Validatie API.
+[API definitie](HyDAMO%20validatie-API/01%20API%20definitie.md) vindt u de OAS3 API specificatie van de HyDAMO Validatie API.
 
 Voordat u aan de slag gaat met de HyDAMO Validatietool moet uw dataset voldoen aan DAMO 2.2 datamodel. Hiertoe heeft Het WaterschapsHuis een extra hulpmiddel ontwikkeld, de HyDAMO Wasmachine. Met de HyDAMO Wasmachine kunt u het verplichte attribuut NEN3610id toevoegen aan uw dataset, worden domeinen omgezet naar omschrijvingen en wordt het resultaat in het correcte Geopackage formaat weggeschreven. De HyDAMO Wasmachine staat hier: [HyDAMO Wasmachine op Github](https://github.com/HetWaterschapshuis/HyDAMOValidatieregels/tree/main/hydamo_wasmachine).
 
-Bekijk [hier](HyDAMO%20validatie-API\01%20API%20definitie.md) de API definitie en [hier](HyDAMO%20validatie-API\02%20Voorbeelden%20gebruik%20API.md) voorbeeld van het gebruik van de API.
+Bekijk [hier](HyDAMO%20validatie-API/01%20API%20definitie.md) de API definitie en [hier](HyDAMO%20validatie-API/02%20Voorbeelden%20gebruik%20API.md) voorbeeld van het gebruik van de API.
