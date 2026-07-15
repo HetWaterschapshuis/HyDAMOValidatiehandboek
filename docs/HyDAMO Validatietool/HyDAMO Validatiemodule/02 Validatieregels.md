@@ -13,11 +13,11 @@ Op deze pagina vindt u een beschrijving van de objecten binnen het validatie JSO
 - [status\_object](#status_object)
 - [objects](#objects)
   - [general\_rules (optioneel)](#general_rules-optioneel)
-    - [id](#id)
-    - [result\_variable](#result_variable)
-    - [function](#function)
+    - [id](#id-general)
+    - [result\_variable](#result_variable-general)
+    - [function](#function-general)
   - [validation\_rules (optioneel)](#validation_rules-optioneel)
-    - [id](#id-1)
+    - [id](#id)
     - [name](#name)
     - [type](#type)
     - [validation\_rule\_set](#validation_rule_set)
@@ -26,9 +26,9 @@ Op deze pagina vindt u een beschrijving van de objecten binnen het validatie JSO
     - [filter](#filter)
     - [error\_type](#error_type)
     - [error\_message](#error_message)
-    - [result\_variable](#result_variable-1)
+    - [result\_variable](#result_variable)
     - [active](#active)
-    - [function](#function-1)
+    - [function](#function)
 
 # schema
 
@@ -54,15 +54,15 @@ Een lijst met hydamo object-lagen waarover contextuele datavalidatie wordt uitge
 
 Een optionele lijst met algemene regels die nieuwe numerieke variabele genereren binnen de HyDAMO object-laag. Deze variabelen zijn vanaf dat punt beschikbaar voor validatieregels en/of general\_rules van andere object-lagen. Binnen general\_rules worden de volgende objecten gespecificeerd
 
-### **id**
+### **id-general**
 
 (integer-waarde) de index van de validatieregel; bepaald de volgorde waarin deze in de resultaattabel wordt opgenomen
 
-### **result\_variable**
+### **result\_variable-general**
 
 bepaalt attribuut-naam samen met id: *general\_{id}\_{result\_variable}*
 
-### **function**
+### **function-general**
 
 de functie waarmee de result\_variable wordt berekend. Deze functies vormen de kern van de general\_rules en staan beschreven in [Functies](Validatieregels\01%20Functies.md).
 

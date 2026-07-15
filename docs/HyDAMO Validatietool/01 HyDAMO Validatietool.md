@@ -1,6 +1,6 @@
 # HyDAMO Validatietool
 
-![](..\images\6a50725b-bb14-42d7-8dda-5217a1d3131b.png)
+![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b.png)
 
 ### Er is een nieuwe versie va de Webclient en van de validatiemodule (met ondersteuning voor (Hy)DAMO 2.5) gelanceerd!
 

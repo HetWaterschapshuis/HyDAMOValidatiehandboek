@@ -42,7 +42,7 @@ Het resultaat is:
 
 ## Inloggen en authentiseren
 
-Om gebruik te kunnen maken van de HyDAMO Validatiemodule en de validatie-API moet een gebruiker geauthentiseerd worden. Authenticatie in de validatie-API vindt plaats aan de hand van een gebruikersnaam en wachtwoord. Voor een beschrijving van het opvragen van een gebruikersnaam en wachtwoord wordt verwezen naar [Gebruikersregistratie](..\02%20Gebruikersregistratie.md). De validatie-API maakt gebruik van OAuth Firebase Authentication. Dit betekent dat authenticatie plaatsvindt bij een server van Google, middels een standaard API van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet gebruik gemaakt worden van een specifieke (Firebase) key (AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE) die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt vervolgens een Python dictionary gedefinieerd met een gebruikersnaam (label ‘email’) en een wachtwoord (label 'password'). Daarna wordt een POST request naar de Google API gedefinieerd, waarbij de key en de dictionary met de login cedentials meegestuurd wordt. Als de HTML statuscode van de response gelijk is aan 200 (de Google API geeft succesvol een resultaat), dan bevat de response een zogenaamde id\_token. Deze wordt tot slot omgezet in een Bearer token (een gecodeerde token) die daarna als header meegeven kan worden aan toekomstige requests aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden via de procdure zoals hier weergegeven. In Python ziet de code er als volgt uit (gebruikersnaam en wachtwoord zijn fictief in het voorbeeld):
+Om gebruik te kunnen maken van de HyDAMO Validatiemodule en de validatie-API moet een gebruiker geauthentiseerd worden. Authenticatie in de validatie-API vindt plaats aan de hand van een gebruikersnaam en wachtwoord. Voor een beschrijving van het opvragen van een gebruikersnaam en wachtwoord wordt verwezen naar [Gebruikersregistratie](../02%20Gebruikersregistratie.md). De validatie-API maakt gebruik van OAuth Firebase Authentication. Dit betekent dat authenticatie plaatsvindt bij een server van Google, middels een standaard API van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet gebruik gemaakt worden van een specifieke (Firebase) key (AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE) die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt vervolgens een Python dictionary gedefinieerd met een gebruikersnaam (label ‘email’) en een wachtwoord (label 'password'). Daarna wordt een POST request naar de Google API gedefinieerd, waarbij de key en de dictionary met de login cedentials meegestuurd wordt. Als de HTML statuscode van de response gelijk is aan 200 (de Google API geeft succesvol een resultaat), dan bevat de response een zogenaamde id\_token. Deze wordt tot slot omgezet in een Bearer token (een gecodeerde token) die daarna als header meegeven kan worden aan toekomstige requests aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden via de procdure zoals hier weergegeven. In Python ziet de code er als volgt uit (gebruikersnaam en wachtwoord zijn fictief in het voorbeeld):
 
 ```py
 username = "gebruiker@hydamo.nl"
@@ -142,7 +142,7 @@ naam dataset: *Regelmiddel.gpkg*
 
 ## Een bestand met validatieregels toevoegen aan de validatie-taak
 
-Als er een validatie-taak beschikbaar is, kan er een bestand met validatieregels toegevoegd worden aan deze validatie-taak. Meer informatie over de inhoud van het bestand met validatieregels vindt u hier [Basis validatieregels](..\05%20Basis%20validatieregels.md). Een basisset validatieregels kunt u op [Github](https://github.com/HetWaterschapshuis/HyDAMOValidatieregels/tree/main/validation_rules) downloaden.
+Als er een validatie-taak beschikbaar is, kan er een bestand met validatieregels toegevoegd worden aan deze validatie-taak. Meer informatie over de inhoud van het bestand met validatieregels vindt u hier [Basis validatieregels](../05%20Basis%20validatieregels.md). Een basisset validatieregels kunt u op [Github](https://github.com/HetWaterschapshuis/HyDAMOValidatieregels/tree/main/validation_rules) downloaden.
 
 Het bestand met validatieregels staat in een lokale folder op een computersysteem (*file\_path*). Om validatieregels te kunnen toevoegen aan een bestaande validatie-taak, is de taak-id nodig van de validatie-taak (zie voorgaande stappen). Vervolgens wordt een dictionary *params* aangemaakt waarin de naam van het bestand met validatieregels opgeslagen wordt (label ‘file’). Daarna wordt een dictionary *files* aangemaakt. Hierin wordt het bestand met validatieregels zelf opgeslagen (via een commando ‘open' en het attribuut 'rb’; het bestand met validatieregels wordt als een binair bestand opgeslagen). Met een POST request naar de API op het endpoint *task/validationrules* wordt het bestand met validatieregels toegevoegd aan de validatie-taak. Naast de id van de validatie-taak (in de URL) worden ook de dictionaries *files* en *params* en de Bearer token (opgeslagen in my\_headers) meegegeven in het request. Als de HTML statuscode van de response gelijk is aan 201 (het post request geeft aan dat de aanpassing succesvol is doorgevoerd), kunnen verschillende gegevens (data) van de validatie-taak uit de response uitgelezen worden, waaronder:
 
@@ -243,7 +243,7 @@ if response_get_metadata.status_code == 200:
     open(os.path.join(result_folder,f"{task_id}_metadata.json"), 'wb').write(response_get_metadata.content)
 ```
 
-Het resultaat is een json bestand met de volgende inhoud (zie ook [Resultaten](..\HyDAMO%20Validatiemodule\03%20Resultaten.md)):
+Het resultaat is een json bestand met de volgende inhoud (zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md)):
 
 *{*  
 *"api\_version": "1.0.0",*  
@@ -283,7 +283,7 @@ if response_get_results_csv.status_code == 200:
     open(os.path.join(result_folder,"duikersifonhevel.csv"), 'wb').write(response_get_results_csv.content)
 ```
 
-Het resultaat is een CSV bestand met resultaten van de validatie van de duikersifonhevels in de dataset (zie ook [Resultaten](..\HyDAMO%20Validatiemodule\03%20Resultaten.md)).
+Het resultaat is een CSV bestand met resultaten van de validatie van de duikersifonhevels in de dataset (zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md)).
 
 ## Download resultaten van de validatie-taak in geopackage formaat
 
@@ -300,7 +300,7 @@ if response_get_results_geopackage.status_code == 200:
     open(os.path.join(result_folder,"validationresults.gpkg"), 'wb').write(response_get_results_geopackage.content)
 ```
 
-Het resultaat is een geopackage bestand met resultaten van de validatie voor alle objectlagen in de dataset (zie ook [Resultaten](..\HyDAMO%20Validatiemodule\03%20Resultaten.md)).
+Het resultaat is een geopackage bestand met resultaten van de validatie voor alle objectlagen in de dataset (zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md)).
 
 ## Download alle resultaat bestanden van de validatie-taak
 

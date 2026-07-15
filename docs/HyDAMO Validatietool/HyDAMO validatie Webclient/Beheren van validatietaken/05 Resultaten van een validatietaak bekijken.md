@@ -1,8 +1,8 @@
 # Resultaten van een validatietaak bekijken
 
-Als de status van een validatietaak gelijk is ‘finished' of ‘error’ is het uitvoeren van de validatietaak (zie ook [Een validatietaak starten](04%20Een%20validatietaak%20starten.md)) gereed. Bekijk in beide gevallen eerst de metadata van de validatie-taak. Klik op icoon <img src="..\..\..\images\e4cfed32-dfad-43df-b6a7-921a68cc593f.png"/> in de rij van de betreffende validatietaak (in de kolom 'Acties’). Er verschijnt een popup venster met daarin informatie over de validatietaak.
+Als de status van een validatietaak gelijk is ‘finished' of ‘error’ is het uitvoeren van de validatietaak (zie ook [Een validatietaak starten](04%20Een%20validatietaak%20starten.md)) gereed. Bekijk in beide gevallen eerst de metadata van de validatie-taak. Klik op icoon ![bekijkmetadatasymbool](../../../images/e4cfed32-dfad-43df-b6a7-921a68cc593f.png) in de rij van de betreffende validatietaak (in de kolom 'Acties’). Er verschijnt een popup venster met daarin informatie over de validatietaak.
 
-<img src="..\..\..\images\d79b2148-e544-42ee-ab2d-648d8c099394.png"/>
+![metadatatabel_screenshot](../../../images/d79b2148-e544-42ee-ab2d-648d8c099394.png)
 
 De volgende informatie wordt in de metadata getoond (van boven naar beneden):
 
@@ -25,7 +25,7 @@ De volgende informatie wordt in de metadata getoond (van boven naar beneden):
 - warnings: waarschuwingen die tijdens de validatie zijn opgetreden.
 - log: een volledige log van de verschillende stappen van de HyDAMO Validatiemodule tijdens de uitvoering van de validatietaak.
 
-Als een validatietaak succesvol is uitgevoerd kan het validatie resultaat bekeken worden op een kaart (zie [Bekijken van validatie resultaten op een kaart](..\04%20Bekijken%20van%20validatie%20resultaten%20op%20een%20kaart.md)) of in tabel (zie [Bekijken van validatie resultaten in tabel](..\05%20Bekijken%20van%20validatie%20resultaten%20in%20tabel.md)). Ook kunnen de resultaten direct worden gedownload door de knop <img src="..\..\..\images\92c420f0-e246-4470-a930-62e7b3d10353.png"/> in de kolom 'Acties' te activeren. Er wordt een zip-bestand (naam gelijk aan de id en naam van de validatietaak, gescheiden door een streepje) gedownload met daarin de volgende bestanden:
+Als een validatietaak succesvol is uitgevoerd kan het validatie resultaat bekeken worden op een kaart (zie [Bekijken van validatie resultaten op een kaart](../04%20Bekijken%20van%20validatie%20resultaten%20op%20een%20kaart.md)) of in tabel (zie [Bekijken van validatie resultaten in tabel](../05%20Bekijken%20van%20validatie%20resultaten%20in%20tabel.md)). Ook kunnen de resultaten direct worden gedownload door de knop ![downloadresultatensymbool](../../../images/92c420f0-e246-4470-a930-62e7b3d10353.png) in de kolom 'Acties' te activeren. Er wordt een zip-bestand (naam gelijk aan de id en naam van de validatietaak, gescheiden door een streepje) gedownload met daarin de volgende bestanden:
 
 - validator.log met de volledige inhoud van de log van de verschillende stappen van de HyDAMO Validatiemodule tijdens de uitvoering van de validatietaak.
 - valiation\_result.json met de volledige inhoud van de metadata van de validatietaak (zoals hierboven beschreven en afgebeeld in het screenshot van de metadata).

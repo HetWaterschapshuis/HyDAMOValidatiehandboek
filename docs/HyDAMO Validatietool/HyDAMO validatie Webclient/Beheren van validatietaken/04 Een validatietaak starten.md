@@ -7,7 +7,7 @@ Een validatietaak kan pas gestart worden als wordt voldaan aan twee voorwaarden:
 
 Als aan beide voorwaarden voldaan is zal de status van de validatietaak gelijk zijn aan ‘ready\_to\_validate' en wordt de knop 'Start validatietaak’, onderin het scherm van de werkruimte voor het beheren van validatietaken actief.
 
-<img src="..\..\..\images\bde456da-8fb1-4b63-a1d0-62188ef721a2.png"/>
+![validatietakenbeheer_screenshot](../../../images/bde456da-8fb1-4b63-a1d0-62188ef721a2.png)
 
 Om de validatietaak te starten activeert u de knop ‘Start validatietaak'. De status van de geselecteerde validatietaak zal in eerste instantie wijzigen in ‘pending’. Afhankelijk van de beschikbare capaciteit in de online (reken)omgeving (er kunnen maximaal 3 validatietaken simultaan uitgevoerd worden) wordt de validatietaak meteen gestart of wordt de validatie-taak in een wachtrij geplaatst en gestart zodra op 1 van de 3 rekennodes beschikbaar komt. De status zal dan wijzigen in ‘validating’.
 
