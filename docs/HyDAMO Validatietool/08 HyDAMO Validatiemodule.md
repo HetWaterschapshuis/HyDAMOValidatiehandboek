@@ -1,6 +1,6 @@
 # HyDAMO Validatiemodule
 
-De HyDAMO Validatiemodule voert de daadwerkelijke validatie van één of meerdere datasets (conform DAMO 2.5 datamodel) uit aan de hand van set validatieregels. De Validatiemodule is een Python toepassing en wordt op een centrale server aangeboden voor gebruik in combinatie met de HyDAMO Validatie-API en/of de HyDAMO Validatiemodule Webclient.
+De HyDAMO Validatiemodule voert de daadwerkelijke validatie van één of meerdere datasets (conform DAMO 2.5 datamodel) uit aan de hand van set validatieregels. De Validatiemodule is een Python toepassing en wordt op een centrale server aangeboden voor gebruik in combinatie met de HyDAMO Validatie-API en/of de HyDAMO Validatiemodule Webclient. 
 
 De HyDAMO Validatiemodule voert drie soorten validaties uit:
 
