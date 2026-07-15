@@ -1,6 +1,6 @@
 # Beheren van validatietaken
 
-<img src="..\..\images\1c4bc71f-d239-4876-bc2f-804dbaa09e94.png"/>
+![Validatietaakscreenshot](../../images/1c4bc71f-d239-4876-bc2f-804dbaa09e94.png)
 
 In deze werkruimte kunt u uw validatietaken beheren. Het scherm bevat een tabel met eigen validatie-taken. Wanneer er een validatietaak is geselecteerd dan verschijnen ook de controls waarmee dataset bestanden en een bestand met validatieregels kunnen worden toegevoegd aan de validatie-taak. Lees meer over het beheren van validatietaken in:
 

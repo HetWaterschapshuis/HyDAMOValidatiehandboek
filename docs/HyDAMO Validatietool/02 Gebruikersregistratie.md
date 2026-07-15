@@ -1,6 +1,6 @@
 # Gebruikersregistratie
 
-<img src="..\images\c7f55eb5-7890-44d3-bea3-3743d267d56c.png" width="200"/>
+![gebruikerssymbool](../images/c7f55eb5-7890-44d3-bea3-3743d267d56c.png){ width="200" }
 
 De HyDAMO Validatietool kan alleen gebruikt worden met een geregistreerd gebruikersaccount en bijbehorend wachtwoord.
 

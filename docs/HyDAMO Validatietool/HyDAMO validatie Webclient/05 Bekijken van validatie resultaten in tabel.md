@@ -2,12 +2,12 @@
 
 Activeer de werkruimte voor het bekijken van validatie resultaten in tabelvorm vanuit de werkruimte voor het beheren van validatietaken, door:
 
-- op de icoon <img src="..\..\images\e98fc833-4903-4ae9-8341-92c4d66ade37.png"/> te klikken van de betreffende validatietaak.
-- het menu-item <img src="..\..\images\dd0532cb-2d44-43c2-8c9e-fa2ece5991b1.png"/> te activeren waarbij de betreffende validatietaak in de tabel met validatatietaken is geselecteerd.
+- op de icoon ![taakviusaliserenalstabelsymbool](../../images/e98fc833-4903-4ae9-8341-92c4d66ade37.png) te klikken van de betreffende validatietaak.
+- het menu-item ![taakviusaliserenalstabelsymbool](../../images//dd0532cb-2d44-43c2-8c9e-fa2ece5991b1.png) te activeren waarbij de betreffende validatietaak in de tabel met validatatietaken is geselecteerd.
 
 Er verschijnt een tabel met daarin alle objecten uit de verschillende objectlagen die in de validatietaak zijn gevalideerd. Voor elke object is de unieke NEN3610id weergegeven, het type object, het rapportcijfer en een beknopte toelichting op de validatieregels die falen.
 
-<img src="..\..\images\d9ea4395-ac95-443c-ba23-f3c3be7a4314.png"/>
+![validatietaakalstabel_screenshot](../../images/d9ea4395-ac95-443c-ba23-f3c3be7a4314.png)
 
 Onder de tabel kunt u het aantal regels dat per pagina weergegeven moet worden aanpassen en door de verschillende pagina’s van de tabel navigeren.
 
@@ -15,7 +15,7 @@ U kunt de inhoud van deze tabel downloaden als CSV bestand door de knop 'Downloa
 
 Om meer detailinformatie van een object te krijgen, selecteert u een rij in de tabel met objecten. Er verschijnt een tweede tabel waarin voor het betreffende object de uitkomsten van de validatieregels wordt getoond.
 
-<img src="..\..\images\4ce6c6f2-09fd-4eb1-9360-605a387f74cf.png"/>
+![validatietaakalstabeldetail_screenshot](../../images/4ce6c6f2-09fd-4eb1-9360-605a387f74cf.png)
 
 Hierin zijn voor elke validatieregel opgenomen:
 
