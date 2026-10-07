@@ -194,7 +194,7 @@
 					"active": true,
 					"filter": {
 						"ISIN": {
-							"parameter": "vormkoker",
+							"parameter": "vormduikersifonhevel",
 							"array": [
 								"Rond"
 							]
