@@ -38,10 +38,11 @@ markdown_extensions:
       permalink: true
   - pymdownx.details
   - pymdownx.superfences
-
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
 
 extra:
   generator: false
@@ -55,12 +56,13 @@ nav:
   - Home: "HyDAMO Validatietool/01 HyDAMO Validatietool.md"
   - Introductie tool:
       - In een oogopslag: "HyDAMO Validatietool/Introductie tool/01 In een oogopslag.md"
-      - Known issues en tips: "HyDAMO Validatietool/Introductie tool/02 Known issues en tips.md"
-      - Versie overzicht: "HyDAMO Validatietool/Introductie tool/03 Versie overzicht.md"
+      - Validatieregels: "HyDAMO Validatietool/Introductie tool/02 Validatieregels.md"
+      - Known issues en tips: "HyDAMO Validatietool/Introductie tool/03 Known issues en tips.md"
+      - Versie overzicht: "HyDAMO Validatietool/Introductie tool/04 Versie overzicht.md"
   - Aan de slag:
       - Gebruikersregistratie: "HyDAMO Validatietool/Aan de slag/01 Gebruikersregistratie.md"
-      - Known issues en tips: "HyDAMO Validatietool/03 Known issues en tips.md"
-      - Versie overzicht: "HyDAMO Validatietool/04 Versie overzicht.md"
+      - De Webclient: "HyDAMO Validatietool/Aan de slag/02 De Webclient.md"
+      - De API: "HyDAMO Validatietool/Aan de slag/03 De API.md"
   - Validatieregels:
       - Basis validatieregels: "HyDAMO Validatietool/05 Basis validatieregels.md"
   - Webclient:

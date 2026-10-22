@@ -12,18 +12,19 @@ De HyDAMO Validatietool is in de basis een (online) webservice (validation as a 
 De tool is opgebouwd uit drie componentlagen:
 
 <div class="component-list" markdown="1">
+
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:simple-python:
+:material-monitor-screenshot:
 </div>
 
 <div class="component-text" markdown="1">
-**Validatiemodule**
+**Validatie-Webclient**
 
- De [Validatiemodule](08%20HyDAMO%20Validatiemodule.md) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://project/hydamo-validation/){:target="_blank"}.
-
+ De [Validatie-Webclient](https://validatietool.hydamo.nl/){:target="_blank"}: is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
 </div>
 </div>
+
 
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
@@ -37,17 +38,19 @@ Met de [Validatie-API](07%20HyDAMO%20validatie-API.md) kun je validatietaken aan
 </div>
 </div>
 
+
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:material-monitor-screenshot:
+:simple-python:
 </div>
 
 <div class="component-text" markdown="1">
-**Validatie-Webclient**
+**Validatiemodule**
 
- De [Validatie-Webclient](https://validatietool.hydamo.nl/){:target="_blank"}: is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient ook de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
+ De [Validatiemodule](08%20HyDAMO%20Validatiemodule.md) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://project/hydamo-validation/){:target="_blank"}.
 </div>
 </div>
+
 </div>
 
 
