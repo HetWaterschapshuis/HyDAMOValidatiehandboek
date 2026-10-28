@@ -1,14 +1,121 @@
-# Functies
+# HyDAMO Validatiemodule
 
-De beschijving van functies zijn bijgewerkt tot versie 1.4.0 van de Validatiemodule. Hieronder staan de functies beschreven uitgesplitst naar:
+De HyDAMO Validatiemodule is als rekenhart het werkpaard van de validatietool. Hij voert - op de achtergrond - de daadwerkelijke validatie van één of meerdere datasets uit aan de hand van het opgegeven HyDAMO-datamodel en set validatieregels. De HyDAMO Validatiemodule voert drie soorten [validaties](TODO hier nog een link plaatsen) uit: de syntax validatie, de logische validatie en de topologische validatie. 
 
-- [Hulpfuncties (general\_rules)](#hulpfuncties-general_rules)
-- [Logische functies (validation\_rules, type=logic)](#logische-functies-validation_rules-typelogic)
-- [Topologische functies (validation\_rules, type=topologic)](#topologische-functies-validation_rules-typetopologic)
+De Validatiemodule is integraal onderdeel van de validatie-cloudservice maar wordt door de Webclient of de Validatie-API aangestuurd. Daarnaast is de module ook als los rekenhart beschikbaar op een openbare [GitHub repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"}: en als gepubliceerde [Python-module](https://pypi.org/project/hydamo-validation){:target="_blank"}:. Hiermee kan je een validatie ook zonder interface op een lokaal systeem doorvoeren en de validatie-module zelf mee-ontwikklen. 
 
-# Hulpfuncties (general\_rules)
+Hieronder vind je informatie over het lokale gebruik van de validatie module en zijn werkwijze.
 
-Hulpfuncties worden gebruikt als functie in de sectie **general\_rules** van de validatieregels. Hulpfuncties geven altijd een numerieke waarde terug, met uitzondering van de functies *join\_parameter* en *object\_relation*.
+## Lokale versie van de HyDAMO Validatiemodule
+
+### De code clonen
+1. Kies een plek op je lokale computer om de repository naar toe te kloonen (bijvoorbeeld ‘C:\repos\HyDAMOValidatieModule’). Voer onderstaand bevel uit in Git Bash of gebruik alternatief git functionaliteit in bijv. Visual Studio Code.
+```bash
+git clone https://github.com/HetWaterschapshuis/HyDAMOValidatieModule.git
+```
+
+### De omgeving opzetten
+1. Installeer zo nodig Python van de [officiële site](https://www.python.org/downloads/){:target="_blank"}: in de benodigde versie. Inspecteer hiervoor de parameter 'requires-python' in het [projectdefinitie-bestand 'project.toml'](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/blob/main/pyproject.toml){:target="_blank"}: op GitHub. Kies bijvoorbeeld de C-schrijf als installatielocatie (bijv. 'C:\Python312').
+2. Maak een Python-environment aan voor je lokale installatie. In de opdrachtprompt (alternatief powershell) voor het voorbeeld van een lokale repository in ‘C:\repos\HyDAMOValidatieModule’ en Python-installatie in 'C:\Python312':
+```console
+C:\Python312\python -m venv C:\repos\HyDAMOValidatieModule\.venv
+```
+3. Activeer het aangemaakte environment in de opdrachtpromt:
+```console
+C:\repos\HyDAMOValidatieModule\.venv\Scripts\activate
+```
+4. Update pip (opdrachtpromt met geactiveerd venv):
+```console
+python -m pip install --upgrade pip
+```
+5. Installeer de library- en projectmanagement-module 'uv' globaal (opdrachtpromt met geactiveerd venv):
+```console
+pipx install uv
+```
+6. Alle libraries installeren die in het requirements-bestand (ontwikkel-versie) zijn vastgelegd (opdrachtpromt met geactiveerd venv):
+```console
+uv pip sync requirements-dev.lock
+```
+7. Vervolgens zou je de validatiemodule lokaal moeten kunnen runnen. Kopieer hiervoor de werkende invoerdataset en validatieregels van de [GitHub repository](tests/data/tasks/test_wrij){:target="_blank"}: en plaats deze met behoud van de mappenstructuur op je lokale computer. Roep de module aan en geef het mapje met de invoer-datasets op (opdrachtpromt met geactiveerd venv):
+```console
+python -m hydamo_validation [pad naar locatie met het mapje datasets en validationrules]
+```
+
+## De werkwijze van de validatiemodule
+
+De module doorloopt in het algemeen de onderstaande, op elkaar volgende fases:
+
+### 1. Voorbereiding en initialisatie
+
+De voorbereidende stappen van de validatie laten zich samenvatten als:
+
+- Vaststellen of de data-directory bestaat,
+- Een resultaatmap en logbestand aanmaken,
+- De validatieregels inlezen en hun validiteit toetsen aan de hand van de schema-definitie.
+
+### 2. Datamodel vaststellen
+
+Onder het vaststellen van het datamodel valt:
+
+- De gekozen datamodel-versie uit de regel-JSON lezen,
+- Het object ‘datamodel’ aanmaken o.b.v. de class HyDAMO in het sub-script datamodel.py:
+    -	Het HyDAMO-schema (uit de regel-JSON ingelezen) inlezen,
+    -	Alle lagen en bijbehorende velddefinities uitlezen,
+    -	Voor alle lagen een extended GeoDataFrame aanmaken.
+- Als resultaat ontstaat een datamodel met alle laagdefinities (laagnaam, validatieschema, geotype) in een extended Geodataframes (op dit moment nog zonder geometrieën en attributen).
+
+### 3. Syntaxvalidatie
+
+De syntaxvalidatie bevat de volgende stappen:
+
+- Alle geopackages uit de invoerdataset(s) worden ingelezen, alle voorkomenden lagen geidentificeerd en naar het object ‘datasets’ geschreven,
+- Het sub-script syntax_validation.py identificeert:
+    -	De lagen uit de invoer-dataset die overeenkomen (precies 1 keer voorkomen) met de lagen in het datamodel -> ‘valid-layers’,
+    -	De datamodel-lagen die niet in de invoer-dataset voorkomen -> ‘missing-layers’,
+- Veldvalidatie:
+    -	Met de toegelaten object-statussen uit de validatieregels de dataset filteren
+    -	Elke valide invoerlaag inlezen als extended GeoDataframe,
+    -	Elke kolom van een laag controleren, bijvoorbeeld: Ontbreekt een benodigde kolom? Hebben de kolommen het juiste datatype? Is de geometrie is valide en bevat geen z-dimensie? Kunnen foutieve datatypes geconverteerd worden. Bevatten velden met waardendomain waarden buiten bereik?
+- De syntaxvalidatie resulteert per laag in 2 GeoDataFrame’s: gdf en result-gdf. De result-gdf bevat het validatieoordeel en - waar nodig - gecorrigeerde waarden en wordt toegevoegd aan de layers summary. De gdf wordt omgezet naar een extended GeoDataFrame en toegevoegd aan het datamodel-object.
+
+### 4. De inhoudelijke validatie (algemeene, logische, toplogische regels)
+
+Bij de inhoudelijke (logische) validatie worden de lagen uit de invoer-dataset getoetst aan de hand van de opgegeven validatieregels. Dit gebeurt middels het subscript logical_validation.py met execute() als de hoofdfunctie:
+
+- Alle logische regels worden in een lijst gelezen en per object afgehandeld,
+- De betroffene laag wordt uit het datamodel-object (extended GeoDataFrame) geïsoleerd en de beoordelingskolommen toegevoegd (‘rating’, ‘valid’, ‘invalid’ etc.).
+- Eerst worden de algemene regels (general-rules) doorlopen:
+    -	De functie een naam geven, de resultaat- en invoer-variabelen identificeren,
+    -	De dataset filteren en indien van toepassing relaties met andere objecten deze toevoegen,
+    -	De functie uit sub-script general.py zoeken en uitvoeren (b.v. buffer()),
+    -   De berekende uitkomst van de geernal rule wegschrijven naar een kolom met de naam van de (resultaat-)variable
+-	Dan worden de logische en topologische regels (validation-rules) doorgelopen:
+    -	De functie een naam geven, de resultaat- en invoer-variabelen identificeren,
+    -	De dataset filteren,
+    - 	De logische functies uitvoeren met het subscript logic.py,
+    -   De topologische functies uitvoeren met het subscript topoologic.py,
+    -   De berekende uitkomst naar een kolom met de naam van de (resultaat-)variable schrijven,
+    -   De beoordelingskolommen updaten (rating, summary, valid etc),
+    -   De uitkomst toevoegen aan layers-summary.
+
+### 5. Samenvatten en exporteren
+
+Hieronder vallen de stappen die de validatie afronden:
+
+- Het sub-script summaries.py met daarin de hoofd-functie export() aanroepen,
+- Alle lagen met laagnaam en geodataframe in een dictionary verzamelen,
+- Iedere laag naar een csv-bestand (zonder geometrie) exporteren,
+- Iedere laag (add-on) naar één geopackage-bestand exporteren,
+- Een JSON met een validatiesamenvatting aanmaken.
+
+
+## Validatie-functies
+
+In de validatiemodule zijn de [algemene, logische en topologische regels](TODO link toevoegen) geformuleerd als Python-functies. Zij bevatten de kern-functionaliteit van de validatiemodule en staan hieronder nader beschreven met naam, invoerparameters en omschrijving.
+
+### Hulpfuncties (general rules)
+
+Hulpfuncties worden gebruikt als functie in de sectie **general_rules** van de validatieregels. Hulpfuncties geven altijd een numerieke waarde terug, met uitzondering van de functies *join_parameter* en *object_relation*.
 
 |  **Naam**        |  **Invoer**                                                                             |  **Beschrijving**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 |:-----------------|:----------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -20,7 +127,7 @@ Hulpfuncties worden gebruikt als functie in de sectie **general\_rules** van de 
 | object\_relation | related\_object, <br/> statistic <br/> related\_parameter (optioneel) <br/> fill\_value | Uit de tabel van gerelateerde objecten (*related\_object*) wordt de statistiek (*statistic*) berekend over een parameter (*related\_parameter*) uit de tabel van gerelateerde objecten. <br/> Voor statistc kunnen de volgende waarden worden gespecificeerd: <br/><ul local-id="b23c62a83aad"><li local-id="9457a71cee77"><p local-id="b148be2f8b03"><em>count</em>: het aantal gerelateerde objecten. <em>related_parameter</em> wordt hier genegeerd als deze is gespecificeerd!</p></li><li local-id="905c5b115c49"><p local-id="2ae172d56af9"><em>sum</em>: de som van de waarden van de gerelateerde parameter in de gerelateerde objecten</p></li><li local-id="45f3467f4477"><p local-id="718a0e73245c"><em>min: </em>de minimale waarde van de gerelateerde parameter in de gerelateerde objecten</p></li><li local-id="dcb265508ea3"><p local-id="b5d36979c7bf"><em>max: </em>de maximale waarde van de gerelateerde parameter in de gerelateerde objecten</p></li><li local-id="d8e8fb8073f3"><p local-id="62a7a7309cab"><em>majority: </em>de meest voorkomende waarde van de gerelateerde parameter in de gerelateerde objecten</p></li></ul> Voorbeeld: voor het HyDAMO object *gemaal* kan de totale maximale gemaalcapaciteit worden bepaald door een related\_object functie met pompen met de volgende invoer-waarden: <br/><ul local-id="28e02ebe6634"><li local-id="089edb4fa19f"><p local-id="42328b1dee7e"><em>statistic</em>: sum</p></li><li local-id="2fefc65dfdf2"><p local-id="3d6beb11f51d"><em>related_object</em>: pomp</p></li><li local-id="50719928ddc0"><p local-id="c4ee6a0f800e"><em>related_parameter</em>: maximalecapaciteit</p></li></ul> De koppeling is n:1 (tegengesteld tot de functie join\_parameter); de statistiek van meerdere *pompen* kan toegevoegd worden aan één object *gemaal*. <br/> Wanneer *fill\_value* wordt gespecificeerd, dan worden ontbrekende waarden uit de functie opgevuld met deze waarde. In bovenstaand voorbeeld geeft *fill\_value=0* een gemaalcapaciteit van 0 terug, op gemalen waar geen pompen zijn gedefinieerd in pomp-objecten. |
 | sum              | array                                                                                   | Berekent de som van alle getallen/attribuut-waarden uit de getallen/attributen gespecificeerd in *array* <br/> Bijvoorbeeld; wanneer de gebruiker *array=[“kruinbreedte”, 30]*  in een sum-functie op het object stuw, geeft de kruinbreedte + 30 als resultaat.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
-# Logische functies (validation\_rules, type=logic)
+### Logische functies
 
 Logische functies kunnen gebruikt worden in filters en als validatie-functie. Logische functies geven altijd een true/false terug.
 
@@ -38,7 +145,7 @@ Logische functies kunnen gebruikt worden in filters en als validatie-functie. Lo
 | consistent\_period   | max\_gap (default=1)                        | controlleert voor de object-laag *sturing* of sets van sturingsregels op een *regelmiddel* of *pomp* met dezelfde *prioriteit* consistente periodes bevatten. <br/> Periodes worden gedefinieerd door de attributen *beginperiode* en *eindperiode*. <br/> Een periode is consistent wanneer deze binnen zijn set niet overlapt met een andere periode binnen dezelfde set. Ook moeten alle periodes binnen de set aaneensluiten. Een set is aaneengesloten wanneer gaten niet groter zijn dan het aantal dagen gedefinieerd door *max\_gap* (default = 1 dag)*.* |
 | join\_object\_exists | join\_object                                | een object waarnaar binnen de tabel wordt verwezen bestaat. <br/> Bijvoorbeeld, de *gemaalid* waarin wordt verwezen in de tabel *pomp* bestaat. In dit voorbeeld wordt de validatie uitgevoerd op de object-laag *pomp*, waarbij de parameter *join\_object*=*gemaal.*                                                                                                                                                                                                                                                                                            |
 
-# Topologische functies (validation\_rules, type=topologic)
+### Topologische functies
 
 Topologische functies kunnen gebruikt worden als topologische validatie-functie. Een object wordt hierbij altijd beschouwd ten opzichte van een hydroobject. De uitvoer van topologische functies zijn altijd true/false.
 

@@ -1,46 +1,34 @@
 # HyDAMO validatie-API
 
-Als een spin in het web communiceert de API (Application Programming Interface) tussen de webclient als grafische schil van de tool en de Python-rekenmodule. In feite leunt de webclient op de achtergrond op de functionaliteit van de API. Hij regelt het aanmaken van validatietaken, toevoegen van datasets en validatieseregels, opstarten van taken en downloaden van resultaten. Het is mogelijk om voor validatieopdrachten de HyDAMO validatie-API direct aan te roepen. Dit kan vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME.
+Als de entrale schakel communiceert de API (Application Programming Interface) tussen de webclient als grafische schil van de tool en de Python-rekenmodule. De API regelt het aanmaken van validatietaken, toevoegen van datasets en validatieseregels, opstarten van taken en downloaden van resultaten. Het is mogelijk om de HyDAMO validatie-API direct aan te roepen en validatieopdrachten zonder de webclient door te voeren. Dit kan vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME.
 
-De HyDAMO validatie-API bestaat uit verschillende <u>endpoints</u>. Elke endpoint heeft een URL om een bepalde actie (request) uit te voeren. Deze requests bestaan uit het opvragen van data (GET), het toevoegen van data (POST) en het vewijderen van data (DELETE):
+De HyDAMO validatie-API bestaat uit verschillende **endpoints**. Elke endpoint heeft een URL om een bepalde actie (request) uit te voeren. Deze requests bestaan uit het opvragen van informatie en data (GET), het toevoegen van data (POST) of het vewijderen van data (DELETE).
 
-<u>Informatie</u>
+![swagger_screenshot](../../images/swagger.png)
 
-  - Informatie over de API en de Validatiemodule opvraagen (GET).
+Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"}: van de Validatie-API. Als je een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg de API-response te zien. Let op, voor het testen van bijna alle endpoints is het noodigzakelijk dat je je van te voren eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
 
-<u>validatietaken</u>
+```powershell
+$body = @{
+    email = "wolf.waterman@hydamo.nl"
+    password = "*****"
+    returnSecureToken = $true
+} | ConvertTo-Json
 
-  - Een overzicht van validatietaken opvraagen (GET).
-  - Detail informatie van een specifieke validatietaak opvraagen (GET).
-  - Een niewe validatietaak aanmaken (POST).
-  - Een validatietaak verwijderen (DELETE).
-  - Een validatietaak starten (POST).
-  - Een validatietaak die uitgevoerd wordt annuleren (POST).
+$response = Invoke-RestMethod `
+    -Method Post `
+    -Uri "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE" `
+    -ContentType "application/json" `
+    -Body $body
 
-<u>Datasets</u>
-
-  - Een overzicht van alle datasets van een specifieke validatietaak opvraagen (GET).
-  - Een dataset van een specifieke validatietaak downloaden (GET).
-  - Een nieuwe dataset toegevoegen aan een validatietaak (POST).
-  - Een dataset verwijderen uit een specifieke validatietaak (DELETE).
-
-<u>Validatieregels</u>
-
-  - Een nieuw bestand met validatieregels toevoegen aan een specifieke validatietaak (POST).
-  - Een bestand met validatieregels van een specifieke validatietaak downloaden (GET).
-  - Validatieregels verwijderen uit een specifieke validatietaak (DELETE).
-
-<u>Validatie resultaat</u>
-
-  - Het validatie resultaat (in verschillende bestandformaten) downloaden (GET).
-
-
+$response.idToken
+```
 
 ## Gebruik van de API
 
 De API gebruikt je vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME. Hieronder vind je stukjes script-code die je door de meest relevante alle stappen in het gebruik van de API leidt.
 
-Onderstaande voorbeelden zijn opgenomen in een Jupyter-notebook. Dit notebook kan je [hier](../../downloads/Voorbeeld_Wiki.ipynb) downloaden. Let op, je moet wel de paden en login gegevens zelf aanpassen.
+Onderstaande voorbeelden zijn ook opgenomen in een [Jupyter-notebook](../../downloads/Voorbeeld_Wiki.ipynb). Let op, je moet wel de paden en login gegevens zelf aanpassen.
 
 ### 1. Informatie van de API opvragen
 
