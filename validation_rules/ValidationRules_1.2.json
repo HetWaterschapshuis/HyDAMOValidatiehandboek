@@ -454,7 +454,7 @@
 					},
 					"function": {
 						"LE": {
-							"left": "maximalehoogteopening",
+							"left": "hoogteopening",
 							"right": "kunstwerkopening_hoogte_m"
 						}
 					}
