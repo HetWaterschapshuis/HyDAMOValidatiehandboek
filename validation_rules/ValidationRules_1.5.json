@@ -34,7 +34,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "Profiel moet intersecten met een waterlijn",
+					"name": "De profiellijn moet intersecten met een waterlijn",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -99,7 +99,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "BOK bovenstrooms plausibel (-8m - maaiveld)",
+					"name": "De binnenonderkant (BOK) bovenstrooms is plausibel (de hoogte ligt tussen -8 m en 325 m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -119,7 +119,7 @@
 				},
 				{
 					"id": 1,
-					"name": "BOK benedenstrooms plausibel (-8m - maaiveld)",
+					"name": "De binnenonderkant (BOK) benedenstrooms is plausibel (de hoogte ligt tussen -8 m en 325 m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -137,7 +137,7 @@
 				},
 				{
 					"id": 2,
-					"name": "BOK bovenstrooms onder maaiveld",
+					"name": "De binnenonderkant (BOK) bovenstrooms ligt onder het maaiveld",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -153,7 +153,7 @@
 				},
 				{
 					"id": 3,
-					"name": "BOK benedenstrooms onder maaiveld",
+					"name": "De binnenonderkant (BOK) benedenstrooms ligt onder het maaiveld",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -169,7 +169,7 @@
 				},
 				{
 					"id": 4,
-					"name": "Lengte groter dan 1 m",
+					"name": "De lengte is groter dan 1 m",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "non-critical",
@@ -194,7 +194,7 @@
 					"active": true,
 					"filter": {
 						"ISIN": {
-							"parameter": "vormkoker",
+							"parameter": "vormduikersifonhevel",
 							"array": [
 								"Rond"
 							]
@@ -225,7 +225,7 @@
 				},
 				{
 					"id": 7,
-					"name": "Het bodemverhang van een duiker moet liggen tussen -2 cm/m (omhoog) en 5 cm/m (omlaag)",
+					"name": "Het bodemverhang van een duiker moet tussen -2 cm/m (omhoog) en 5 cm/m (omlaag) liggen",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "non-critical",
@@ -259,7 +259,7 @@
 				},
 				{
 					"id": 9,
-					"name": "Een duikersifonhevel zal geen overlap met een andere duikersifonhevel hebben",
+					"name": "Een duikersifonhevel mag geen overlap met een andere duikersifonhevel hebben",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -274,7 +274,7 @@
 				},
 				{
 					"id": 10,
-					"name": "De BOK bovenstrooms mag slechts minimaal lager liggen dan de bovenstroomse bodemhoogte van het hydroobject",
+					"name": "De binnenonderkant (BOK) bovenstrooms mag slechts minimaal lager liggen dan de bovenstroomse bodemhoogte van het hydroobject",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -293,7 +293,7 @@
 				},
 				{
 					"id": 11,
-					"name": "De BOK benedenstrooms mag slechts minimaal lager liggen dan de bendenstroomse bodemhoogte van het hydroobject",
+					"name": "De binnenonderkant (BOK) benedenstrooms mag slechts minimaal lager liggen dan de bendenstroomse bodemhoogte van het hydroobject",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -317,7 +317,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "hoogstedoorstroomhoogte plausibel (-8m - 325m)",
+					"name": "De hoogstedoorstroomhoogte is plausibel (ligt tussen -8 m en 325 m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -335,7 +335,7 @@
 				},
 				{
 					"id": 1,
-					"name": "laagstedoorstroomhoogte plausibel (-8m - 325m)",
+					"name": "De laagstedoorstroomhoogte is plausibel (ligt tussen -8 m en 325 m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -484,7 +484,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "Constructie hoogte plausibel (-8m - 325m)",
+					"name": "De constructiehoogte is plausibel (ligt tussen -8 m en 325 m)",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -502,7 +502,7 @@
 				},
 				{
 					"id": 1,
-					"name": "Constructie moet lager liggen dan omringend maaiveld",
+					"name": "De constructie moet lager liggen dan het omringende maaiveld",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "non-critical",
@@ -519,7 +519,7 @@
 				},
 				{
 					"id": 2,
-					"name": "De kruinbreedte moet groter dan 0.3 zijn",
+					"name": "De kruinbreedte moet groter dan 0.3 m zijn",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "non-critical",
@@ -535,7 +535,7 @@
 				},
 				{
 					"id": 3,
-					"name": "Afstand tot as watergang moet kleiner zijn dan 1 meter",
+					"name": "De afstand tot de as van de watergang moet kleiner zijn dan 1 m",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -551,7 +551,7 @@
 				},
 				{
 					"id": 4,
-					"name": "kruinbreedte is groter of gelijk aan de doorstroombreedte",
+					"name": "De kruinbreedte is groter of gelijk aan de doorstroombreedte",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -567,7 +567,7 @@
 				},
 				{
 					"id": 5,
-					"name": "De hoogste doorstroomhoogte van de kunstwerkopening zal lager of gelijk zijn aan de constructiehoogte",
+					"name": "De hoogste doorstroomhoogte van de kunstwerkopening moet lager of gelijk zijn aan de constructiehoogte",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -598,7 +598,7 @@
 				},
 				{
 					"id": 8,
-					"name": "Een stuw zal geen overlap met een andere stuw hebben",
+					"name": "Een stuw mag geen overlap met een andere stuw hebben",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -618,34 +618,12 @@
 			"general_rules": [
 				{
 					"id": 1,
-					"result_variable": "kunstwerkopening_laagstedoorstroomhoogte",
+					"result_variable": "doorstroomopening_laagstedoorstroomhoogte",
 					"function": {
 						"object_relation": {
 							"statistic": "min",
-							"related_object": "kunstwerkopening",
+							"related_object": "doorstroomopening",
 							"related_parameter": "laagstedoorstroomhoogte"
-						}
-					}
-				},
-				{
-					"id": 2,
-					"result_variable": "kunstwerkopening_laagstedoorstroombreedte",
-					"function": {
-						"object_relation": {
-							"statistic": "sum",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "laagstedoorstroombreedte"
-						}
-					}
-				},
-				{
-					"id": 3,
-					"result_variable": "kunstwerkopening_hoogstedoorstroombreedte",
-					"function": {
-						"object_relation": {
-							"statistic": "sum",
-							"related_object": "kunstwerkopening",
-							"related_parameter": "hoogstedoorstroombreedte"
 						}
 					}
 				}
@@ -704,42 +682,6 @@
 							"inclusive": false
 						}
 					}
-				},
-				{
-					"id": 3,
-					"name": "Een brug moet een plausibele laagste doorstroombreedte hebben",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "laagstedoorstroombreedte_plausibel",
-					"error_message": "laagstedoorstroombreedte niet plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "kunstwerkopening_laagstedoorstroombreedte",
-							"min": 1,
-							"max": 50,
-							"inclusive": false
-						}
-					}
-				},
-				{
-					"id": 4,
-					"name": "Een brug moet een plausibele hoogste doorstroombreedte hebben",
-					"type": "logic",
-					"validation_rule_set": "basic",
-					"error_type": "critical",
-					"result_variable": "hoogstedoorstroombreedte_plausibel",
-					"error_message": "hoogstedoorstroombreedte niet_plausibel",
-					"active": true,
-					"function": {
-						"BE": {
-							"parameter": "kunstwerkopening_hoogstedoorstroombreedte",
-							"min": 1,
-							"max": 50,
-							"inclusive": false
-						}
-					}
 				}
 			]
 		},
@@ -748,7 +690,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "De capaciteit groter dan 0",
+					"name": "De capaciteit moet groter dan 0 zijn",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -794,7 +736,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "Het aantal pompen is groter dan nul",
+					"name": "Het aantal pompen moet groter dan nul zijn",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -810,7 +752,7 @@
 				},
 				{
 					"id": 1,
-					"name": "Totale capaciteit is groter dan nul",
+					"name": "De totale capaciteit moet groter dan nul zijn",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -826,7 +768,7 @@
 				},
 				{
 					"id": 2,
-					"name": "Een gemaal zal geen overlap met een ander gemaal hebben",
+					"name": "Een gemaal mag geen overlap met een ander gemaal hebben",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -846,7 +788,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "Hydroobject heeft voldoende lengte voor modelverwerking",
+					"name": "Het hydroobject heeft voldoende lengte voor modelverwerking (minimaal 1 m)",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -862,7 +804,7 @@
 				},
 				{
 					"id": 1,
-					"name": "Een hydroobject wordt gescheiden bij een samenkomst of opsplitsing",
+					"name": "Het hydroobject wordt gescheiden bij een samenkomst of opsplitsing",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -877,7 +819,7 @@
 				},
 				{
 					"id": 2,
-					"name": "Hydroobject kruist zichzelf alleen in combinatie met een duikersifonhevel of aquaduct",
+					"name": "Hydroobjecten kruisen elkaar alleen in combinatie met een duikersifonhevel of aquaduct",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -895,7 +837,7 @@
 				},
 				{
 					"id": 3,
-					"name": "Hydroobject vormt een consistent geheel, er zijn geen \"doodlopende\" routes",
+					"name": "Hydroobjecten sluiten aan elkaar aan en vormen een consistent geheel, er zijn geen \"doodlopende\" routes",
 					"type": "topologic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1002,7 +944,7 @@
 			"validation_rules": [
 				{
 					"id": 0,
-					"name": "Er mag geen overlap of gat in de periode zitten van meerdere sturingen met dezelfde prioriteit per gestuurd object",
+					"name": "Er mogen geen overlappende of ontbrekende periodes zitten van meerdere sturingen met dezelfde prioriteit per gestuurd object",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1011,13 +953,14 @@
 					"active": true,
 					"function": {
 						"consistent_period": {
-							"max_gap": 1
+							"max_gap": 1,
+							"groupers": ["pompid", "afsluitmiddelid"]
 						}
 					}
 				},
 				{
 					"id": 1,
-					"name": "de gestuurde pomp moet bestaan",
+					"name": "De gestuurde pomp moet bestaan",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1037,7 +980,7 @@
 				},
 				{
 					"id": 3,
-					"name": "de gestuurde hydrologische randvoorwaarde moet bestaan",
+					"name": "De gestuurde hydrologische randvoorwaarde moet bestaan",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1057,7 +1000,7 @@
 				},
 				{
 					"id": 4,
-					"name": "vaste waarde pomp zal binnen het fysieke bereik van de stuurvariabele passen",
+					"name": "De vaste waarde pomp moet binnen het fysieke bereik van de stuurvariabele passen",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1066,7 +1009,7 @@
 					"active": true,
 					"filter": {
 						"ISIN": {
-							"parameter": "stuurvariabele",
+							"parameter": "typestuurvariabele",
 							"array": [
 								"pompdebiet"
 							]
@@ -1081,7 +1024,7 @@
 				},
 				{
 					"id": 7,
-					"name": "gestuurde pomp heeft juiste stuurvariabele",
+					"name": "De gestuurde pomp moet de juiste stuurvariabele hebben",
 					"type": "logic",
 					"validation_rule_set": "basic",
 					"error_type": "critical",
@@ -1095,7 +1038,7 @@
 					},
 					"function": {
 						"ISIN": {
-							"parameter": "stuurvariabele",
+							"parameter": "typestuurvariabele",
 							"array": [
 								"pompdebiet"
 							]
