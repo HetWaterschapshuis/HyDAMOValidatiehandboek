@@ -6,7 +6,7 @@ Hieronder is een stap-voor-stap toelichting hoe je met de Webclient aan de slag 
 
 ## 1. Starten en inloggen
 
-Je bereikt de Webclient onder de volgende URL:[https://validatietool.hydamo.nl/](https://validatietool.hydamo.nl/){ target="_blank" }
+Je bereikt de Webclient onder de volgende URL: [https://validatietool.hydamo.nl/](https://validatietool.hydamo.nl/){ target="_blank" }
 
 De Webclient start met een inlogscherm. Om van de Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
 
@@ -270,6 +270,8 @@ Als een validatietaak succesvol is uitgevoerd kan je het validatieresultaat beki
 - valiation_result.json met de volledige inhoud van de metadata van de validatietaak.
 - results.gpkg met alle validatie resultaten voor alle objectlagen in Geopackage formaat.
 - submap 'geosjon' met daarin voor elke objectlaag een GeoJSON met de validatie resultaten van de betreffende objectlaag.
+
+Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 
 ## 9. Bekijken van resultaten op de kaart

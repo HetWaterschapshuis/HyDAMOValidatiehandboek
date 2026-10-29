@@ -6,7 +6,7 @@ De HyDAMO validatie-API bestaat uit verschillende **endpoints**. Elke endpoint h
 
 ![swagger_screenshot](../../images/swagger.png)
 
-Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"}: van de Validatie-API. Als je een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg de API-response te zien. Let op, voor het testen van bijna alle endpoints is het noodigzakelijk dat je je van te voren eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
+Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"} van de Validatie-API. Als je een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg de API-response te zien. Let op, voor het testen van bijna alle endpoints is het noodigzakelijk dat je je van te voren eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
 
 ```powershell
 $body = @{
@@ -281,6 +281,8 @@ Het resultaat is een json bestand met de volgende inhoud (voor meer informatie o
 *"validation_result": ["duikersifonhevel","regelmiddel","hydroobject"]*  
 *}*
 
+Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de metadata van een validatie kan interpreteren.
+
 ### 9. De resultaten in CSV-formaat downloaden
 
 Als er geen fouten voorkomen in de metadata van een afgeronde validatietaak kan je de resultaten downloaden. In deze stap wordt het validatieresultaat als CSV-bestand gedownload. Let op dit is alleen mogelijk als je bij opstarten van de taak het format CSV hebt meegegeven! Hiervoor wordt een GET-request op het endpoint *task/result* verstuurd. Naast de taak-id (in de URL) moet je de taaknaam, de objectlaag gevolgd door ‘.csv' en de Bearer-token (variable my_headers) meegeven. Bij een succesvolle HTTP-statuscode van 200 wordt het CSV-bestand met de validatie-resultaten opgeslagen in de opgegeven locatie. In onderstaand voorbeeld zijn de resultaten van object 'duikersifonhevel’ beschouwd. Let op, voor elke objectlaag moet je een apart CSV-bestand downloaden!
@@ -295,7 +297,7 @@ if response_get_results_csv.status_code == 200:
     open(os.path.join(result_folder,"duikersifonhevel.csv"), 'wb').write(response_get_results_csv.content)
 ```
 
-Voor meer informatie over het interpreteren van het resultaat zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md).
+Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 10. De resultaten in GeoPackage-formaat downloaden
 
@@ -311,7 +313,7 @@ if response_get_results_geopackage.status_code == 200:
     open(os.path.join(result_folder,"validationresults.gpkg"), 'wb').write(response_get_results_geopackage.content)
 ```
 
-Voor meer informatie over het interpreteren van het resultaat zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md).
+Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 11. Alle resultaten van de validatietaak downloaden
 
@@ -326,6 +328,8 @@ if response_get_all_results.status_code == 200:
         os.makedirs(result_folder)
     open(os.path.join(result_folder,"validationresults.zip"), 'wb').write(response_get_all_results.content)
 ```
+
+Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 12. Een validatietaak annuleren
 

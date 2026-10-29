@@ -2,12 +2,6 @@
 
 Aan het einde van een validatie heeft de gebruiker verschillende mogeljkheden om de resultaten te verkrijgen. Bij een validatie met behulp van de webclient is het mogelijk om de [resultaten op de kaart](TODO hier de link toevoegen) met enig interpretatie van de uitkomsen te bekijken. Bij gebruik van de Validatie-API of de losse validatiemodule kan de validatie-log en een set van verschillende uitvoerbestanden gedownload worden. Alle bestanden kunnen uiteraard ook in de Webviewer gedownload worden. Hieronder is een handreiking van hoe de resultaten te interpreteren zijn.
 
-
-- [Samenvatting (validation\_result.json)](#samenvatting-validation_resultjson)
-- [Per object-laag (geopackage, csv en geojson)](#per-object-laag-geopackage-csv-en-geojson)
-  - [Kolomnamen](#kolomnamen)
-  - [Enumeratie van syntax-fouten](#enumeratie-van-syntax-fouten)
-
 ## Samenvatting (validation_result.json)
 
 De samenvatting zit in het bestand validation_result.json en wordt ook **metadata** genoemd of uitgebreid **log-bestand**. Je kan hem goed bekijken met bijvoorbeeld een teksteditor. Een voorbeeld van een sammenvatting bij een succesvol uitgevoerde validatie:

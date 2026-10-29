@@ -21,7 +21,7 @@ De tool is opgebouwd uit drie componentlagen:
 <div class="component-text" markdown="1">
 **Validatie-Webclient**
 
- De [Validatie-Webclient](https://validatietool.hydamo.nl/){:target="_blank"}: is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
+ De [Validatie-Webclient](../../Aan%20de%20slag/02%20De%20Webclient) is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om de API graphisch te besturen. Daarnaast geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart of als tabel te bekijken. Om van de Webclient gebruik te kunnen maken is het nodig om een [gebruikersaccount](../../Aan%20de%20slag/01%20Gebruikersregistratie) te hebben.
 </div>
 </div>
 
@@ -34,7 +34,7 @@ De tool is opgebouwd uit drie componentlagen:
 <div class="component-text" markdown="1">
 **Validatie-API**
 
-Met de [Validatie-API](07%20HyDAMO%20validatie-API.md) kun je validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. De API maakt hiervoor gebruik van de rekenmodule. Om van de API gebruik te kunnen maken is het nodig om een [gebruikersaccount](02%20Gebruikersregistratie.md) te hebben.
+Met de [Validatie-API](../../Aan%20de%20slag/03%20De%20API) kun je validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. De API maakt hiervoor gebruik van de rekenmodule. Om van de API gebruik te kunnen maken is het nodig om een [gebruikersaccount](../../Aan%20de%20slag/01%20Gebruikersregistratie) te hebben.
 </div>
 </div>
 
@@ -47,7 +47,7 @@ Met de [Validatie-API](07%20HyDAMO%20validatie-API.md) kun je validatietaken aan
 <div class="component-text" markdown="1">
 **Validatiemodule**
 
- De [Validatiemodule](08%20HyDAMO%20Validatiemodule.md) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://project/hydamo-validation/){:target="_blank"}.
+ De [Validatiemodule](../../Aan%20de%20slag/04%20De%20Validatiemodule) is de binnenste schil en voert de daadwerkelijke validatie van de datasets door. Hij is ontwikkeld in Python en beschikaar als [openbare repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en standalone [Python package](https://pypi.org/project/hydamo-validation/){:target="_blank"}.
 </div>
 </div>
 
@@ -67,7 +67,7 @@ Verdere kernelementen in het validatieproces zijn:
 <div class="component-mini-text" markdown="1">
 **Handboek**
 
-[Handboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek){:target="_blank"}: Het handboek is een openbare GitHub-repository waarvan deze Wikipedia onderdeel uitmaakt. Dit is de centrale opslagplaats voor relevante documentatie, referentiebestanden en voorbeelddatasets. Onder andere bevinden zich hier de officiele [Validatieregelsets](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validatie_rules){:target="_blank"}, de [HyDAMO-datamodelschema's](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en de [HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}.
+[Handboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek){:target="_blank"} Het handboek is een openbare GitHub-repository waarvan deze Wikipedia onderdeel uitmaakt. Dit is de centrale opslagplaats voor relevante documentatie, referentiebestanden en voorbeelddatasets. Onder andere bevinden zich hier de officiele [Validatieregelsets](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules){:target="_blank"}, de [HyDAMO-datamodelschema's](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en de [HyDAMO-wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){:target="_blank"}.
 </div>
 </div>
 

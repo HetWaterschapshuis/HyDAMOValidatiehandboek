@@ -2,7 +2,7 @@
 
 De HyDAMO Validatiemodule is als rekenhart het werkpaard van de validatietool. Hij voert - op de achtergrond - de daadwerkelijke validatie van één of meerdere datasets uit aan de hand van het opgegeven HyDAMO-datamodel en set validatieregels. De HyDAMO Validatiemodule voert drie soorten [validaties](TODO hier nog een link plaatsen) uit: de syntax validatie, de logische validatie en de topologische validatie. 
 
-De Validatiemodule is integraal onderdeel van de validatie-cloudservice maar wordt door de Webclient of de Validatie-API aangestuurd. Daarnaast is de module ook als los rekenhart beschikbaar op een openbare [GitHub repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"}: en als gepubliceerde [Python-module](https://pypi.org/project/hydamo-validation){:target="_blank"}:. Hiermee kan je een validatie ook zonder interface op een lokaal systeem doorvoeren en de validatie-module zelf mee-ontwikklen. 
+De Validatiemodule is integraal onderdeel van de validatie-cloudservice maar wordt door de Webclient of de Validatie-API aangestuurd. Daarnaast is de module ook als los rekenhart beschikbaar op een openbare [GitHub repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en als gepubliceerde [Python-module](https://pypi.org/project/hydamo-validation){:target="_blank"}. Hiermee kan je een validatie ook zonder interface op een lokaal systeem doorvoeren en de validatie-module zelf [mee-ontwikklen en delen](../Ondersteuning/01%20Ondersteuning.md).
 
 Hieronder vind je informatie over het lokale gebruik van de validatie module en zijn werkwijze.
 
@@ -15,7 +15,7 @@ git clone https://github.com/HetWaterschapshuis/HyDAMOValidatieModule.git
 ```
 
 ### De omgeving opzetten
-1. Installeer zo nodig Python van de [officiële site](https://www.python.org/downloads/){:target="_blank"}: in de benodigde versie. Inspecteer hiervoor de parameter 'requires-python' in het [projectdefinitie-bestand 'project.toml'](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/blob/main/pyproject.toml){:target="_blank"}: op GitHub. Kies bijvoorbeeld de C-schrijf als installatielocatie (bijv. 'C:\Python312').
+1. Installeer zo nodig Python van de [officiële site](https://www.python.org/downloads/){:target="_blank"} in de benodigde versie. Inspecteer hiervoor de parameter 'requires-python' in het [projectdefinitie-bestand 'project.toml'](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/blob/main/pyproject.toml){:target="_blank"}: op GitHub. Kies bijvoorbeeld de C-schrijf als installatielocatie (bijv. 'C:\Python312').
 2. Maak een Python-environment aan voor je lokale installatie. In de opdrachtprompt (alternatief powershell) voor het voorbeeld van een lokale repository in ‘C:\repos\HyDAMOValidatieModule’ en Python-installatie in 'C:\Python312':
 ```console
 C:\Python312\python -m venv C:\repos\HyDAMOValidatieModule\.venv
@@ -36,7 +36,7 @@ pipx install uv
 ```console
 uv pip sync requirements-dev.lock
 ```
-7. Vervolgens zou je de validatiemodule lokaal moeten kunnen runnen. Kopieer hiervoor de werkende invoerdataset en validatieregels van de [GitHub repository](tests/data/tasks/test_wrij){:target="_blank"}: en plaats deze met behoud van de mappenstructuur op je lokale computer. Roep de module aan en geef het mapje met de invoer-datasets op (opdrachtpromt met geactiveerd venv):
+7. Vervolgens zou je de validatiemodule lokaal moeten kunnen runnen. Kopieer hiervoor de werkende invoerdataset en validatieregels van de [GitHub repository](tests/data/tasks/test_wrij){:target="_blank"} en plaats deze met behoud van de mappenstructuur op je lokale computer. Roep de module aan en geef het mapje met de invoer-datasets op (opdrachtpromt met geactiveerd venv):
 ```console
 python -m hydamo_validation [pad naar locatie met het mapje datasets en validationrules]
 ```

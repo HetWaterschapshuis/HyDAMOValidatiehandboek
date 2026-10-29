@@ -23,11 +23,11 @@ Welkom bij het handboek van de HyDAMO Validatietool. Hier is alle informatie ver
 </div>
 
 <div class="link-box" markdown="1">
-<a href="03 Validatieproces/">Aan de slag</a>
+<a href="../Aan de slag/01 Gebruikersregistratie">Aan de slag</a>
 </div>
 
 <div class="link-box" markdown="1">
-<a href="07 HyDAMO validatie-API/">API-documentatie</a>
+<a href="../Ondersteuning/01 Ondersteuning">Ondersteuning</a>
 </div>
 
 </div>
@@ -63,7 +63,7 @@ Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende 
 <div class="component-mini-text" markdown="1">
 **Overzicht**
 
-Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](HyDAMO%20validatie-API/01%20API%20definitie.md)
+Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
 </div>
 </div>
 
@@ -75,7 +75,7 @@ Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen v
 <div class="component-text" markdown="1">
 **Gebruikersregistratie**
 
-Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](02%20Gebruikersregistratie.md) te hebben.
+Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) te hebben.
 </div>
 </div>
 
@@ -87,19 +87,19 @@ Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruike
 <div class="component-text" markdown="1">
 **Aan de slag**
 
-Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](02%20Gebruikersregistratie.md) kan gebruiken, als [API](02%20Gebruikersregistratie.md) kan benaderen of als developer met het rekenhart als [Python-module](02%20Gebruikersregistratie.md) aan de slag kan.
+Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](../Aan de slag/02 De Webclient) kan gebruiken, als [API](../Aan de slag/03 De API) kan benaderen of als developer met het rekenhart als [Python-module](../Aan de slag/04 De Validatiemodule) aan de slag kan.
 </div>
 </div>
 
 <div class="component" markdown="1">
 <div class="component-icon" markdown="1">
-:material-calendar:
+:octicons-comment-discussion-16:
 </div>
 
 <div class="component-text" markdown="1">
-**Nieuws en evenementen**
+**Ondersteuning**
 
-Vind hier [nieuws en evenementen](02%20Gebruikersregistratie.md) die je op de hoogte van ontwikklelingen rond HyDAMO en data-validatie houden. 
+Vind hier informatie over [contact, community en mee-ontwikkelen](../Ondersteuning/01 Ondersteuning) rond de HyDAMO-validatietool. 
 </div>
 </div>
 </div>
@@ -123,17 +123,16 @@ Vind hier [nieuws en evenementen](02%20Gebruikersregistratie.md) die je op de ho
 ### Aan de slag
 - [Gebruikersregistratie](../Aan%20de%20slag/01%20Gebruikersregistratie)
 - [De Webclient](../Aan%20de%20slag/02%20De%20Webclient)
-- [De API](../Aan%20de%20slag/02%20De%20API)
-- [De Rekenmodule](02%20Gebruikersregistratie.md)
+- [De API](../Aan%20de%20slag/03%20De%20API)
+- [De Validatiemodule](../Aan de slag/04 De Validatiemodule)
 
 </div>
 <div class="component-mini-noframe-noicon" markdown="1">
 
-### Overzichten
-- [Validatieregels](04%20Versie%20overzicht.md)
-- [Known issues en tips](03%20Known%20issues%20en%20tips.md)
-- [Versie overzicht](04%20Versie%20overzicht.md)
-
+### Ondersteuning
+- [Contact](../Ondersteuning/01 Ondersteuning/#contact)
+- [Gebruikers en presentaties](../Ondersteuning/01 Ondersteuning/#gebruikers)
+- [Mee-ontwikklen](../Ondersteuning/01 Ondersteuning/#mee-ontwikkelen)
 
 
 </div>
