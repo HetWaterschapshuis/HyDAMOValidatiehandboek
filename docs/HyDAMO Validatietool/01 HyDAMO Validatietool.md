@@ -44,15 +44,17 @@ Welkom bij het handboek van de HyDAMO Validatietool. Hier is alle informatie ver
 
 </div>
 
-
 <div class="landing-content" markdown="1">
 
+<div class="notification_bar"><a href="../Ondersteuning/01 Ondersteuning/#gebruikers">Het volgende <b>HyDAMO-validator werkatelier</b> staat gepland op 26. november 2026</a></div>
+
 HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
+
+Ben je beniuewd naar de kwaliteit van de door de waterschappen aangeleverde HyDAMO-datasets? Bekijk dan de [GkW-kwaliteitsrapportages](https://datastromen.hetwaterschapshuis.nl){ target="_blank" }. De landelijke HyDAMO-dataset (gkw-hydamo-package.zip) is te downloaden op de site van [NHI](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }.
 
 Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor onder andere provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
 
 ![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
-
 
 <div class="component-list" markdown="1">
 <div class="component" markdown="1">

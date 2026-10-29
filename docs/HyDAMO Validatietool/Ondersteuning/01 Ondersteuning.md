@@ -21,35 +21,15 @@ hydamo-validatietool@hetwaterschapshuis.nl
 
 ## Gebruikers
 
-Donderdagmiddag 7 november 2024 van 14-16 uur wordt Het Waterschapshuis werkatelier gebruikt om gebruikerservaringen van het gebruik van de HyDAMO Validatietool uit te wisselen.
+Vierjaarlijks wordt het **HyDAMO-Validator werkateliers** door het Waterschapshuis georganiseerd. De werkateliers zijn een online-bijeenkomst van gebruikers om ervaring op te doen met HyDAMO, nieuwe ontwikkelingen onder de aandacht te brengen en best practices uit te wisselen.
 
-Programma
+Het volgende atelier staat gepland voor:
 
-14:00 Welkom
+**Donderdagmiddag 26 november 2026 van 14-16 uur**, de agenda volgt.
 
-14:05 Stand van zaken HyDAMO Validatietool
+Ben je geinteresseerd om bij het werkatelier aan te sluiten? Stuur dan een mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl) om aan de mailing-lijst toegevoegd te worden.
 
-14:20 Gebruikerservaringen
-
-15:00 Pauze (10 min)
-
-15:10 HyDAMO Validatietool en GKW
-
-15:40 Gebruikerswensen
-
-15:55 Vervolg
-
-16:00 Afsluiting
-
-**Wanneer** : donderdag 7 november 2024
-
-**Hoe laat** : 14:00 – 15:00 uur
-
-**Waar** : Online via Teams
-
-Heb je vragen? Wij helpen je graag!
-
-Stuur gerust een mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)
+Samen met een groep acieve gebruikers probeert het Waterschapshuis dieper op inhoudelijke vraagstukken in te gaan en zo vanuit de praktijkervaring aan de verbetering van HyDAMO, de validatieregels en de Validatietool te werken. Ben je geinteresseerd om **superuser** te worden? Stuur dan een mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
 
 
 ## Presentaties 
@@ -65,7 +45,7 @@ Onderstaande presentaties en documenten zijn van de HyDAMO-validator gebruikersb
 
 - [Aan de slag met de tooling (Rudolf Versteeg)](../../downloads/Rudolf_Versteeg_WebClient%20Validatietool.pptx)
 - [Automatiseren met API en FME (Cas Thoonsen)](../../downloads/Cas_Thoonsen_HyDAMO_Gebruikersmiddag_WSRL.pptx)
-- [Modellen genereren en validatieregels uitbreiden (Emiel Verstegen)](../../ownloads/Emiel_Verstegen_BZ1178-RHD-ZZ-XX-PP-Z-0001-Validatietool%20en%20modelgeneratie.pptx)
+- [Modellen genereren en validatieregels uitbreiden (Emiel Verstegen)](../../downloads/Emiel_Verstegen_BZ1178-RHD-ZZ-XX-PP-Z-0001-Validatietool%20en%20modelgeneratie.pptx)
 - [Bewustwording van data (Johnny van Keulen)](../../downloads/Johnny_van_Keulen_Presentatie%20HyDAMO%20Validatietool%20gebruikersmiddag.pptx)
 
 ## Mee-ontwikkelen

@@ -55,7 +55,7 @@ Het resultaat is:
 
 ### 2. Inloggen en authentiseren
 
-Om gebruik te kunnen maken van taak- en validatiegerelateerde API-functionaliteit moet je je als gebruiker geauthentiseren. De authenticatie vindt plaats door middel van een gebruikersnaam en wachtwoord. Hier vind je meer over de [gebruikersregistratie](../02%20Gebruikersregistratie.md).
+Om gebruik te kunnen maken van taak- en validatiegerelateerde API-functionaliteit moet je je als gebruiker geauthentiseren. De authenticatie vindt plaats door middel van een gebruikersnaam en wachtwoord. Hier vind je meer over de [gebruikersregistratie](01%20Gebruikersregistratie.md).
 
 De validatie-API maakt gebruik van OAuth Firebase Authentication van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet de specifieke Firebase-key - AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE - meegevenen worden die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt de key in een Python dictionary geplaatst samen met de gebruikersnaam (label ‘email’) en wachtwoord (label 'password'). Daarna wordt een POST-request naar de Google API gedefinieerd, waarbij de dictionary met de login cedentials meegestuurd wordt. Bij een succesvolle HTTP statuscode van 200 dan bevat de response een id_token. Deze wordt tot slot omgezet in een Bearer-token (een gecodeerde token) die daarna als header meegeven wordt aan alle volgende verzoeken aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden. In Python ziet de code als volgt uit:
 
@@ -256,7 +256,7 @@ if response_get_metadata.status_code == 200:
     open(os.path.join(result_folder,f"{task_id}_metadata.json"), 'wb').write(response_get_metadata.content)
 ```
 
-Het resultaat is een json bestand met de volgende inhoud (voor meer informatie over het intrpreteren van de resultaten zie ook [Resultaten](../HyDAMO%20Validatiemodule/03%20Resultaten.md)):
+Het resultaat is een json bestand met de volgende inhoud (voor meer informatie over het interpreteren van de resultaten zie ook [Resultaten](05%20Resultaten%20interpreteren.md):
 
 *{*  
 *"api_version": "1.2.4",*  
@@ -281,7 +281,7 @@ Het resultaat is een json bestand met de volgende inhoud (voor meer informatie o
 *"validation_result": ["duikersifonhevel","regelmiddel","hydroobject"]*  
 *}*
 
-Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de metadata van een validatie kan interpreteren.
+Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de metadata van een validatie kan interpreteren.
 
 ### 9. De resultaten in CSV-formaat downloaden
 
@@ -297,7 +297,7 @@ if response_get_results_csv.status_code == 200:
     open(os.path.join(result_folder,"duikersifonhevel.csv"), 'wb').write(response_get_results_csv.content)
 ```
 
-Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
+Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 10. De resultaten in GeoPackage-formaat downloaden
 
@@ -313,7 +313,7 @@ if response_get_results_geopackage.status_code == 200:
     open(os.path.join(result_folder,"validationresults.gpkg"), 'wb').write(response_get_results_geopackage.content)
 ```
 
-Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
+Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 11. Alle resultaten van de validatietaak downloaden
 
@@ -329,7 +329,7 @@ if response_get_all_results.status_code == 200:
     open(os.path.join(result_folder,"validationresults.zip"), 'wb').write(response_get_all_results.content)
 ```
 
-Lees in [dit hoofdstuk](../05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
+Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
 
 ### 12. Een validatietaak annuleren
 

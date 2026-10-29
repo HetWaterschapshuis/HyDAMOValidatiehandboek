@@ -28,11 +28,11 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
     Download hieronder de gekozen versie de validatieregels
 
-    - Uitgebreide overzicht van de (inhoudlijke) validatieregels [v1.5 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.5.xlsx)
+    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.5 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
-    - De validatieregels [v1.5 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.5.xlsx)
+    - De validatieregels [v1.5 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_1.5.json?raw=true){:target="_blank"}
 
-    - De syntaxregels in vorm van het [HyDAMO-datamodel 1.5 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_1.5.json)
+    - De syntaxregels in vorm van het [HyDAMO-datamodel 2.5 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_2.5.json?raw=true){:target="_blank"}
 
     | Object           | Regeltype              | Regelnaam                                                     | Toelichting                                                                                                                               |
     |:-----------------|:-----------------------|:--------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
@@ -107,11 +107,11 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
     Download hieronder de gekozen versie de validatieregels
 
-    - Uitgebreide overzicht van de (inhoudlijke) validatieregels [v1.4 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.4.xlsx)
+    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.4 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
-    - De validatieregels [v1.4 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.4.xlsx)
+    - De validatieregels [v1.4 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_1.4.json?raw=true){:target="_blank"}
 
-    - De syntaxregels in vorm van het [HyDAMO-datamodel 1.4 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_1.4.json)
+    - De syntaxregels in vorm van het [HyDAMO-datamodel 2.4 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_2.4.json?raw=true){:target="_blank"}
 
     | Object           | Regeltype              | Regelnaam                                                         | Toelichting                                                                                                                               |
     |:-----------------|:-----------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
@@ -211,11 +211,11 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
     Download hieronder de gekozen versie de validatieregels
 
-    - Uitgebreide overzicht van de (inhoudlijke) validatieregels [v1.3 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.3.xlsx)
+    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.3 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
-    - De validatieregels [v1.3 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.3.xlsx)
+    - De validatieregels [v1.3 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_1.3.json?raw=true){:target="_blank"}
 
-    - De syntaxregels in vorm van het [HyDAMO-datamodel 1.3 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_1.3.json)
+    - De syntaxregels in vorm van het [HyDAMO-datamodel 2.3 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_2.3.json?raw=true){:target="_blank"}
 
     | Object           | Regeltype              | Regelnaam                                                         | Toelichting                                                                                                                               |
     |:-----------------|:-----------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
@@ -315,11 +315,11 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
     Download hieronder de gekozen versie de validatieregels
 
-    - Uitgebreide overzicht van de (inhoudlijke) validatieregels [v1.2 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.2.xlsx)
+    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.2 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
-    - De validatieregels [v1.2 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.2.xlsx)
+    - De validatieregels [v1.2 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_1.2.json?raw=true){:target="_blank"}
 
-    - De syntaxregels in vorm van het [HyDAMO-datamodel 1.2 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_1.2.json)
+    - De syntaxregels in vorm van het [HyDAMO-datamodel 2.2 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_2.2.json?raw=true){:target="_blank"}
 
     | Object           | Regeltype              | Regelnaam                                                         | Toelichting                                                                                                                               |
     |:-----------------|:-----------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|
@@ -419,11 +419,11 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
     Download hieronder de gekozen versie de validatieregels
 
-    - Uitgebreide overzicht van de (inhoudlijke) validatieregels [v1.1 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.1.xlsx)
+    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.1 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
-    - De validatieregels [v1.1 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/overzicht_ValidationRules_1.1.xlsx)
+    - De validatieregels [v1.1 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_1.1.json?raw=true){:target="_blank"}
 
-    - De syntaxregels in vorm van het [HyDAMO-datamodel 1.1 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_1.1.json)
+    - De syntaxregels in vorm van het [HyDAMO-datamodel 2.1 in JSON-formaat](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/HyDAMO_2.1.json?raw=true){:target="_blank"}
 
     | Object           | Regeltype              | Regelnaam                                                         | Toelichting                                                                                                                               |
     |:-----------------|:-----------------------|:------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------|

@@ -1,3 +1,6 @@
+# Bij een nieuwe versie van de validatieregels of andere noodzaak om de pagina '02 Validatieregels.md'
+# te vervangen dit script uitvoeren in commandline met geactiverde .venv
+
 import json
 from pathlib import Path
 
@@ -40,7 +43,7 @@ def main():
         / "docs"
         / "HyDAMO Validatietool"
         / "Introductie tool"
-        / "04 Validatieregels.md"
+        / "02 Validatieregels.md"
     )
 
     print(f"{len(json_files)} JSON-bestanden gevonden.")
@@ -52,18 +55,9 @@ def main():
 
         df = json_to_dataframe(json_file)
 
-        # csv_file = output_dir / f"overzicht_{json_file.stem}.csv"
-        # df.to_csv(
-        #     csv_file,
-        #     index=False,
-        #     sep=";",
-        #     encoding="utf-8-sig",
-        # )
-
         excel_file = output_dir / f"overzicht_{json_file.stem}.xlsx"
         write_excel(df, excel_file, sheet_name=json_file.stem)
 
-        # print(f"  -> {csv_file.name}")
         print(f"  -> {excel_file.name}")
 
         # Voor de documentatie md lange regelnamen opsplitsen met een linebreak
@@ -269,6 +263,11 @@ def write_excel(df, output_file, sheet_name):
 
 def dataframe_to_tab(df, version):
 
+    if '1.' in version:
+        version_modhydamo = version.replace('1.', '2.')
+    else:
+        version_modhydamo = version
+
     md_df = df[
         [
             "Object",
@@ -289,14 +288,15 @@ def dataframe_to_tab(df, version):
         f'=== "Versie {version}"\n\n'
         f'    Download hieronder de gekozen versie de validatieregels\n\n'
         f'    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v{version} als Excel-bestand]'
-        f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/'
-        f'overzicht_ValidationRules_{version}.xlsx)\n\n'
+        f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules)'
+        '''{:target="_blank"}\n\n'''
         f'    - De validatieregels [v{version} in JSON-formaat]'
-        f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules/'
-        f'overzicht_ValidationRules_{version}.xlsx)\n\n'
-        f'    - De syntaxregels in vorm van het [HyDAMO-datamodel {version} in JSON-formaat]'
+        f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/ValidationRules_{version}.json?raw=true)'
+        '''{:target="_blank"}\n\n'''
+        f'    - De syntaxregels in vorm van het [HyDAMO-datamodel {version_modhydamo} in JSON-formaat]'
         f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo/'
-        f'HyDAMO_{version}.json)\n\n'
+        f'HyDAMO_{version_modhydamo}.json?raw=true)'
+        '''{:target="_blank"}\n\n'''
         f"{indented_table}\n"
     )
 
