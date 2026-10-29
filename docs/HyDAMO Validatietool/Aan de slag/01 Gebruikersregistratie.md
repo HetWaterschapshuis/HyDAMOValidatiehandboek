@@ -11,7 +11,7 @@ Het gebruik van de Validatie Webclient en API kan alleen met een geregistreerd g
 
 ## Gebruikersaccount aanvragen
 
-Je kan een gebruikersaccount aanvragen door een email te versturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp van de email ‘Aanvraag gebruikersaccount HyDAMO Validatietool’ en voeg de volgende gegevens toe in de body van de email:
+Je kan een gebruikersaccount aanvragen. Je kan een gebruikersaccount aanvragen door een email te versturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp van de email ‘Aanvraag gebruikersaccount HyDAMO Validatietool’ en voeg de volgende gegevens toe in de body van de email:
 
 - Voornaam: Wolf
 - Achternaam: Waterman
