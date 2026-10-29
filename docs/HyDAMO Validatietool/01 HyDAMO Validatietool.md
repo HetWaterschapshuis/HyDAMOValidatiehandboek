@@ -1,41 +1,141 @@
+---
+hide:
+- navigation
+- toc
+---
+
+<div class="landingpage" markdown="1">
+
+<div class="landing-banner" markdown="1">
+
+<div class="landing-banner-inner" markdown="1">
+
+<div class="landing-banner-text" markdown="1">
+
 # HyDAMO Validatietool
 
-![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b.png)
+Welkom bij het handboek van de HyDAMO Validatietool. Hier is alle informatie verzameld over het gebruik van de Validatietool voor een cyclisch modelleerproces.
 
-### Er is een nieuwe versie va de Webclient en van de validatiemodule (met ondersteuning voor (Hy)DAMO 2.5) gelanceerd!
+<div class="ribbon-links" markdown="1">
 
-### Bekijk de [Known issues en tips](03%20Known%20issues%20en%20tips.md).
+<div class="link-box" markdown="1">
+<a href="../Introductie tool/01 In een oogopslag">Introductie tool</a>
+</div>
 
-# HyDAMO Validatietool
+<div class="link-box" markdown="1">
+<a href="../Aan de slag/01 Gebruikersregistratie">Aan de slag</a>
+</div>
 
-Op deze Wiki treft u informatie aan over het gebruik van de HyDAMO Validatietool.
+<div class="link-box" markdown="1">
+<a href="../Ondersteuning/01 Ondersteuning">Ondersteuning</a>
+</div>
 
-Heeft u vragen of opmerkingen over de Wiki, stuur dan een email naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
+</div>
 
-Als gevolg van de digitalisering van processen neemt data een steeds belang­rijkere rol in bij het afwegen en nemen van beslissingen. De toegenomen databehoefte, de groei van de omvang van datasets en de continu veran­derende omgeving, vragen om een cyclisch modelleerproces, waarbij nieuw verkregen inzichten worden gebruikt om brondata te verbeteren. Met deze brondata kunnen modellen gegenereerd worden en/of bestaande modellen worden geactualiseerd. De HyDAMO Validatietool is een belangrijk schakel in dit cyclische modelleerproces en moet leiden tot een betere kwaliteit van de data. Door de HyDAMO Validatietool zo te ontwerpen dat deze op meerdere plekken in het modelleerproces kan worden toegepast (bij waterschappen, bij het GKW (GegevensKnooppunt Waterschappen) en bij het NHI), neemt de betrouwbaarheid en kwaliteit van invoerbestanden voor gebruik in modelgeneratoren toe.
+</div>
 
-De HyDAMO Validatietool is in de basis een (online) webservice (validation as a service) waarmee databestanden kunnen worden gevalideerd. De HyDAMO Validatietool bestaat uit de volgende componenten:
+<div class="landing-banner-image" markdown="1">
 
-- Een HyDAMO Validatiemodule (ontwikkeld in Python) die de daadwerkelijke validatie van één of meerdere datasets uitvoert aan de hand van set validatieregels.
-- Een HyDAMO validatie-API waarmee:
+![](../images/6a50725b-bb14-42d7-8dda-5217a1d3131b_xsmall.png)
 
-  - validatietaken kunnen worden gedefinieerd;
-  - databestanden en validatieregels kunnen worden toegevoegd aan een validatietaak;
-  - een validatietaak kan worden gestart (die dan uitgevoerd wordt door de Python validatiemodule) en;
-  - een validatie resultaat kan worden gedownload.
-- Een HyDAMO validatie Webclient waarmee een gebruiker beschikt over een eenvoudige gra­fische interface waarmee de (verschillende functies van de) validatie-API bediend kunnen worden en (eenvoudige) analyses van validatieresultaten kunnen worden uitgevoerd.
+</div>
 
-De HyDAMO Validatietool is ontwikkeld door HKV lijn in water BV, D2Hydro en HydroConsult in opdracht van Het Waterschapshuis.
+</div>
 
-Voordat u aan de slag gaat met de HyDAMO Validatietool moet uw dataset voldoen aan het DAMO datamodel. Hiertoe heeft Het WaterschapsHuis een extra hulpmiddel ontwikkeld, de HyDAMO Wasmachine. Met de HyDAMO Wasmachine kunt u het verplichte attribuut NEN3610id toevoegen aan uw dataset, worden domeinen omgezet naar omschrijvingen en wordt het resultaat in het correcte Geopackage formaat weggeschreven. De HyDAMO Wasmachine staat hier: [HyDAMO Wasmachine op Github](https://github.com/HetWaterschapshuis/HyDAMOValidatieregels/tree/main/hydamo_wasmachine).
+</div>
 
-# Inhoud van deze wiki
-- [Gebruikersregistratie](02%20Gebruikersregistratie.md)
-- [Known issues en tips](03%20Known%20issues%20en%20tips.md)
-- [Versie overzicht](04%20Versie%20overzicht.md)
-- [Basis validatieregels](05%20Basis%20validatieregels.md)
-- [HyDAMO validatie Webclient](06%20HyDAMO%20validatie%20Webclient.md)
-- [HyDAMO validatie-API](07%20HyDAMO%20validatie-API.md)
-- [HyDAMO Validatiemodule](08%20HyDAMO%20Validatiemodule.md)
-- [Mee-ontwikkelen](09%20Mee-ontwikkelen.md)
-- [Gebruikersmiddag HyDAMO Validatietool](10%20Gebruikersmiddag%20HyDAMO%20Validatietool.md)
+
+<div class="landing-content" markdown="1">
+
+HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
+
+Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor onder andere provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
+
+![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
+
+
+<div class="component-list" markdown="1">
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-eye:
+</div>
+
+<div class="component-mini-text" markdown="1">
+**Overzicht**
+
+Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-account:
+</div>
+
+<div class="component-text" markdown="1">
+**Gebruikersregistratie**
+
+Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) te hebben.
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:material-power-standby:
+</div>
+
+<div class="component-text" markdown="1">
+**Aan de slag**
+
+Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](../Aan de slag/02 De Webclient) kan gebruiken, als [API](../Aan de slag/03 De API) kan benaderen of als developer met het rekenhart als [Python-module](../Aan de slag/04 De Validatiemodule) aan de slag kan.
+</div>
+</div>
+
+<div class="component" markdown="1">
+<div class="component-icon" markdown="1">
+:octicons-comment-discussion-16:
+</div>
+
+<div class="component-text" markdown="1">
+**Ondersteuning**
+
+Vind hier informatie over [contact, community en mee-ontwikkelen](../Ondersteuning/01 Ondersteuning) rond de HyDAMO-validatietool. 
+</div>
+</div>
+</div>
+
+
+
+
+##
+<div class="component-grid-3frames" markdown="1">
+<div class="component-mini-noframe-noicon" markdown="1">
+
+### Introductie tool
+- [De tool in een oogopslag](../Introductie%20tool/01%20In%20een%20oogopslag)
+- [Validatieregels](../Introductie%20tool/02%20Validatieregels)
+- [Known issues en tips](../Introductie%20tool/03%20Known%20Issues%20en%20tips)
+- [Versie overzicht](../Introductie%20tool/04%20Versie%20Overzicht)
+
+</div>
+<div class="component-mini-noframe-noicon" markdown="1">
+
+### Aan de slag
+- [Gebruikersregistratie](../Aan%20de%20slag/01%20Gebruikersregistratie)
+- [De Webclient](../Aan%20de%20slag/02%20De%20Webclient)
+- [De API](../Aan%20de%20slag/03%20De%20API)
+- [De Validatiemodule](../Aan de slag/04 De Validatiemodule)
+
+</div>
+<div class="component-mini-noframe-noicon" markdown="1">
+
+### Ondersteuning
+- [Contact](../Ondersteuning/01 Ondersteuning/#contact)
+- [Gebruikers en presentaties](../Ondersteuning/01 Ondersteuning/#gebruikers)
+- [Mee-ontwikklen](../Ondersteuning/01 Ondersteuning/#mee-ontwikkelen)
+
+
+</div>
+</div>
+</div>
+</div>

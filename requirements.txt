@@ -1,3 +1,6 @@
 mkdocs>=1.6.1,<2.0
 mkdocs-material>=9.5.0,<10.0
 pymdown-extensions>=10.0.0
+pandas>=2.3.3
+openpyxl>=3.1.5
+tabulate>=0.10.0

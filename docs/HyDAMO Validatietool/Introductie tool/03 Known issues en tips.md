@@ -1,0 +1,23 @@
+---
+hide:
+- toc
+---
+
+# Known issues en tips
+
+Loopt je tegen een onafgehandelde fout aan in de validatieTool; raadpleeg dan de lijst met bekende bugs in de validatiemodule staat op de [GitHub pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/issues){ target="_blank" }. Een onafgehandelde fout staat in de resultaten bij *Error* en begint met *Python Exception: …..*
+
+Onderstaande tabel bevat een overzicht van bekende problemen (known issues) in het gebruik van de HyDAMO Validatietool. Indien mogelijk is een workaround beschreven om het 'probleem' te omzeilen. Wanneer dat niet mogelijk is zal het probleem zo snel mogelijk in een nieuwe release opgelost worden.
+
+|  **Nummer**    |  **Omschrijving**   |  **Toelichting/Workaround**    |  **Opgelost**    |
+|:---------------|:--------------------|--------------------------------|:-----------------|
+| VAL-1 | Een dataset geopackage bestand wordt niet geaccepteerd door de Validatiemodule. | Een regelmatig gemaakte fout is dat bij het aanmaken van een geopackage databestand, de naam van de laag niet correct wordt aangemaakt. Deze naam moet voldoen aan de object definfitie van het gekozen [HyDAMO datamodel (bijvoorbeeld 2.4 of 2.5)](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){ target="_blank" }. <br/> Gebruik daarom altijd vóóraf de [HyDAMO wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){ target="_blank" } om je geopackages conform bijvoorbeeld HyDAMO 2.4 of 2.5 aan te leveren. <br/> Ter inspiratie een [test-set Waterschap Rijn en Ijssel](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/blob/main/tests/data/tasks/test_wrij/datasets/HyDAMO.gpkg). | |
+| VAL-2 | Een dataset geopackage veroorzaakt een Error: Python Exception. tijdens de validatie. *Succes* zal op *false* staan en *Status* waarschijnlijk op *syntax-validation (fields)*. | Een of meerdere dataset-lagen zijn niet conform HyDAMO gedefinieerd. Let daarbij specifiek op: <br/><ul><li>naam van de laag (zie VAL-1)</li><li>naam van de attributen</li><li>datatype van de attributen (integer, float, datetime, etc.)</li></ul><br/>Gebruik daarom altijd vooraf de [HyDAMO wasmachine](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/hydamo_wasmachine){ target="_blank" } om je geopackages conform het gekozen [HyDAMO datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){ target="_blank" } aan te leveren.  | |
+| VAL-3 | De gebruiker mist kolommen in het resultaat. Bijvoorbeeld general\_001\_*result\_variable,* waarbij *result\_variable* in de validationrules.json is gespecificeerd. | In de [Resultaten](HyDAMO%20Validatiemodule/03%20Resultaten.md) zal bij errors een melding worden gegeven dat deze kolom mist met toelichting in de volgende vorm: <br/> *"general\_rule niet uitgevoerd. Inspecteer de invoer voor deze regel: (####)"* <br/> In #### kun je de regelnummer, de invoer en de Python Exception waardoor de regel is gefaald terugvinden. <br/> De reden van het falen wordt weergegeven bij de Python Exception en duidt op een onjuiste configuratie op uw brondata. | In Validatiemodule 1.1.0 |
+| VAL-5 | Bij gebruik van de webclient komt het regelmatig voor dat het downloaden van het resultaat de eerste keer niet lukt. | Zorg ervoor dat je de regel met de taak geselecteerd hebt voordat je de download knop activeert. Wacht totdat de velden met de dataset en validatieregels geheel geladen zijn. | |
+| VAL-6 | Hele grote Geopackage bestanden geven problemen bij het downloaden. Vooralsnog is dit alleen geconstateerd bij datasets vanuit het GKW. | De fout treedt op bij het aanmaken van een csv bestand. Gebruik als tijdelijke work-around de API om het resultaat als Geopackage te downloaden. | |
+| VAL-7 | Extreem grote datasets (bijv. van heel NL) komen niet tot een einde. | Bij extreem grote datasets loopt het beschikbare geheugen in de cloud vol. Probeer validaties per validatieregel uit te voeren. | |
+| VAL-8| De HyDAMO wasmachine kan tegen een issue aan lopen bij gebruik van FME Desktop 2023. In de 2022 en 2024 versie zijn geen problemen bekend. Het probleem doet zich voor in de Aggregator-functie |  | Wasmachine|
+| VAL-9| Bestanden met resultaten van grote gebieden met veel objecten, kunnen mogelijk niet gedownload worden via de API. | Er wordt gewerkt aan een pacth die dit oplost. Tot dit tijd is het advies om het gebied op te delen in kleine gebieden. | In behandeling |
+
+Probleemmeldingen kunnen ingediend worden via: [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)
