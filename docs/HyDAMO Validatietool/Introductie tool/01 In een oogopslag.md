@@ -79,7 +79,7 @@ Verdere kernelementen in het validatieproces zijn:
 <div class="component-mini-text" markdown="1">
 **Validatieregels**
 
-Bij een validatie horen altijd [validatieregels](05%20Basis%20validatieregels.md) die aangeven op welke aspecten gecontroleerd moet worden. De regels worden in een apart JSON-bestand meegegeven en zijn beschikbaar op de openbare [GitHub-repository](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validatie_rules){:target="_blank"} van het handboek.
+Bij een validatie horen altijd [validatieregels](../../Introductie%20tool/02%20Validatieregels) die aangeven op welke aspecten gecontroleerd moet worden. De regels worden in een apart JSON-bestand meegegeven en zijn beschikbaar op de openbare [GitHub-repository](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules){:target="_blank"} van het handboek.
 </div>
 </div>
 
