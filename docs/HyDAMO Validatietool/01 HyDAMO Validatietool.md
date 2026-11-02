@@ -52,7 +52,7 @@ HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="
 
 Ben je beniuewd naar de kwaliteit van de door de waterschappen aangeleverde HyDAMO-datasets? Bekijk dan de [GkW-kwaliteitsrapportages](https://datastromen.hetwaterschapshuis.nl){ target="_blank" }. De landelijke HyDAMO-dataset (gkw-hydamo-package.zip) is te downloaden op de site van [NHI](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }.
 
-Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor onder andere provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
+Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
 
 ![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
 
@@ -65,7 +65,7 @@ Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende 
 <div class="component-mini-text" markdown="1">
 **Overzicht**
 
-Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
+Ontdek de drie componentlagen van de validatietool en alle essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
 </div>
 </div>
 
@@ -77,7 +77,7 @@ Ontdek de drie componentlagen van de validatietool en de essentiele onderdelen v
 <div class="component-text" markdown="1">
 **Gebruikersregistratie**
 
-Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) te hebben.
+Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) aan te maken.
 </div>
 </div>
 
@@ -89,7 +89,7 @@ Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruike
 <div class="component-text" markdown="1">
 **Aan de slag**
 
-Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](../Aan de slag/02 De Webclient) kan gebruiken, als [API](../Aan de slag/03 De API) kan benaderen of als developer met het rekenhart als [Python-module](../Aan de slag/04 De Validatiemodule) aan de slag kan.
+Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](../Aan de slag/02 De Webclient) kan gebruiken, als [API](../Aan de slag/03 De API) kan benaderen of als developer met de [Python-module](../Aan de slag/04 De Validatiemodule) als rekenhart aan de slag kan.
 </div>
 </div>
 
@@ -101,7 +101,7 @@ Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je
 <div class="component-text" markdown="1">
 **Ondersteuning**
 
-Vind hier informatie over [contact, community en mee-ontwikkelen](../Ondersteuning/01 Ondersteuning) rond de HyDAMO-validatietool. 
+Vind hier informatie over [contact, evenementen en mee-ontwikkelen](../Ondersteuning/01 Ondersteuning) rond de HyDAMO-validatietool. 
 </div>
 </div>
 </div>
@@ -126,7 +126,8 @@ Vind hier informatie over [contact, community en mee-ontwikkelen](../Ondersteuni
 - [Gebruikersregistratie](../Aan%20de%20slag/01%20Gebruikersregistratie)
 - [De Webclient](../Aan%20de%20slag/02%20De%20Webclient)
 - [De API](../Aan%20de%20slag/03%20De%20API)
-- [De Validatiemodule](../Aan de slag/04 De Validatiemodule)
+- [De Validatiemodule](../Aan%20de%20slag/04%20De%20Validatiemodule)
+- [Resultaten interpreteren](../Aan%20de%20slag/05%20Resultaten%20interpreteren)
 
 </div>
 <div class="component-mini-noframe-noicon" markdown="1">

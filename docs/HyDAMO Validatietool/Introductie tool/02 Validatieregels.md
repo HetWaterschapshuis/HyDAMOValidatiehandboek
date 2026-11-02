@@ -6,27 +6,27 @@ hide:
 
 # Validatieregels
 
-Bij iedere validatie horen validatieregels die aangeven op welke aspecten gecontroleerd moet worden. Een validatie verloopt in twee etappes: eerst de syntaxvalidatie en daarna de inhoudelijke validatie.
+Bij iedere validatie horen validatieregels die aangeven op welke aspecten de tool moet controleren. Een validatie verloopt altijd in twee etappes: eerst de **syntaxvalidatie** en daarna de **inhoudelijke validatie**.
 
 ## Syntaxvalidatie
-De syntaxvalidatie is intrinsiek. Ze wordt wordt altijd en compleet doorgevoerd met een vaste set van controles. De controles zijn een formele vergelijking van de HyDAMO-datamodel specificaties met de aangeboden invoerdataset. De tool controleerd of de objectlagen voldoen aan het type geometrie (point, linestring, polygon), type waarde (tekst, ineger, float etc.), veldnamen en waardendomeinen. De gebruiker neemt geen invloed op het uitvoeren van de sysntaxvalidaties behalve door het opgeven van de HyDAMO-datamodelversie in de validatieregel-JSON. Als een onderdeel van de syntaxvalidatie faald kan het ertoe leiden dat de logische validatie niet plaatsvind. De resultaten van de syntaxvalidatie worden in het resultaatbesand met de kolommen met het voorzetsel "syntax_" meegegeven.
+De syntaxvalidatie is intrinsiek. Ze wordt wordt altijd en compleet doorgevoerd met een vaste set van controles. De controles zijn een formele vergelijking van de HyDAMO-datamodel specificaties met de aangeboden invoerdataset. De tool controleerd of de objectlagen voldoen aan het type geometrie (point, linestring, polygon), type waarde (tekst, ineger, float etc.), veldnamen en waardendomeinen. De gebruiker neemt geen invloed op het uitvoeren van de sysntaxvalidaties behalve door het opgeven van de HyDAMO-datamodelversie in de validatieregel-JSON. Als een onderdeel van de syntaxvalidatie faald kan het ertoe leiden dat de logische validatie niet plaatsvind. De resultaten van de syntaxvalidatie worden in de kolommen van het resultaatbesand met het voorzetsel "syntax_" aangeduid.
 
 ## Inhoudelijke validatie
-De inhoudelijke validatie heeft de invoer van de gebruiker in de form van de validatieregels nodig. De inhoudelijke validatie kent algemene regles, de general rules, en (topo-)logische regels, de validation rules.
+De inhoudelijke validatie volgt de door de gebruiker ingevoerde validatieregels. De inhoudelijke validatie kent algemene regels - de general rules - en (topo-)logische regels - de validation rules.
 
-**Gerneral rules** zijn niet-kritiek en stellen eerder algemene berekeningen of hulpfuncties voor dan controles. Voorbelden zijn het ophalen van de maaiveldhoogte of het afleiden van statistieke waarden. Algemene regels hebben een unieke naam die zich samenzet uit het woord 'general', de regel-id en de resultaatvariable, bijvoorbeeld: general_000_maaiveldhoogte. In het resultaatbestand worden de resultaten van de general rules meegegeven met de regelnaam als kolom.
+**Gerneral rules** zijn niet-kritiek en stellen eerder algemene berekeningen of hulpfuncties voor dan controles. Voorbelden zijn het ophalen van de maaiveldhoogte of het afleiden van statistieke waarden. Algemene regels hebben een unieke naam die zich samenzet uit het woord 'general' + de regel-id + de resultaatvariable. Een voorbeeld is: general_000_maaiveldhoogte. In het resultaatbestand worden de uitkomsten van de general rules meegegeven met de regelnaam als kolom.
 
-De (topo-)logische regels zijn onderverdeeld in **logische regels** en **topologische regels**. Logische regels vergelijken numerieke waardes met elkaar of controleren of de id's van objecten in gerelateerde tabellen voorkomen. Topologische regels hebben altijd een geographisch aspect zoals intersectie- of afstandscontroles. (Topo-)Logische regels hebben een unieke naam die zich samenzet uit het woord 'validate', de regel-id en de resultaatvariable, bijvoorbeeld: validate_008_geen_overlap. In het resultaatbestand worden de resultaten van de (topo-)logische regels meegegeven met de regelnaam als kolom. Logische en topologische regels moeten als kritiek of niet-kritiek geclassificeerd worden. Kritieke controles wegen 5 keer zwaarder in de resultaatbeoordeling dan niet-kritieke controles.
+De (topo-)logische regels zijn onderverdeeld in **logische regels** en **topologische regels**. Logische regels vergelijken numerieke waardes met elkaar of controleren of de id's van objecten in gerelateerde tabellen voorkomen. Topologische regels hebben altijd een geographisch aspect zoals intersectie- of afstandscontroles. (Topo-)Logische regels hebben een unieke naam die zich samenzet uit het woord 'validate' + de regel-id + de resultaatvariable. Een voorbeeld is: validate_008_geen_overlap. In het resultaatbestand worden de uitkomsten van de (topo-)logische regels meegegeven met de regelnaam als kolom. Logische en topologische regels zijn of als kritiek of niet-kritiek geclassificeerd. Kritieke controles wegen 5 keer zwaarder in de resultaatbeoordeling dan niet-kritieke controles.
 
 ## Regelversies
-Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validatieregels met toelichting. Kies een ander tabje om bij een eerdre regelversie te komen. 
+Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validatieregels met toelichting. Kies een ander tabbladje om bij een eerdere regelversie te komen. 
 
 <!-- VALIDATION_RULE_TABLES_START -->
 <!-- AUTOMATISCH GEGENEREERD - NIET HANDMATIG WIJZIGEN -->
 
 === "Versie 1.5"
 
-    Download hieronder de gekozen versie de validatieregels
+    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.
 
     - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.5 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
@@ -101,7 +101,7 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
 === "Versie 1.4"
 
-    Download hieronder de gekozen versie de validatieregels
+    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.
 
     - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.4 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
@@ -201,7 +201,7 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
 === "Versie 1.3"
 
-    Download hieronder de gekozen versie de validatieregels
+    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.
 
     - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.3 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
@@ -305,7 +305,7 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
 === "Versie 1.2"
 
-    Download hieronder de gekozen versie de validatieregels
+    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.
 
     - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.2 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 
@@ -409,7 +409,7 @@ Onderstaande tabel geeft een overzicht van de meest recente inhoudelijke validat
 
 === "Versie 1.1"
 
-    Download hieronder de gekozen versie de validatieregels
+    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.
 
     - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v1.1 als Excel-bestand](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules){:target="_blank"}
 

@@ -5,7 +5,7 @@ hide:
 
 # Versie overzicht
 
-Op deze pagina vind je de actuele versies van de verschillende componenten van de HyDAMO Validatietool.
+Op deze pagina vind je de actuele versies van de verschillende HyDAMO Validatietool-componenten.
 
 |  **Component**             |  **Versie**                                                                         |  **Releasedatum**    |
 |:---------------------------|:------------------------------------------------------------------------------------|:---------------------|
@@ -13,10 +13,10 @@ Op deze pagina vind je de actuele versies van de verschillende componenten van d
 | HyDAMO validatie-API       | 1.2.4.2 (verwerken grote invoerbestanden)                                           | 31-08-2026           |
 | HyDAMO validatie Webclient | 2.0.22 (facelift Webclient, verwerken grote invoerbestanden)                        | 31-08-2026           |
 
-Let op: om gebruik te maken van **versie 1.3.0 of hoger** moet het json bestand met validatieregels aangepast worden met:
+Let op: om gebruik te maken van de rekenmodule  **versie 1.3.0 of hoger** moet het JSON-bestand met validatieregels aangepast worden met:
 
-- verwijs bovenin naar de laatste versie van het schema → "schema": "1.5".
-- bij het attribuut “hydamo\_version“ kan nu gekozen worden tussen de waarde “2.2”, “2.3“, “2.4“ of “2.5“ (afhankelijk van de (Hy)DAMO versie van data die wordt gebruikt!).
+- verwijs bovenin naar de laatste versie van het schema → "schema": "1.5",
+- bij het attribuut “hydamo\_version“ kan nu gekozen worden tussen de waarde “2.2”, “2.3“, “2.4“ of “2.5“ (afhankelijk van het (Hy)DAMO-datamodel die je gebruikt).
 
 ## Release notes
 

@@ -286,7 +286,7 @@ def dataframe_to_tab(df, version):
 
     return (
         f'=== "Versie {version}"\n\n'
-        f'    Download hieronder de gekozen versie de validatieregels\n\n'
+        f'    Download hieronder de gekozen versie <u>validatieregels</u> en bijbehorend <u>datamodel</u>.\n\n'
         f'    - Uitgebreid overzicht van de (inhoudlijke) validatieregels [v{version} als Excel-bestand]'
         f'(https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules/overzichten_ValidationRules)'
         '''{:target="_blank"}\n\n'''

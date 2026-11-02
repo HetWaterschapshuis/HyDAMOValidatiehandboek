@@ -5,7 +5,7 @@ hide:
 
 # Known issues en tips
 
-Loopt je tegen een onafgehandelde fout aan in de validatieTool; raadpleeg dan de lijst met bekende bugs in de validatiemodule staat op de [GitHub pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/issues){ target="_blank" }. Een onafgehandelde fout staat in de resultaten bij *Error* en begint met *Python Exception: …..*
+Als je tegen een fout in de validatietool aanloopt raadpleeg dan eerst onderstaande lijst met bekende bugs. Een onafgehandelde fout staat in de resultaten bij *Error* en begint met *Python Exception: …..*
 
 Onderstaande tabel bevat een overzicht van bekende problemen (known issues) in het gebruik van de HyDAMO Validatietool. Indien mogelijk is een workaround beschreven om het 'probleem' te omzeilen. Wanneer dat niet mogelijk is zal het probleem zo snel mogelijk in een nieuwe release opgelost worden.
 
@@ -20,4 +20,4 @@ Onderstaande tabel bevat een overzicht van bekende problemen (known issues) in h
 | VAL-8| De HyDAMO wasmachine kan tegen een issue aan lopen bij gebruik van FME Desktop 2023. In de 2022 en 2024 versie zijn geen problemen bekend. Het probleem doet zich voor in de Aggregator-functie |  | Wasmachine|
 | VAL-9| Bestanden met resultaten van grote gebieden met veel objecten, kunnen mogelijk niet gedownload worden via de API. | Er wordt gewerkt aan een pacth die dit oplost. Tot dit tijd is het advies om het gebied op te delen in kleine gebieden. | In behandeling |
 
-Probleemmeldingen kunnen ingediend worden via: [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)
+Probleemmeldingen kunnen ingediend worden via: [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl) of toegevoegd worden als issue in de openbare repository van de [validatiemodule](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/issues){ target="_blank" }.
