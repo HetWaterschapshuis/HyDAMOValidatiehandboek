@@ -1,12 +1,12 @@
 # HyDAMO validatie-API
 
-Als de entrale schakel communiceert de API (Application Programming Interface) tussen de webclient als grafische schil van de tool en de Python-rekenmodule. De API regelt het aanmaken van validatietaken, toevoegen van datasets en validatieseregels, opstarten van taken en downloaden van resultaten. Het is mogelijk om de HyDAMO validatie-API direct aan te roepen en validatieopdrachten zonder de webclient door te voeren. Dit kan vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME.
+Als centrale schakel communiceert de API (Application Programming Interface) tussen de webclient als grafische schil van de tool en de Python-rekenmodule. De API regelt het aanmaken van validatietaken, toevoegen van datasets en validatieseregels, opstarten van taken en downloaden van resultaten. Het is mogelijk om de HyDAMO validatie-API direct aan te roepen en validatieopdrachten zonder de webclient door te voeren. Dit kan vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME.
 
-De HyDAMO validatie-API bestaat uit verschillende **endpoints**. Elke endpoint heeft een URL om een bepalde actie (request) uit te voeren. Deze requests bestaan uit het opvragen van informatie en data (GET), het toevoegen van data (POST) of het vewijderen van data (DELETE).
+De HyDAMO validatie-API bestaat uit verschillende **endpoints**. Elke endpoint heeft een URL om een bepalde actie (request) door te voeren. Deze requests bestaan uit het opvragen van informatie en data (GET), het toevoegen van data (POST) of het vewijderen van data (DELETE).
 
 ![swagger_screenshot](../../images/swagger.png)
 
-Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"} van de Validatie-API. Als je een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg de API-response te zien. Let op, voor het testen van bijna alle endpoints is het noodigzakelijk dat je je van te voren eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
+Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"} van de Validatie-API. Als je daarin een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg je te zien welk response de API teruggeeft. Let op, voor het testen van de meeste endpoints is het nodig dat je je eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
 
 ```powershell
 $body = @{
@@ -28,13 +28,13 @@ $response.idToken
 
 De API gebruikt je vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME. Hieronder vind je stukjes script-code die je door de meest relevante alle stappen in het gebruik van de API leidt.
 
-Onderstaande voorbeelden zijn ook opgenomen in een [Jupyter-notebook](../../downloads/Voorbeeld_Wiki.ipynb). Let op, je moet wel de paden en login gegevens zelf aanpassen.
+Onderstaande voorbeelden zijn ook opgenomen in een [Jupyter-notebook](../../downloads/Voorbeeld_Wiki.ipynb). Let op, je moet wel de paden en login-gegevens zelf aanpassen.
 
 ### 1. Informatie van de API opvragen
 
-Ja kan informatie over de API opvragen zonder in te loggen. In onderstaand voorbeeld wordt eerst het gebruik van de module ‘requests' (zie ook [deze documentatie](https://docs.python-requests.org/en/latest/)) mogelijk gemaakt door het importeren van de 'request' librarie. Daarnaast worden ook de libraries ‘os' en 'time’ geimporteerd voor het makkelijke gebruik van besstandspaden (os) en het bijhouden van de duur van de uitgevoerde stappen (time). In de variable 'server' defineer je voor het eerst een API-URL. In dit geval de basis-URL van de HyDAMO Validatie server.
+Ja kan informatie over de API opvragen zonder in te loggen. In onderstaand voorbeeld wordt eerst het gebruik van de module ‘requests' mogelijk gemaakt door het importeren van de 'request' library. Daarnaast worden de libraries ‘os' en 'time’ geimporteerd voor het makkelijke gebruik van besstandspaden (os) en het bijhouden van de duur van de uitgevoerde stappen (time). In de variable 'server' defineer je een API-URL. In dit geval de basis-URL van de HyDAMO Validatie server.
 
-Met de GET request wordt de server-URL aangeroepen. De server antwoord met informatie over de validatie-API die in de variable 'response' wordt opgeslagen. Als de HTTP statuscode van de response gelijk is aan 200 betekend dit dat het verzoek successvol was. Het resultaat van het antwoord wordt  naar het scherm geschreven door een print commando. In Python ziet dat als volgt uit:
+Met de GET request wordt de server-URL aangeroepen. De server antwoord met informatie over de validatie-API die in de variable 'response' wordt opgeslagen. Als de HTTP statuscode van de response gelijk is aan 200 betekend dit dat het verzoek successvol was. Het resultaat van het antwoord wordt  naar het scherm geschreven (print commando). In Python:
 
 ```py
 import requests
@@ -55,9 +55,9 @@ Het resultaat is:
 
 ### 2. Inloggen en authentiseren
 
-Om gebruik te kunnen maken van taak- en validatiegerelateerde API-functionaliteit moet je je als gebruiker geauthentiseren. De authenticatie vindt plaats door middel van een gebruikersnaam en wachtwoord. Hier vind je meer over de [gebruikersregistratie](01%20Gebruikersregistratie.md).
+Om gebruik te kunnen maken van taak- en validatiegerelateerde API-functionaliteit moet je je authentiseren. De authenticatie vindt plaats door middel van een gebruikersnaam en wachtwoord. Hier vind je meer over de [gebruikersregistratie](01%20Gebruikersregistratie.md).
 
-De validatie-API maakt gebruik van OAuth Firebase Authentication van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet de specifieke Firebase-key - AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE - meegevenen worden die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt de key in een Python dictionary geplaatst samen met de gebruikersnaam (label ‘email’) en wachtwoord (label 'password'). Daarna wordt een POST-request naar de Google API gedefinieerd, waarbij de dictionary met de login cedentials meegestuurd wordt. Bij een succesvolle HTTP statuscode van 200 dan bevat de response een id_token. Deze wordt tot slot omgezet in een Bearer-token (een gecodeerde token) die daarna als header meegeven wordt aan alle volgende verzoeken aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden. In Python ziet de code als volgt uit:
+De validatie-API maakt gebruik van Firebase Authentication van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet de specifieke Firebase-key - AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE - meegevenen worden die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt de key in een Python dictionary geplaatst samen met de gebruikersnaam (label ‘email’) en wachtwoord (label 'password'). Daarna wordt een POST-request naar de Google API gedefinieerd, waarbij de dictionary met de login cedentials meegestuurd wordt. Bij een succesvolle HTTP statuscode van 200 bevat de response een id_token. Deze wordt tot slot omgezet in een Bearer-token (een gecodeerde token) die daarna als header meegeven wordt aan alle volgende verzoeken aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden. In Python:
 
 ```py
 username = "wolf.waterman@hydamo.nl"
@@ -80,7 +80,7 @@ Het resultaat is (de daadwerkelijke Bearer-token is vervangen door sterretjes):
 
 ### 3. Een nieuwe validatietaak aanmaken
 
-Uiteraard kan je met de validatie-API een nieuwe validatietaak aanemaken. Hiertoe moet een unieke Bearer-token beschikbaar zijn in de variable 'my_headers' (zie vorige paragraaf). Ernaast moet je voor elke nieuwe validatietaak een willekeurige taaknaam definieren. Bearer-token en taaknaam worden in een POST request op het endpoint *tasks* meegegeven en het aanmaken van de validatietaak in gang gezet. Een HTTP-statuscode van 201 betekend dat de aangevraagde aanpassing door de post-request succesvol is doorgevoerd. Het antwoord wordt naar het scherm afgedrukt. Daar vind je verschillende gegevens over de aangemaakte validatietaak:
+Uiteraard kan je met de validatie-API een nieuwe validatietaak aanmaken. Hiervoor een unieke Bearer-token beschikbaar zijn in de variable 'my_headers' (zie vorige paragraaf). Ernaast moet je voor elke nieuwe validatietaak een willekeurige taaknaam definieren. Bearer-token en taaknaam worden in een POST request op het endpoint *tasks* meegegeven en het aanmaken van de validatietaak in gang gezet. Een HTTP-statuscode van 201 betekend dat de aangevraagde aanpassing door de post-request is succesvol doorgevoerd. Het antwoord wordt naar het scherm afgedrukt. Daar vind je verschillende gegevens over de aangemaakte validatietaak:
 
 - De unieke id (automatisch toegewezen) van de validatietaak,
 - De naam van de validatietaak,
@@ -112,16 +112,16 @@ Het resultaat is:
 
 ### 4. Invoerdatasets toevoegen aan de validatietaak
 
-Je kan aan een validatietaak 1 of meerdere invoerdatasets toevoegen. Hiervoor moet eerst een verwijzing naar deze databestanden gemaakt worden. Een invoerdataset kan 1 of meerdere objectlagen (stuwen, gemalen, hydro-objecten, etc.) bevatten. Het is mogelijk om meerdere bestanden met elk 1 objectlaag toe te voegen aan een validatietaak. De bestanden moeten voldoen aan:
+Je kan aan een validatietaak een of meerdere invoerdatasets toevoegen. Hiervoor moet eerst een verwijzing naar deze databestanden gemaakt worden. Een invoerdataset kan een of meerdere objectlagen (stuwen, gemalen, hydro-objecten, etc.) bevatten. Het is mogelijk om meerdere bestanden met elk 1 objectlaag toe te voegen aan een validatietaak. De bestanden moeten voldoen aan:
 
-- een versie van het HyDAMO-datamodel, bijvoorbeeld *DAMO 2.5*. Zie voor meer informatie [DAMO Objectenboek](https://damo.hetwaterschapshuis.nl/DAMO%202.2/Objectenhandboek%20DAMO%202.6/HTML/Inleiding.html).
-- het dataformaat GeoPackage (extensie \*.gpkg). Zie voor meer informatie [Geopackage](https://www.geopackage.org/).
+- een versie van het HyDAMO-datamodel, bijvoorbeeld *DAMO 2.5*. Zie voor meer informatie [HyDAMO Datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
+- het dataformaat GeoPackage (extensie \*.gpkg). Zie voor meer informatie [Geopackage](https://www.geopackage.org/){:target="_blank"}.
 
 In onderstaand voorbeeld worden meerdere invoerbestanden (met duikersifonhevels, hydro-objecten en regelmiddelen) toegevoegd aan een bestaande validatietaak. Hiervoor wordt de lijst *datasets* gedefinieerd met daarin de namen van de te gebruiken GeoPackage-bestanden. De locatie van de lokale map met deze bestanden wordt opgegeven in de pad-variable 'file_path'. Verder heb je de id ('taak_id') van de validatietaak nodig waaraan je de datasets wil toevoegen. Deze id kan uit de response van het aanmaken van een nieuwe taak komen (zie voorgaande paragraaf).
 
 Vervolgens worden in een lus de verschillende databestanden 1 voor 1 toegevoegd aan de validatietaak. Voor elke dataset wordt eerst een dictionary *params* aangemaakt. Hierin wordt de naam van het bestand opgeslagen (label ‘file’). Daarna wordt een dictionary *files* aangemaakt. Hierin wordt het databestand zelf opgeslagen (via een commando ‘open' en het attribuut 'rb’). Met een POST request op het endpoint *task/datasets* wordt vervolgens ieder bestand toegevoegd aan een bestaande validatietaak.
 
-In de request wordt de taak-id (in de URL) samen met de dictionaries *files* en *params* en de Bearer-token (variable my_headers). Met een succesvolle HTTP-statuscode van 201 kan je verschillende gegevens van de validatietaak uit de response lezen, onder meer:
+In de request wordt de taak-id (in de URL) samen met de dictionaries *files* en *params* en de Bearer-token (variable my_headers opgestuurd. Met een succesvolle HTTP-statuscode van 201 kan je verschillende gegevens van de validatietaak uit de response lezen, onder meer:
 
 - De id van de validatietaak,
 - De namen en volgnummers van de toegevoegde invoerdatasets.
@@ -157,7 +157,7 @@ naam dataset: *Regelmiddel.gpkg*
 
 ### 5. Validatieregels toevoegen aan de validatietaak
 
-Je kan aan een bestaande validatietaak een bestand met [validatieregels](hier een link toevoegen!) toegevoegen. Het bestand met validatieregels dien je in een lokale folder te zetten (varibale *file_path*). Je hebt verder de id ('taak_id') van de validatietaak nodig waarvoor je de regels wil toevoegen. Deze id kan uit de response van het aanmaken van een nieuwe taak komen (zie voorgaande stappen).
+Je kan aan een bestaande validatietaak een bestand met [validatieregels](../../Introductie%20tool/02%20Validatieregels) toegevoegen. Het bestand met validatieregels dien je in een lokale folder te zetten (varibale *file_path*). Je hebt verder de id ('taak_id') van de validatietaak nodig waarvoor je de regels wil toevoegen. Deze id kan uit de response van het aanmaken van een nieuwe taak komen (zie voorgaande stappen).
 
 Een dictionary *params* wordt aangemaakt waarin de naam van het regelbestand wordt opgeslagen (label ‘file’). Daarna wordt een dictionary *files* aangemaakt. Hierin wordt het bestand met validatieregels zelf opgeslagen (via een commando ‘open' en het attribuut 'rb’). Met een POST request op het endpoint *task/validationrules* wordt het regelbestand toegevoegd aan de validatietaak. Naast de taak-id (in de URL) worden ook de dictionaries *files* en *params* en de Bearer-token (variable my_headers) meegegeven in het request. Bij een succesvolle HTTP-statuscode van 201 kan je verschillende gegevens van de validatietaak uit de response lezen, waaronder:
 
@@ -184,7 +184,7 @@ Het resultaat is:
 *id: 999 (dit id is een voorbeeld)*  
 *validatieregels aanwezig: True*
 
-### 6. De status van de validatietaak controleSren
+### 6. De status van de validatietaak controleren
 
 Voordat je een validatietaak kan opstarten moet een taak minimaal 1 invoerdataset en 1 bestand met validatieregels bevatten. Aan de hand van de taak-status kan je controleren of een taak gereed is voor validatie. De status is dan gelijk aan *ready_to_validate*.
 
@@ -242,7 +242,7 @@ Let op: validatietaken van grote datasets kunnen aanzienlijke verwerkingstijden 
 
 ### 8. De log van de validatietaak downloaden
 
-Als een validatietaak is beeindigd (succesvol of met fout), kan je de log ('metadata') van de taak downloaden en het verloop en resultaat van de validatie in detail controlen. Eerst moet je een lokale folder (variable 'result_folder') definieren waar naartoe het metadata-bestand weggeschreven kan worden. Met een POST-request op het endpoint *task/result/metadata* wordt dit bestand opgevraagd. Naast de taak-id (in de URL) wordt de Bearer-token (variable my_headers) meegegeven in het verzoek. Als de HTTP-statuscode 200 is wordt het metadata-bestand opgeslagen in opgegeven locatie. Als de doel-map waar het bestand opgeslagen moet worden niet bestaat wordt geprobeerd om deze aan te maken. Het bestand krijgt de naam '*taak-id*_metadata.json’.
+Als een validatietaak is beeindigd (succesvol of met fout), kan je de log ('metadata') van de taak downloaden en het verloop en resultaat van de validatie in detail controlen. Eerst moet je een lokale folder (variable 'result_folder') definieren waar naartoe het metadata-bestand weggeschreven kan worden. Met een POST-request op het endpoint *task/result/metadata* wordt dit bestand opgevraagd. Naast de taak-id (in de URL) wordt de Bearer-token (variable my_headers) meegegeven in het verzoek. Als de HTTP-statuscode 200 is wordt het metadata-bestand opgeslagen in de opgegeven locatie. Als de doel-map niet bestaat wordt geprobeerd om deze aan te maken. Het bestand krijgt de naam '*taak-id*_metadata.json’.
 
 ```py
 result_folder = r"...\Resultaten"
@@ -256,7 +256,7 @@ if response_get_metadata.status_code == 200:
     open(os.path.join(result_folder,f"{task_id}_metadata.json"), 'wb').write(response_get_metadata.content)
 ```
 
-Het resultaat is een json bestand met de volgende inhoud (voor meer informatie over het interpreteren van de resultaten zie ook [Resultaten](05%20Resultaten%20interpreteren.md):
+Het resultaat is een JSON-bestand met de volgende inhoud (voor meer informatie over het interpreteren van de resultaten zie ook [Resultaten](05%20Resultaten%20interpreteren.md):
 
 *{*  
 *"api_version": "1.2.4",*  
@@ -301,7 +301,7 @@ Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownload
 
 ### 10. De resultaten in GeoPackage-formaat downloaden
 
-Je kan bij de download het GeoPackage-formaat gebruiken om de validatieresultaten in een GIS-programma te bekijken. Let op, dit is alleen mogelijk als je bij het opstarten van de taak het format GeoPackage het meegegeven! Het proces gebeurt op vergelijkbare manier als voor het downloaden van een CSV (zie voorgaande paragraaf). Alleen kan je - in tegenstelling tot het downloaden van een CSV-bestand - in een GeoPackage meerdere objectenlagen opslagen. Er hoeft dus maar 1 GeoPackage-bestand gedownload te worden.
+Je kan bij de download het GeoPackage-formaat kiezen om de validatieresultaten in een GIS-programma te bekijken. Let op, dit is alleen mogelijk als je bij het opstarten van de taak het format GeoPackage het meegegeven! Het proces gebeurt op vergelijkbare manier als voor het downloaden van een CSV (zie voorgaande paragraaf). Alleen kan je - in tegenstelling tot het downloaden van een CSV-bestand - in een GeoPackage meerdere objectenlagen opslagen. Er hoeft dus maar 1 GeoPackage-bestand gedownload te worden.
 
 ```py
 response_get_results_geopackage = requests.get(server + '/task/' + str(task_id) + '/result/geopackage', headers=my_headers)
