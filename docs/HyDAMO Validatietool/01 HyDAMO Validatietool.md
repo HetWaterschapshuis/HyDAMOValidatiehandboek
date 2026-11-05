@@ -12,9 +12,9 @@ hide:
 
 <div class="landing-banner-text" markdown="1">
 
-# HyDAMO Validatietool
+# HyDAMO-validatietool
 
-Welkom bij het handboek van de HyDAMO Validatietool. Hier is alle informatie verzameld over het gebruik van de Validatietool voor een cyclisch modelleerproces.
+Welkom bij het handboek van de HyDAMO-validatietool. Hier is alle informatie verzameld over het gebruik van de Validatietool voor een cyclisch modelleerproces.
 
 <div class="ribbon-links" markdown="1">
 
