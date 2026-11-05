@@ -1,10 +1,10 @@
 # Resultaten
 
-Aan het einde van een validatie heeft de gebruiker verschillende mogeljkheden om de resultaten te verkrijgen. Bij een validatie met behulp van de webclient is het mogelijk om de [resultaten op de kaart](TODO hier de link toevoegen) met enig interpretatie van de uitkomsen te bekijken. Bij gebruik van de Validatie-API of de losse validatiemodule kan de validatie-log en een set van verschillende uitvoerbestanden gedownload worden (alle bestanden zijn uiteraard ook in de Webviewer beschikbaar voor download). Hieronder is een handreiking over hoe de resultaten te interpreteren zijn.
+Aan het einde van een validatie heeft de gebruiker verschillende mogeljkheden om de resultaten te verkrijgen. Bij een validatie via de webclient kun je de [resultaten op de kaart](02%20De%20Webclient.md#9-bekijken-van-resultaten-op-de-kaart) bekijken en zijn de uitkomsten door kleurgeving en labels met enig interpretatie voorzien. Bij gebruik van de Validatie-API of de losse validatiemodule kun je het validatielog en verschillende uitvoerbestanden downloaden (alle bestanden zijn uiteraard ook in de Webviewer beschikbaar voor download). Hieronder vind je een toelichting op de interpretatie van de resultaten.
 
 ## Samenvatting (validation_result.json)
 
-De samenvatting zit in het bestand validation_result.json en wordt ook **metadata** genoemd of uitgebreid **log-bestand**. Je kan hem goed bekijken met bijvoorbeeld een teksteditor. Een voorbeeld van een sammenvatting bij een succesvol uitgevoerde validatie:
+De samenvatting staat in het bestand validation_result.json. Dit bestand wordt ook wel **metadata** of uitgebreid **log-bestand** genoemd. Je kunt dit bestand bijvoorbeeld met een teksteditor bekijken. Hieronder staat een voorbeeld van een samenvatting van een succesvol uitgevoerde validatie:
 
 ```json
 {
@@ -103,15 +103,15 @@ De samenvatting zit in het bestand validation_result.json en wordt ook **metadat
 }
 ```
 
- Belangrijke uitkomsten vind je onder de volgende JSON-keys:
+ De belangrijkste uitkomsten vind je onder de volgende JSON-sleutels:
 
-- **success** (true/false): alleen bij true is de validatie volledig uitgevoerd,
+- **success** (true/false): alleen als de waarde true is, is de validatie volledig uitgevoerd,
 - **module_version**: de versie van de validatiemodule die is gebruikt,
-- **date_check**: de lokale datum-tijd waarop de validatie is gestart,
+- **date_check**: de lokale datum en tijd waarop de validatie is gestart,
 - **duration** (nummer): de tijd in seconden die de validatie heeft geduurd,
 - **status**: geeft aan tot welke stap de validatiemodule is gekomen: *initialization, define data-model, syntax-validation (layers), syntax-validation (fields), logical validation, export results, finished.* Een geslaagde validatie (succes=true) heeft altijd status=finished,
 - **error**: een foutmelding gevolgd door een Python-exception. Alleen zichtbaar als *success=false* en *status != finished*,
-- **errors**: deze is alleen zichtbaar wanneer een of meerdere *general_rules* of *validation_rules* uit de validationrules.json een Python-exception veroorzaakt. De module zal bij elke exception doorgaan met de volgende regel. Deze errors hebben zelf geen invloed op de *status*- en *success*-waarden*.*,
+- **errors**: deze sleutel is alleen zichtbaar wanneer een of meer *general_rules* of *validation_rules* uit validationrules.json een Python-exceptie veroorzaken. De module gaat na elke exceptie verder met de volgende regel. Deze fouten hebben zelf geen invloed op de waarden van *status* en *success*,
 - **dataset_layers** (array): lagen zoals aangeboden in de dataset-GeoPackage(s),
 - **result_layers** (array): de lagen die te downloaden zijn als resultaat,
 - **missing_layers**: lagen die onderdeel zijn van het datamodel, maar niet aanwezig zijn in de dataset,
@@ -119,39 +119,39 @@ De samenvatting zit in het bestand validation_result.json en wordt ook **metadat
 - **syntax_result** (array): lagen waarvoor een *syntax_oordeel* beschikbaar is,
 - **validation_result** (array): lagen waarvoor *validation_rules* zijn uitgevoerd.
 
-## Resultaat als objectlaag (GeoPackage, csv, GeoJSON)
+## Resultaat als objectlaag (GeoPackage, CSV, GeoJSON)
 
-Je kan de resultaten ook als objectlaag downloaden. Voor resultaten in csv- en GeoJSON-formaat wordt een bestand per objectlaag aangemaakt. Bij een GeoPackage zijn alle lagen in een bestand samengevoegd. De validatie-uitkomsten staan per feature in de toegevoegde resultaat-kolommen.
+Je kan de resultaten ook als objectlaag downloaden. Voor resultaten in CSV- en GeoJSON-formaat wordt een bestand per objectlaag aangemaakt. Bij een GeoPackage zijn alle lagen in een bestand samengevoegd. De validatie-uitkomsten staan per feature in de toegevoegde resultaat-kolommen.
 
 ### Fout-codes bij syntaxfouten
 
-De resultaat-kolommen met betrekking tot syntax-controles (syntax_{kolom_naam}) kunnen een samengezet syntax-oordeel bevatten in de vorm van:
+De resultaat-kolommen met betrekking tot syntaxcontroles (syntax_{kolom_naam}) kunnen worden samengezet tot één syntax-oordeel in de vorm van:
 
 *oorspronkelijke_waarde → NULL (fouten: #,#,#)*
 
-Het deel *oorspronkelijke_waarde → NULL* komt alleen voor als een mutatie van de oorspronkelijke waarde naar NULL heeft plaats gevonden. Het veld wordt dan leeggemaakt.
+Het deel *oorspronkelijke_waarde → NULL* komt alleen voor als de oorspronkelijke waarde is gewijzigd naar NULL. Het veld wordt dan leeggemaakt.
 
-Het deel *(fouten: #,#,#)* geeft met de getallen 1 t/m 7 de code van de fouten weer die gedetecteerd zijn voor dit object:
+Het deel *(fouten: #,#,#)* bevat de foutcodes 1 tot en met 7 die voor dit object zijn vastgesteld:
 
-- **1 = invalid_dtype_error**: de oorspronkelijke waarde is niet van het juiste data-type en kan niet geconverteerd worden (waarde wordt verwijderd),
-- **2 = invalid_dtype**: de oorspronkelijke waarde is niet van het juiste data-type maar kan wél geconverteerd worden,
-- **3 = non_unique_values**: de oorsprokelijke waarde is niet uniek (waarde wordt verwijderd),
-- **4 = missing_values**: deze verplichte kolom ontbreekt compleet of bevat geen waarde, naast null worden ook de domeinwaarden 98 en 99 ('overig', 'onbekend') als ontbrekend gedetecteerd,
+- **1 = invalid_dtype_error**: de oorspronkelijke waarde heeft niet het juiste gegevenstype en kan niet worden geconverteerd (waarde wordt verwijderd), 
+- **2 = invalid_dtype**: de oorspronkelijke waarde heeft niet het juiste gegevenstype, maar kan wel worden geconverteerd,
+- **3 = non_unique_values**: de oorspronkelijke waarde is niet uniek (waarde wordt verwijderd),
+- **4 = missing_values**: deze verplichte kolom ontbreekt volledig of bevat geen waarde, naast null worden ook de domeinwaarden 98 en 99 ('overig', 'onbekend') als ontbrekend beschouwd,
 - **5 = fill_values**: de ongeldige vulwaarde -999 is gedetecteerd (waarde wordt verwijderd),
-- **6 = non_domain_values**: een waarde is gedetecteerd die niet binnen het toegestaane keuzedomein valt (waarde wordt verwijderd),
-- **7 = invalid_geometry**: een niet-valide geometrie of een geometrie van een onjuist type is gedetecteerd (geometrie wordt verwijderd).
+- **6 = non_domain_values**: er is een waarde vastgesteld die niet binnen het toegestaane keuzedomein valt (waarde wordt verwijderd),
+- **7 = invalid_geometry**: er is een ongeldige geometrie of een geometrie van het verkeerde type vastgesteld (geometrie wordt verwijderd).
 
 ### Resultaat-kolommen
 
-Alle uitvoerbestanden bevatten de volgende resultaat-kolommen:
+Alle uitvoerbestanden bevatten de volgende resultaatkolommen:
 
-- **nen3610id** (string): de unieke id van het object volgens NEN 3610 norm,
+- **nen3610id** (string): de unieke ID van het object volgens de NEN 3610-norm,
 - **code** (string): de waterschapscode van het object,
 - **syntax_{kolom_naam}** (string): het resultaat van de syntax-validatie per item ten opzichte van het HyDAMO-datamodel,
 - **syntax_oordeel** (true/false): alle syntax-validaties zijn hier samengevat: true als er geen syntax-fouten zijn opgetreden, anders false,
 - **general_{id:03d}_{result_variable}** (numeriek): uitkomst van een algemene regel, oftewel *general_rule*, gespecificeerd met *id* en *result_variable* van de desbetreffende regel,
 - **validate_{id:03d}_{result_variable}** (true/false): uitkomst van een logische regel, oftewel *validation_rule*, gespecificeerd met *id* en *result_variable* van de desbetreffende (topo-)logische regel,
-- **rating** (integer): het rapportcijfer, waarbij 10 de hoogste beoordeling is en 0 de laagste,
+- **rating** (integer): het rapportcijfer: 10 is de hoogste beoordeling en 0 de laagste,
 - **summary** (string): een samenvatting van alle *error_message*s van alle gefaalde (topo-)logische validatieregels op dit object,
 - **valid** (string): de *regel-id's* van alle (topo-)logische validatieregels die slagen voor dit object,
 - **invalid** (string): de *regel-id's* van alle (topo-)logische validatieregels die falen voor dit object,

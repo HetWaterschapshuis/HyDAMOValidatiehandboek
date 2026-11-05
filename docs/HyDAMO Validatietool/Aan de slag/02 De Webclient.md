@@ -1,35 +1,35 @@
-# HyDAMO validatie Webclient
+# HyDAMO validatie-webclient
 
-De Webclient is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om het validatieproces graphisch te besturen (onder de motorkap wordt hiermee de validatie-API aangestuurd). Met de Webclient kan je intuitief validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. Bovendien geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart en als tabel te bekijken.
+De webclient is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om het validatieproces graphisch te besturen (onder de motorkap wordt hiermee de validatie-API aangestuurd). Met de webclient kun je op een intuïtieve manier validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. Bovendien geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart en als tabel te bekijken.
 
-Hieronder is een stap-voor-stap toelichting hoe je met de Webclient aan de slag gaat:
+Hieronder vind je een stapsgewijze toelichting op het gebruik van de webclient:
 
 ## 1. Starten en inloggen
 
-Je bereikt de Webclient onder de volgende URL: [https://validatietool.hydamo.nl/](https://validatietool.hydamo.nl/){ target="_blank" }
+Je opent de webclient via de volgende URL: [https://validatietool.hydamo.nl/](https://validatietool.hydamo.nl/){ target="_blank" }
 
 De Webclient start met een inlogscherm. Om van de Webclient gebruik te kunnen maken is een [gebruikersaccount](01%20Gebruikersregistratie.md) nodig.
 
 ![loginscherm](../../images/aa9f3fc0-daa4-409e-b747-e755bc049284.png)
 
-Voer je gebruikersnaam/emailadres in en daarna het wachtwoord. Klik op de knop 'Log in'.
+Voer je gebruikersnaam of e-mailadres in en vervolgens je wachtwoord. Klik op de knop 'Log in'.
 
-Als je geen gebruikersnaam of wachtwoord hebt, klik dan op de link 'Toegang vragen'. Volg de instructies voor het aanvragen van een gebruikersaccount, door een email te versturen naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl), met daarin je voornaam, achternaam, emailadres, mobiele telefoonnummer en de naam van je organisatie.
+Als je geen gebruikersnaam of wachtwoord hebt, klik dan op de link 'Toegang vragen'. Volg de instructies om een gebruikersaccount aan te vragen. Stuur daarvoor een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl), met daarin je voornaam, achternaam, emailadres, mobiele telefoonnummer en de naam van je organisatie.
 
 
 ## 2. De opbouw van de schermen
 
-Het scherm van de Webclient bestaat uit 3 delen:
+Het scherm van de webclient bestaat uit drie delen:
 
-- Een verticale menu-balk,
-- Verschillende werkruimtes waarin je validatietaken beheert en resultaten kan bekijken,
-- Een paneel met filteropties en instellingen van achtergrondkaarten (afhankelijk van het gekozen scherm in de menu-balk).
+- Een verticale menubalk,
+- Verschillende werkruimten waarin je validatietaken beheert en resultaten kunt bekijken,
+- Een paneel met filteropties en instellingen voor achtergrondkaarten (afhankelijk van het gekozen scherm in de menu-balk).
 
 ![validatietaken_screenshot](../../images/b9110089-2dba-4b1f-92bb-7763f5812a3c.png)
 
 ### De Menu-balk
 
-De verticale menu-balk bevat 3 items:
+De verticale menubalk bevat dire onderdelen:
 
 
 
@@ -41,7 +41,7 @@ De verticale menu-balk bevat 3 items:
 </div>
 
 <div class="component-text" markdown="1">
- <u>Beheer van validatietaken</u>: button om naar de werkruimte voor het beheren van je validatietaken te wisselen.
+ <u>Beheer van validatietaken</u>: knop waarmee je naar de werkruimte voor het beheer van je validatietaken gaat.
 </div>
 </div>
 
@@ -52,7 +52,7 @@ De verticale menu-balk bevat 3 items:
 </div>
 
 <div class="component-text" markdown="1">
-<u>Validatieresultaten op de kaart</u>: button om naar de werkruimte voor het visualiseren van validatie-resultaten op kaart te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
+<u>Validatieresultaten op de kaart</u>: knop om naar de werkruimte voor het visualiseren van validatie-resultaten op kaart te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
 </div>
 </div>
 
@@ -72,7 +72,7 @@ De verticale menu-balk bevat 3 items:
 
 ### De Werkruimte
 
-Er worden 3 soorten werkruimten onderscheiden in de Webclient:
+De webclient heeft drie soorten werkruimten:
 
 - De werkruimte voor het beheren van je validatie-taken.
 
@@ -96,21 +96,21 @@ Aan de linkerzijde van de kaart- en resultaattabel is een inklapbaar paneel met 
 
 ## 3. Beheren van validatietaken
 
-In deze werkruimte beheer je je validatietaken in een tabel. Wanneer je een validatietaak selecteerd kunnen in de ondere helft van het scherm GeoPackage-invoerdatasets en het JSON-bestand met validatieregels toegevoegd worden.
+In deze werkruimte beheer je je validatietaken in een tabel. Wanneer je een validatietaak selecteert, kun je in de onderste helft van het scherm GeoPackage-invoerdatasets en het JSON-bestand met validatieregels toevoegen.
 
 ![Validatietaakscreenshot](../../images/1c4bc71f-d239-4876-bc2f-804dbaa09e94.png)
 
 ## 4. Een nieuwe validatietaak aanmaken
 
-Voordat de tool kan rekenen moet eerst een validatietaak gedefinieerd worden. Ga naar de werkruimte van het validatietaken-beheer en maak een nieuwe validatietaak aan door op de knop ‘nieuwe validatietaak’ te klikken. Er verschijnt een dialoog, waarin je een willekeurige omschrijving kan opgegeven.
+Voordat de tool een validatie kan uitvoeren, moet je eerst een validatietaak aanmaken. Ga naar de werkruimte van het validatietaken-beheer en maak een nieuwe validatietaak aan door op de knop ‘nieuwe validatietaak’ te klikken. Er verschijnt een dialoogvenster waarin je een omschrijving kunt opgeven.
 
 ![validatietakenaanmaken_screenshot](../../images/b6c4f60d-5f57-408f-9129-a01cc15e3058.png){width="400"}
 
-De validatietaak wordt geinitialiseerd en verschijnt in de beheertabel. Er wordt automatisch een uniek ‘id' toegewezen en de nieuwe taak krijgt standaard de status 'new’.
+De validatietaak wordt geïnitialiseerd en verschijnt in de beheertabel. Er wordt automatisch een unieke id toegewezen en de nieuwe taak krijgt standaard de status 'new’.
 
 ![validatietaken_screenshot](../../images/8ef10433-0602-4b94-b5ed-d20b35c2e897.png)
 
-In de tabel vind je verder een kolom ‘Datasets'. Hierin kun je zien of en hoeveel dataset-bestanden je aan een validatietaak hebt toegevoegd. Tot slot is er een kolom 'Acties’ zichtbaar met een vijftal knoppen:
+De tabel bevat ook een kolom Datasets. Hierin zie je of en hoeveel datasetbestanden aan een validatietaak zijn toegevoegd. Tot slot is er een kolom 'Acties’ zichtbaar met een vijftal knoppen:
 
 
 
@@ -122,7 +122,7 @@ In de tabel vind je verder een kolom ‘Datasets'. Hierin kun je zien of en hoev
 </div>
 
 <div class="component-text" markdown="1">
- <u>Verwijder deze taak</u>: hiermee verwijder je definitief de validatietaak (inclusief eventuele resultaten) uit de lijst met validatietaken. Taken met een validatieresultaat ouder dan 10 dagen worden door het systeem automatisch verwijderd!
+ <u>Verwijder deze taak</u>: hiermee verwijder je definitief de validatietaak (inclusief eventuele resultaten) uit de lijst met validatietaken. Het systeem verwijdert validatietaken met resultaten die ouder zijn dan tien dagen automatisch.
 </div>
 </div>
 
@@ -133,7 +133,7 @@ In de tabel vind je verder een kolom ‘Datasets'. Hierin kun je zien of en hoev
 </div>
 
 <div class="component-text" markdown="1">
-<u>Bekijk resultaten van deze taak op de kaart</u>: hiermee wissel je naar de werkruimte voor het bekijken van je geo-bestanden op de kaart. Na het toevoegen van de invoer-datasets bekijk je hier je ingelezen GeoPackage-lagen. Na uit doorvoeren van de validatie zie je in deze werkruimte je resultaat op kaart.
+<u>Bekijk resultaten van deze taak op de kaart</u>: hiermee wissel je naar de werkruimte voor het bekijken van je geo-bestanden op de kaart. Na het toevoegen van de invoer-datasets bekijk je hier je ingelezen GeoPackage-lagen. Na het uitvoeren van de validatie zie je de resultaten op de kaart.
 </div>
 </div>
 
@@ -144,7 +144,7 @@ In de tabel vind je verder een kolom ‘Datasets'. Hierin kun je zien of en hoev
 </div>
 
 <div class="component-text" markdown="1">
-<u>Bekijk resultaten van deze taak in tabelvorm</u>: hiermee wissel je naar de werkruimte voor het bekijken van validatieresultaten in tabelvorm. De tabel is pas gevuld na het doorvoeren van de validatie.
+<u>Bekijk resultaten van deze taak in tabelvorm</u>: hiermee wissel je naar de werkruimte voor het bekijken van validatieresultaten in tabelvorm. De tabel wordt pas gevuld nadat de validatie is uitgevoerd.
 </div>
 </div>
 
@@ -175,37 +175,37 @@ In de tabel vind je verder een kolom ‘Datasets'. Hierin kun je zien of en hoev
 
 ## 5. Invoer-datasets toevoegen aan een taak
 
-De HyDAMO-datasets kunnen afkomstig zijn van registers van Waterschappen of uit het GKW (Gegevensknooppunt Waterschappen) als download op het [NHI portaal](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }. De invoer-datasets moeten in het GeoPackage-formaat aangeboden worden. Verder moet de data voldoen aan het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
+De HyDAMO-datasets kunnen afkomstig zijn uit registers van waterschappen of uit het GkW (Gegevensknooppunt Waterschappen) als download op het [NHI portaal](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }. De invoer-datasets moeten in het GeoPackage-formaat aangeboden worden. Verder moet de data voldoen aan het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
 
-Om een dataset toe te voegen selecteer je eerst een validatietaak in de tabel met validatietaken. Je kan op twee manieren een dataset toevoegen aan de geselecteerde taak:
+Om een dataset toe te voegen selecteer je eerst een validatietaak in de tabel met validatietaken. Je kunt op twee manieren een dataset aan de geselecteerde taak toevoegen:
 
-1. Klik ergens in het oranje vlak ‘Datasets’. Er opent een bestandsdialoog waarin je een GeoPackage-bestand kan selecteren.
+1. Klik ergens in het oranje vlak Datasets. Er wordt een bestandsdialoogvenster geopend waarin je een GeoPackage-bestand kunt selecteren.
 2. Selecteer een GeoPackage-bestand in je verkenner en sleep deze op het oranje vlak ‘Datasets’.
 
-Zodra de bestanden zijn toegevoegd verschijnen deze in de tabel met datasets.
+Zodra de bestanden zijn toegevoegd, verschijnen ze in de tabel met datasets.
 
 ![datasets_screenshot](../../images/4fb3bf2c-e91e-4ef3-b248-60c2c4154c56.png){width="500"}
 
-Merk op dat na het toevoegen van een of meerdere bestanden, het aantal datasets in de tabel met validatietaken wordt bijgewerkt. De status van de validatietaak is na het toevoegen van datasets nog ongewijzigd. Pas als je zowel datasets als validatieregels aan een taak toevoegt zal de status wijzigen.
+Let op: na het toevoegen van een of meer bestanden wordt het aantal datasets in de tabel met validatietaken bijgewerkt. De status van de validatietaak is na het toevoegen van datasets nog ongewijzigd. Pas als je zowel datasets als validatieregels aan een taak toevoegt zal de status wijzigen.
 
 ![validatietaken_screenshot](../../images/37556bff-2d8f-482e-b4c7-6fb2ba4d9867.png)
 
-Nieuw is de mogelijkheid om de ingelezen data (voordat een validatietaak is gestart) alvast te beoordelen op de kaart. Activeer hiervoor de menuknop ‘Validatieresultaten op kaart’ in de verticale menu-balk of de knop ‘Bekijk resultaten van deze taak op de kaart' in de kolom 'Acties’ van de betreffende taak in de tabel.
+Je kunt de ingelezen gegevens ook al op de kaart bekijken voordat je een validatietaak start. Activeer hiervoor de menuknop ‘Validatieresultaten op kaart’ in de verticale menu-balk of de knop ‘Bekijk resultaten van deze taak op de kaart' in de kolom 'Acties’ van de betreffende taak in de tabel.
 
 ![datasetsopkaart_screenshot](../../images/f85a481a-d05a-4730-91e5-cf5a3bb131e5.png)
 
-De legenda duidt de verschillende iconen (afhankelijk van de beschikbare objecten in de databestanden). Hydro-objecten (oftewel watergangen) worden als lijnen weergegeven en zijn op genomen in de legenda. De kleuren uit de legenda zijn pas van toepassing als een validatieresultaat beschikbaar is.
+De legenda toont de verschillende pictogrammen, afhankelijk van de objecten in de databestanden. Hydro-objecten (watergangen) worden als lijnen weergegeven en zijn opgenomen in de legenda. De kleuren uit de legenda zijn pas van toepassing als een validatieresultaat beschikbaar is.
 
-Het paneel met de kaartopties (rechterzijde van het scherm) bevat voor elk type object uit de databestanden een aparte kaartlaag. Je kan elke laag in de kaart uitzetten door het vinkje weg te halen. Daarnaast is er een sectie met 'Overige kaartlagen'. Hier wordt altijd een referentie-kaartlaag van de watergangen getoond en eventuele andere objecten waarvan geen geografische ligging bekend is. Tot slot is er een sectie waarin je van achtergrondkaartlaag kan wisselen.
+Het paneel met de kaartopties (rechterzijde van het scherm) bevat voor elk type object uit de databestanden een aparte kaartlaag. Je kunt een kaartlaag verbergen door het bijbehorende vinkje uit te schakelen. Daarnaast is er een sectie met 'Overige kaartlagen'. Hier wordt altijd een referentie-kaartlaag van de watergangen getoond en eventuele andere objecten waarvan geen geografische ligging bekend is. Tot slot is er een sectie waarin je van achtergrondkaartlaag kan wisselen.
 
 Het paneel met de filteropties (linkerzijde van het scherm) bevat allerlei filter-mogelijkheden. Een groot deel van deze filteropties is op basis van validatieresultaten en dus alleen relevant als de validatietaak al is uitgevoerd.
 
 
 ## 6. Validatieregels toevoegen aan een taak
 
-Bij iedere validatie horen validatieregels die aangeven op welke aspecten de tool controleerd. Er zijn syntax-validatieregels op basis van het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en [inhoudelijke validatieregels](../Introductie%20tool/02%20Validatieregels). De syntaxregels zijn intrinziek dat wil zeggen dat zij altijd en compleet doorgevoerd worden met een vaste set van controles. De inhoudelijke validatieregels zijn afhankelijk van de door de gebruiker voor iedere taak ingevoerde (en aangevinkte) regels uit het JSON-regelbestand.
+Bij iedere validatie horen validatieregels die aangeven op welke aspecten de tool controleerd. Er zijn syntaxvalidatieregels op basis van het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en [inhoudelijke validatieregels](../Introductie%20tool/02%20Validatieregels). De syntaxregels zijn intrinziek. Dat wil zeggen dat ze altijd volledig worden uitgevoerd met een vaste set controles. De inhoudelijke validatieregels zijn afhankelijk van de door de gebruiker voor iedere taak ingevoerde (en aangevinkte) regels uit het JSON-regelbestand.
 
-Voeg een JSON-regelbestand toe door eerst een validatietaak in de taakbeheertabel te selecteren. Ja kan op twee manieren een bestand met validatieregels toevoegen aan de taak:
+Voeg een JSON-regelbestand toe door eerst een validatietaak in de taakbeheertabel te selecteren. Je kunt op twee manieren een bestand met validatieregels aan de taak toevoegen:
 
 1. Klik ergens in het oranje vlak ‘Validatieregels’. Er wordt een bestandsdialoog geopend waarin je het regelbestand kan selecteren.
 2. Selecteer het regelbestand in je verkenner en sleep deze op het oranje vlak ‘Validatieregels’.
@@ -220,7 +220,7 @@ Zodra het bestand is toegevoegd wordt de tabel met validatieregels gevuld. Deze 
 
 ![validatieregels_screenshot](../../images/9fd93f52-f93f-4ffa-afa1-6b0536f1237e.png)
 
-Als je een verkeerd regelbestand hebt toegevoegd moet je een nieuw bestand toevoegen om de oude te overschrijven. Het is niet mogelijk om validatieregels te verwijderen. Het is wel mogelijk om een ingelezen validatieregel te deactiveren. Klik hiervoor op de knop ‘Bewerkingsmodus inschakelen'. In de kolom ‘Actief’ is het nu mogelijk om vinkjes te verwijderen of te plaatsen. Dit kan alleen bij logische- en topologische regels, niet bij de algemene rekenregels ('general rules’). Na het aanpassen kan je de instellingen opslaan door de knop 'Wijzigingen opslaan'. De HyDAMO Webclient bewaard de instellingen ook als je opnieuw laadt.
+Als je het verkeerde regelbestand hebt toegevoegd, moet je een nieuw bestand toevoegen om het oude te overschrijven. Het is niet mogelijk om validatieregels te verwijderen. Je kunt een ingelezen validatieregel wel deactiveren. Klik hiervoor op de knop ‘Bewerkingsmodus inschakelen'. In de kolom ‘Actief’ is het nu mogelijk om vinkjes te verwijderen of te plaatsen. Dit kan alleen bij logische- en topologische regels, niet bij de algemene rekenregels ('general rules’). Na het aanpassen kan je de instellingen opslaan door de knop 'Wijzigingen opslaan'. De HyDAMO-webclient bewaart de instellingen ook wanneer je de pagina opnieuw laadt.
 
 Merk op dat na het toevoegen van validatieregels aan een validatietaak (in het geval dat er minimaal 1 dataset bestand aanwezig is), de status van de validatietaak verandert naar 'ready_to_validate'.
 
@@ -228,24 +228,24 @@ Merk op dat na het toevoegen van validatieregels aan een validatietaak (in het g
 
 ## 7. Een validatietaak starten
 
-Een validatie kan pas gestart worden als de status van een taak in de taaktabel op 'ready_to_validate' staat. Hiervoor is minimaal 1 dataset-bestand en 1 validatieregel nodig. De knop 'Start validatietaak’, onderin het scherm van de werkruimte takenbeheer, is dan actief en kan gedrukt worden.
+Een validatie kan pas gestart worden als de status van een taak in de taaktabel op 'ready_to_validate' staat. Hiervoor is minimaal 1 dataset-bestand en 1 validatieregel nodig. De knop 'Start validatietaak' onderaan de werkruimte voor taakbeheer is dan actief. Je kunt erop klikken om de validatie te starten.
 
 ![validatietakenbeheer_screenshot](../../images/bde456da-8fb1-4b63-a1d0-62188ef721a2.png)
 
-Als je ‘Start validatietaak' drukt verandert de status van de geselecteerde taak naar ‘pending’. Afhankelijk van de beschikbare capaciteit in de online rekenomgeving (er kunnen maximaal 3 validatietaken simultaan uitgevoerd worden) wordt de validatietaak meteen opgestart of wordt de validatie-taak in een wachtrij geplaatst. De status wijzigt dan naar ‘validating’.
+Als je ‘Start validatietaak' drukt verandert de status van de geselecteerde taak naar ‘pending’. Afhankelijk van de beschikbare capaciteit in de online rekenomgeving wordt de validatietaak direct gestart of in een wachtrij geplaatst. Er kunnen maximaal drie validatietaken tegelijk worden uitgevoerd. De status wijzigt dan naar ‘validating’.
 
-De validatietaak is klaar als de status van ‘validating' wijzigt in ‘finished’. De validatietaak is dan zonder foutmelding tot een goed einde gekomen. Als 'error’ getoond wordt is de validatie voortijdig gestopt door een fout.
+De validatietaak is afgerond als de status verandert van ‘validating' in ‘finished’. De validatietaak is dan zonder foutmelding tot een goed einde gekomen. Als 'error’ getoond wordt is de validatie voortijdig gestopt door een fout.
 
 ## 8. De validatielog uitlezen
 
-Als de status van een validatietaak ‘finished' of ‘error’ toont is het uitvoeren van de validatietaak beeindigd. Bekijk in beide gevallen eerst de metadata van de validatie-taak. Klik op icoon ![bekijkmetadatasymbool](../../images/e4cfed32-dfad-43df-b6a7-921a68cc593f.png) in de rij van de betreffende taak (in de kolom 'Acties’). Er verschijnt een popup-venster met daarin informatie over de validatie.
+Wanneer de status van een validatietaak finished of error is, is de uitvoering beëindigd. Bekijk in beide gevallen eerst de metadata van de validatie-taak. Klik op icoon ![bekijkmetadatasymbool](../../images/e4cfed32-dfad-43df-b6a7-921a68cc593f.png) in de rij van de betreffende taak (in de kolom 'Acties’). Er verschijnt een popup-venster met daarin informatie over de validatie.
 
 ![metadatatabel_screenshot](../../images/d79b2148-e544-42ee-ab2d-648d8c099394.png)
 
 De volgende informatie wordt in de metadata getoond (van boven naar beneden):
 
 - **task_id**: de id van de validatietaak waarvoor metadata is opgevraagd,
-- **api-version**: de versie van de HyDAMO Validatietool API die is gebruikt,
+- **api-version**: de versie van de HyDAMO-validatietool API die is gebruikt,
 - **user_name**: je eigen gebruikersnaam,
 - **task_started**: datum en tijd waarop de validatietaak is gestart,
 - **task_finished**: datum en tijd waarop de validatietaak is geëindigd,

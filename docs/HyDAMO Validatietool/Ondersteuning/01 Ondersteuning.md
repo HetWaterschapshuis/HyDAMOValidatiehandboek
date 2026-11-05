@@ -7,12 +7,12 @@ hide:
 
 ### Helpdesk
 
-Heb je vragen, fouten ontdekt of verzoeken tot ondersteuning? Stuur dan een email aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
+Heb je vragen, fouten ontdekt of verzoeken tot ondersteuning? Stuur dan een e-mail aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
 
 
 ### Functioneel Beheer hWh
 
-We vragen om wensen met betrekking tot het gebruik van de HyDAMO Validatietool, bestaande validatieregels of behoeften aan nieuwe validatieregels te melden aan de helpdesk ([hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)), zodat een compleet beeld blijft bestaan over de gebruikerswensen en behoeve van verdere doorontwikkeling van de HyDAMO Validatietool.
+We vragen om wensen met betrekking tot het gebruik van de HyDAMO-validatietool, bestaande validatieregels of behoeften aan nieuwe validatieregels te melden aan de helpdesk ([hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)), zodat een compleet beeld blijft bestaan over de gebruikerswensen en behoeve van verdere doorontwikkeling van de HyDAMO-validatietool.
 
 ## Gebruikers
 

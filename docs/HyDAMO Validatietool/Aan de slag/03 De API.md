@@ -1,12 +1,12 @@
 # HyDAMO validatie-API
 
-Als centrale schakel communiceert de API (Application Programming Interface) tussen de webclient als grafische schil van de tool en de Python-rekenmodule. De API regelt het aanmaken van validatietaken, toevoegen van datasets en validatieseregels, opstarten van taken en downloaden van resultaten. Het is mogelijk om de HyDAMO validatie-API direct aan te roepen en validatieopdrachten zonder de webclient door te voeren. Dit kan vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME.
+De API (Application Programming Interface) vormt de schakel tussen de webclient als grafische schil en de Python-rekenmodule. De API regelt het aanmaken van validatietaken, het toevoegen van datasets en validatieseregels, het starten van taken en het downloaden van resultaten. Je kunt de HyDAMO-validatie-API rechtstreeks aanroepen en validatieopdrachten uitvoeren zonder de webclient te gebruiken. Dit kan vanuit een scriptingomgeving zoals Python Notebook, Visual Studio Code of FME.
 
-De HyDAMO validatie-API bestaat uit verschillende **endpoints**. Elke endpoint heeft een URL om een bepalde actie (request) door te voeren. Deze requests bestaan uit het opvragen van informatie en data (GET), het toevoegen van data (POST) of het vewijderen van data (DELETE).
+De HyDAMO-validatie-API bestaat uit verschillende **endpoints**. Elk endpoint heeft een URL waarmee je een bepalde actie (request) kunt uitvoeren. Met deze requests kun je informatie en gegevens opvragen (GET), gegevens toevoegen (POST) of gegevens vewijderen (DELETE).
 
 ![swagger_screenshot](../../images/swagger.png)
 
-Bekijk voor een complete overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"} van de Validatie-API. Als je daarin een bepaald GET-, POST- of DELETE-endpoint openklapt kan je de achterliggende functionaliteit met de knopjes 'Try it out' en 'Execute uitproberen en krijg je te zien welk response de API teruggeeft. Let op, voor het testen van de meeste endpoints is het nodig dat je je eenmalig authentiseerd. Je moet hiervoor een Firebase ID-token aanmaken en deze token bij de button 'Authorize' boven-rechts invullen. De token verkrijg je door met geldig gebruikersnaam en wachtwoord onderstaande bevelen in de powershel uit te voeren:
+Bekijk voor een compleet overzicht van de API-functionaliteit de interactieve [Swagger documentatie](https://validatie-api.hydamo.nl/docs){:target="_blank"} van de Validatie-API. Klap een GET-, POST- of DELETE-endpoint open om de bijbehorende functionaliteit te bekijken. Met de knoppen *Try it out* en *Execute* kun je het endpoint testen en de response van de API bekijken. Let op, voor het testen van de meeste endpoints moet je je eenmalig authentiseren. Maak hiervoor een Firebase-ID-token aan en vul deze in bij de knop *Authorize* rechtsboven. Je verkrijgt het token door met een geldige gebruikersnaam en een geldig wachtwoord de onderstaande opdrachten in PowerShell uit te voeren:
 
 ```powershell
 $body = @{
@@ -26,9 +26,9 @@ $response.idToken
 
 ## Gebruik van de API
 
-De API gebruikt je vanuit een scripting-omgeving zoals Python Notebook, Visual Studio Code of FME. Hieronder vind je stukjes script-code die je door de meest relevante alle stappen in het gebruik van de API leidt.
+Je gebruikt de API vanuit een scriptomgeving, bijvoorbeeld Python Notebook, Visual Studio Code of FME. Hieronder vind je codevoorbeelden die je door de belangrijkste stappen van het API-gebruik leiden.
 
-Onderstaande voorbeelden zijn ook opgenomen in een [Jupyter-notebook](../../downloads/Voorbeeld_Wiki.ipynb). Let op, je moet wel de paden en login-gegevens zelf aanpassen.
+Onderstaande voorbeelden zijn ook opgenomen in een [Jupyter-notebook](../../downloads/Voorbeeld_Wiki.ipynb). Let op: je moet de paden en inloggegevens zelf aanpassen.
 
 ### 1. Informatie van de API opvragen
 
@@ -57,7 +57,7 @@ Het resultaat is:
 
 Om gebruik te kunnen maken van taak- en validatiegerelateerde API-functionaliteit moet je je authentiseren. De authenticatie vindt plaats door middel van een gebruikersnaam en wachtwoord. Hier vind je meer over de [gebruikersregistratie](01%20Gebruikersregistratie.md).
 
-De validatie-API maakt gebruik van Firebase Authentication van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO Validatietool wordt gevraagd, moet de specifieke Firebase-key - AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE - meegevenen worden die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt de key in een Python dictionary geplaatst samen met de gebruikersnaam (label ‘email’) en wachtwoord (label 'password'). Daarna wordt een POST-request naar de Google API gedefinieerd, waarbij de dictionary met de login cedentials meegestuurd wordt. Bij een succesvolle HTTP statuscode van 200 bevat de response een id_token. Deze wordt tot slot omgezet in een Bearer-token (een gecodeerde token) die daarna als header meegeven wordt aan alle volgende verzoeken aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden. In Python:
+De validatie-API maakt gebruik van Firebase Authentication van Google. Om bij Google kenbaar te maken dat authenticatie voor de HyDAMO-validatietool wordt gevraagd, moet de specifieke Firebase-key - AIzaSyAU17otJko594SYoCulCPfXwkHOXQEieXE - meegevenen worden die aan de validatie-API is gekoppeld. In onderstaand voorbeeld wordt de key in een Python dictionary geplaatst samen met de gebruikersnaam (label ‘email’) en wachtwoord (label 'password'). Daarna wordt een POST-request naar de Google API gedefinieerd, waarbij de dictionary met de login cedentials meegestuurd wordt. Bij een succesvolle HTTP statuscode van 200 bevat de response een id_token. Deze wordt tot slot omgezet in een Bearer-token (een gecodeerde token) die daarna als header meegeven wordt aan alle volgende verzoeken aan de HyDAMO validatie-API. De header wordt naar het scherm geprint. Let op dat de houdbaarheid van van de token maximaal een uur is. Daarna moet er opnieuw een token aangevraagd worden. In Python:
 
 ```py
 username = "wolf.waterman@hydamo.nl"
