@@ -11,19 +11,19 @@ Het gebruik van de validatie-webclient en API kan alleen met een geregistreerd g
 
 ## Gebruikersaccount aanvragen
 
-Je kan een gebruikersaccount aanvragen door een e-mail te versturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp ‘Aanvraag gebruikersaccount HyDAMO-validatietool’ en voeg de volgende gegevens toe in de body:
+Je kunt een gebruikersaccount aanvragen door een e-mail te versturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp ‘Aanvraag gebruikersaccount HyDAMO-validatietool’ en voeg de volgende gegevens toe in de body:
 
 - Voornaam: Wolf
 - Achternaam: Waterman
 - E-mailadres: [wolf@waterman.nl](mailto:wolf@waterman.nl)
-- Mobiele telefoonnummer: +316-xxxxxxxx
+- Mobiel telefoonnummer: +316-xxxxxxxx
 - Organisatie: Bedrijf
 
-Je ontvangt binnen 3 werkdagen een e-mail met het aangemaakte gebruikersaccount, inclusief de gebruikersnaam. Het wachtwoord wordt per SMS verstuurd naar het opgegeven mobiele telefoonnummer.
+Je ontvangt binnen 3 werkdagen een e-mail met het aangemaakte gebruikersaccount, inclusief de gebruikersnaam. Het wachtwoord wordt per sms verstuurd naar het opgegeven mobiele telefoonnummer.
 
 ## Gebruikersaccount opzeggen
 
-Je kan ten alle tijden je account opzeggen door een e-mail te sturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp ‘Opzeggen gebruikersaccount HyDAMO-validatietool’ en voeg de volgende gegevens toe in de body:
+Je kunt ten alle tijden je account opzeggen door een e-mail te sturen aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl). Kies als onderwerp ‘Opzeggen gebruikersaccount HyDAMO-validatietool’ en voeg de volgende gegevens toe in de body:
 
 - Voornaam: Wolf
 - Achternaam: Waterman

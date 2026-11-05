@@ -1,6 +1,6 @@
 # HyDAMO validatie-webclient
 
-De webclient is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om het validatieproces graphisch te besturen (onder de motorkap wordt hiermee de validatie-API aangestuurd). Met de webclient kun je op een intuïtieve manier validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. Bovendien geeft de Webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart en als tabel te bekijken.
+De webclient is de visuele schil van de Validatietool en geeft de gebruiker de mogelijkheid om het validatieproces grafisch te besturen (onder de motorkap wordt hiermee de validatie-API aangestuurd). Met de webclient kun je op een intuïtieve manier validatietaken aanmaken, datasets en validatieregels toevoegen, een taak starten en de resultaten downloaden. Bovendien geeft de webclient de mogelijkheid om invoerbestanden en rekenresultaten op de kaart en als tabel te bekijken.
 
 Hieronder vind je een stapsgewijze toelichting op het gebruik van de webclient:
 
@@ -8,13 +8,13 @@ Hieronder vind je een stapsgewijze toelichting op het gebruik van de webclient:
 
 Je opent de webclient via de volgende URL: [https://validatietool.hydamo.nl/](https://validatietool.hydamo.nl/){ target="_blank" }
 
-De Webclient start met een inlogscherm. Om van de Webclient gebruik te kunnen maken is een [gebruikersaccount](01%20Gebruikersregistratie.md) nodig.
+De webclient start met een inlogscherm. Om van de webclient gebruik te kunnen maken is een [gebruikersaccount](01%20Gebruikersregistratie.md) nodig.
 
 ![loginscherm](../../images/aa9f3fc0-daa4-409e-b747-e755bc049284.png)
 
 Voer je gebruikersnaam of e-mailadres in en vervolgens je wachtwoord. Klik op de knop 'Log in'.
 
-Als je geen gebruikersnaam of wachtwoord hebt, klik dan op de link 'Toegang vragen'. Volg de instructies om een gebruikersaccount aan te vragen. Stuur daarvoor een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl), met daarin je voornaam, achternaam, emailadres, mobiele telefoonnummer en de naam van je organisatie.
+Als je geen gebruikersnaam of wachtwoord hebt, klik dan op de link 'Toegang vragen'. Volg de instructies om een gebruikersaccount aan te vragen. Stuur daarvoor een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl), met daarin je voornaam, achternaam, e-mailadres, mobiele telefoonnummer en de naam van je organisatie.
 
 
 ## 2. De opbouw van de schermen
@@ -23,13 +23,13 @@ Het scherm van de webclient bestaat uit drie delen:
 
 - Een verticale menubalk,
 - Verschillende werkruimten waarin je validatietaken beheert en resultaten kunt bekijken,
-- Een paneel met filteropties en instellingen voor achtergrondkaarten (afhankelijk van het gekozen scherm in de menu-balk).
+- Een paneel met filteropties en instellingen voor achtergrondkaarten (afhankelijk van het gekozen scherm in de menubalk).
 
 ![validatietaken_screenshot](../../images/b9110089-2dba-4b1f-92bb-7763f5812a3c.png)
 
-### De Menu-balk
+### De Menubalk
 
-De verticale menubalk bevat dire onderdelen:
+De verticale menubalk bevat drie onderdelen:
 
 
 
@@ -52,7 +52,7 @@ De verticale menubalk bevat dire onderdelen:
 </div>
 
 <div class="component-text" markdown="1">
-<u>Validatieresultaten op de kaart</u>: knop om naar de werkruimte voor het visualiseren van validatie-resultaten op kaart te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
+<u>Validatieresultaten op de kaart</u>: knop om naar de werkruimte voor het visualiseren van validatieresultaten op kaart te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
 </div>
 </div>
 
@@ -63,7 +63,7 @@ De verticale menubalk bevat dire onderdelen:
 </div>
 
 <div class="component-text" markdown="1">
-<u>Validatieresultaten in tabellen</u>: button om naar de werkruimte voor het weergeven van validatie-resultaten in tabelvorm te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
+<u>Validatieresultaten in tabellen</u>: knop om naar de werkruimte voor het weergeven van validatieresultaten in tabelvorm te wisselen. Deze is pas actief als er een validatietaak met resultaten beschikbaar is.
 </div>
 </div>
 
@@ -74,15 +74,15 @@ De verticale menubalk bevat dire onderdelen:
 
 De webclient heeft drie soorten werkruimten:
 
-- De werkruimte voor het beheren van je validatie-taken.
+- De werkruimte voor het beheren van je validatietaken.
 
 ![validatietaakselecteren_screenshot](../../images/d2514938-db03-4a5b-b307-a71188c58516.png)
 
-- De werkruimte voor het bekijken van je validatie-resultaten op een kaart.
+- De werkruimte voor het bekijken van je validatieresultaten op een kaart.
 
 ![validatietaakopkaart_screenshot](../../images/46545fc7-5838-451c-b15d-7d761c5767ef.png)
 
-- De werkruimte voor het bekijken van validatie-resultaten in tabelvorm.
+- De werkruimte voor het bekijken van validatieresultaten in tabelvorm.
 
 ![validatietaakalstabel_screenshot](../../images/3cc342f1-b017-4c72-8e7f-fc412d60c020.png)
 
@@ -102,7 +102,7 @@ In deze werkruimte beheer je je validatietaken in een tabel. Wanneer je een vali
 
 ## 4. Een nieuwe validatietaak aanmaken
 
-Voordat de tool een validatie kan uitvoeren, moet je eerst een validatietaak aanmaken. Ga naar de werkruimte van het validatietaken-beheer en maak een nieuwe validatietaak aan door op de knop ‘nieuwe validatietaak’ te klikken. Er verschijnt een dialoogvenster waarin je een omschrijving kunt opgeven.
+Voordat de tool een validatie kan uitvoeren, moet je eerst een validatietaak aanmaken. Ga naar de werkruimte van het validatietakenbeheer en maak een nieuwe validatietaak aan door op de knop ‘nieuwe validatietaak’ te klikken. Er verschijnt een dialoogvenster waarin je een omschrijving kunt opgeven.
 
 ![validatietakenaanmaken_screenshot](../../images/b6c4f60d-5f57-408f-9129-a01cc15e3058.png){width="400"}
 
@@ -133,7 +133,7 @@ De tabel bevat ook een kolom Datasets. Hierin zie je of en hoeveel datasetbestan
 </div>
 
 <div class="component-text" markdown="1">
-<u>Bekijk resultaten van deze taak op de kaart</u>: hiermee wissel je naar de werkruimte voor het bekijken van je geo-bestanden op de kaart. Na het toevoegen van de invoer-datasets bekijk je hier je ingelezen GeoPackage-lagen. Na het uitvoeren van de validatie zie je de resultaten op de kaart.
+<u>Bekijk resultaten van deze taak op de kaart</u>: hiermee wissel je naar de werkruimte voor het bekijken van je geo-bestanden op de kaart. Na het toevoegen van de invoerdatasets bekijk je hier je ingelezen GeoPackage-lagen. Na het uitvoeren van de validatie zie je de resultaten op de kaart.
 </div>
 </div>
 
@@ -155,7 +155,7 @@ De tabel bevat ook een kolom Datasets. Hierin zie je of en hoeveel datasetbestan
 </div>
 
 <div class="component-text" markdown="1">
-<u>Bekijk meta-data van deze taak</u>: hiermee bekijk je de uitgebreide log-meldingen van deze taak. Metadata is pas beschikbaar na het doorvoeren van de validatie.
+<u>Bekijk metadata van deze taak</u>: hiermee bekijk je de uitgebreide logmeldingen van deze taak. Metadata is pas beschikbaar na het doorvoeren van de validatie.
 </div>
 </div>
 
@@ -166,16 +166,16 @@ De tabel bevat ook een kolom Datasets. Hierin zie je of en hoeveel datasetbestan
 </div>
 
 <div class="component-text" markdown="1">
-<u>Download alle metadata en resultaten</u>: hiermee kan je een set met alle validatieresultaten en metadata downloaden. Deze button is pas geactiveerd na het doorvoeren van de validatie.
+<u>Download alle metadata en resultaten</u>: hiermee kun je een set met alle validatieresultaten en metadata downloaden. Deze knop is pas geactiveerd na het doorvoeren van de validatie.
 </div>
 </div>
 
 </div>
 
 
-## 5. Invoer-datasets toevoegen aan een taak
+## 5. Invoerdatasets toevoegen aan een taak
 
-De HyDAMO-datasets kunnen afkomstig zijn uit registers van waterschappen of uit het GkW (Gegevensknooppunt Waterschappen) als download op het [NHI portaal](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }. De invoer-datasets moeten in het GeoPackage-formaat aangeboden worden. Verder moet de data voldoen aan het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
+De HyDAMO-datasets kunnen afkomstig zijn uit registers van waterschappen of uit het GkW (Gegevensknooppunt Waterschappen) als download op het [NHI-portaal](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }. De invoerdatasets moeten in het GeoPackage-formaat aangeboden worden. Verder moet de data voldoen aan het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
 
 Om een dataset toe te voegen selecteer je eerst een validatietaak in de tabel met validatietaken. Je kunt op twee manieren een dataset aan de geselecteerde taak toevoegen:
 
@@ -186,59 +186,59 @@ Zodra de bestanden zijn toegevoegd, verschijnen ze in de tabel met datasets.
 
 ![datasets_screenshot](../../images/4fb3bf2c-e91e-4ef3-b248-60c2c4154c56.png){width="500"}
 
-Let op: na het toevoegen van een of meer bestanden wordt het aantal datasets in de tabel met validatietaken bijgewerkt. De status van de validatietaak is na het toevoegen van datasets nog ongewijzigd. Pas als je zowel datasets als validatieregels aan een taak toevoegt zal de status wijzigen.
+Let op: na het toevoegen van een of meer bestanden wordt het aantal datasets in de tabel met validatietaken bijgewerkt. De status van de validatietaak is na het toevoegen van datasets nog ongewijzigd. Pas als je zowel datasets als validatieregels aan een taak toevoegt, zal de status wijzigen.
 
 ![validatietaken_screenshot](../../images/37556bff-2d8f-482e-b4c7-6fb2ba4d9867.png)
 
-Je kunt de ingelezen gegevens ook al op de kaart bekijken voordat je een validatietaak start. Activeer hiervoor de menuknop ‘Validatieresultaten op kaart’ in de verticale menu-balk of de knop ‘Bekijk resultaten van deze taak op de kaart' in de kolom 'Acties’ van de betreffende taak in de tabel.
+Je kunt de ingelezen gegevens ook al op de kaart bekijken voordat je een validatietaak start. Activeer hiervoor de menuknop ‘Validatieresultaten op kaart’ in de verticale menubalk of de knop ‘Bekijk resultaten van deze taak op de kaart' in de kolom 'Acties’ van de betreffende taak in de tabel.
 
 ![datasetsopkaart_screenshot](../../images/f85a481a-d05a-4730-91e5-cf5a3bb131e5.png)
 
 De legenda toont de verschillende pictogrammen, afhankelijk van de objecten in de databestanden. Hydro-objecten (watergangen) worden als lijnen weergegeven en zijn opgenomen in de legenda. De kleuren uit de legenda zijn pas van toepassing als een validatieresultaat beschikbaar is.
 
-Het paneel met de kaartopties (rechterzijde van het scherm) bevat voor elk type object uit de databestanden een aparte kaartlaag. Je kunt een kaartlaag verbergen door het bijbehorende vinkje uit te schakelen. Daarnaast is er een sectie met 'Overige kaartlagen'. Hier wordt altijd een referentie-kaartlaag van de watergangen getoond en eventuele andere objecten waarvan geen geografische ligging bekend is. Tot slot is er een sectie waarin je van achtergrondkaartlaag kan wisselen.
+Het paneel met de kaartopties (rechterzijde van het scherm) bevat voor elk type object uit de databestanden een aparte kaartlaag. Je kunt een kaartlaag verbergen door het bijbehorende vinkje uit te schakelen. Daarnaast is er een sectie met 'Overige kaartlagen'. Hier wordt altijd een referentiekaartlaag van de watergangen getoond en eventuele andere objecten waarvan geen geografische ligging bekend is. Tot slot is er een sectie waarin je van achtergrondkaartlaag kunt wisselen.
 
-Het paneel met de filteropties (linkerzijde van het scherm) bevat allerlei filter-mogelijkheden. Een groot deel van deze filteropties is op basis van validatieresultaten en dus alleen relevant als de validatietaak al is uitgevoerd.
+Het paneel met de filteropties (linkerzijde van het scherm) bevat allerlei filtermogelijkheden. Een groot deel van deze filteropties is op basis van validatieresultaten en dus alleen relevant als de validatietaak al is uitgevoerd.
 
 
 ## 6. Validatieregels toevoegen aan een taak
 
-Bij iedere validatie horen validatieregels die aangeven op welke aspecten de tool controleerd. Er zijn syntaxvalidatieregels op basis van het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en [inhoudelijke validatieregels](../Introductie%20tool/02%20Validatieregels). De syntaxregels zijn intrinziek. Dat wil zeggen dat ze altijd volledig worden uitgevoerd met een vaste set controles. De inhoudelijke validatieregels zijn afhankelijk van de door de gebruiker voor iedere taak ingevoerde (en aangevinkte) regels uit het JSON-regelbestand.
+Bij iedere validatie horen validatieregels die aangeven op welke aspecten de tool controleert. Er zijn syntaxvalidatieregels op basis van het [HyDAMO-datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"} en [inhoudelijke validatieregels](../Introductie%20tool/02%20Validatieregels). De syntaxregels zijn intrinsiek. Dat wil zeggen dat ze altijd volledig worden uitgevoerd met een vaste set controles. De inhoudelijke validatieregels zijn afhankelijk van de door de gebruiker voor iedere taak ingevoerde (en aangevinkte) regels uit het JSON-regelbestand.
 
 Voeg een JSON-regelbestand toe door eerst een validatietaak in de taakbeheertabel te selecteren. Je kunt op twee manieren een bestand met validatieregels aan de taak toevoegen:
 
-1. Klik ergens in het oranje vlak ‘Validatieregels’. Er wordt een bestandsdialoog geopend waarin je het regelbestand kan selecteren.
+1. Klik ergens in het oranje vlak ‘Validatieregels’. Er wordt een bestandsdialoog geopend waarin je het regelbestand kunt selecteren.
 2. Selecteer het regelbestand in je verkenner en sleep deze op het oranje vlak ‘Validatieregels’.
 
-Zodra het bestand is toegevoegd wordt de tabel met validatieregels gevuld. Deze tabel bevat de volgende kolommen (van links naar rechts):
+Zodra , wordt de tabel met validatieregels gevuld. Deze tabel bevat de volgende kolommen (van links naar rechts):
 
-- De status van validatieregel (vinkje als de regel actief is, kruisje als de regel inactief is),
+- De status van de validatieregel (vinkje als de regel actief is, kruisje als de regel inactief is),
 - De naam van het bestand waaruit de validatieregel is gelezen,
-- Op welk DAMO object de validatieregel van toepassing is,
+- Op welk DAMO-object de validatieregel van toepassing is,
 - De omschrijving van de validatieregel,
 - Mogelijke uitzonderingen die van toepassing zijn voor de regel (objecten die uitgesloten worden van validatie).
 
 ![validatieregels_screenshot](../../images/9fd93f52-f93f-4ffa-afa1-6b0536f1237e.png)
 
-Als je het verkeerde regelbestand hebt toegevoegd, moet je een nieuw bestand toevoegen om het oude te overschrijven. Het is niet mogelijk om validatieregels te verwijderen. Je kunt een ingelezen validatieregel wel deactiveren. Klik hiervoor op de knop ‘Bewerkingsmodus inschakelen'. In de kolom ‘Actief’ is het nu mogelijk om vinkjes te verwijderen of te plaatsen. Dit kan alleen bij logische- en topologische regels, niet bij de algemene rekenregels ('general rules’). Na het aanpassen kan je de instellingen opslaan door de knop 'Wijzigingen opslaan'. De HyDAMO-webclient bewaart de instellingen ook wanneer je de pagina opnieuw laadt.
+Als je het verkeerde regelbestand hebt toegevoegd, moet je een nieuw bestand toevoegen om het oude te overschrijven. Het is niet mogelijk om validatieregels te verwijderen. Je kunt een ingelezen validatieregel wel deactiveren. Klik hiervoor op de knop ‘Bewerkingsmodus inschakelen'. In de kolom ‘Actief’ is het nu mogelijk om vinkjes te verwijderen of te plaatsen. Dit kan alleen bij logische- en topologische regels, niet bij de algemene rekenregels ('general rules’). Na het aanpassen kun je de instellingen opslaan door de knop 'Wijzigingen opslaan'. De HyDAMO-webclient bewaart de instellingen ook wanneer je de pagina opnieuw laadt.
 
-Merk op dat na het toevoegen van validatieregels aan een validatietaak (in het geval dat er minimaal 1 dataset bestand aanwezig is), de status van de validatietaak verandert naar 'ready_to_validate'.
+Merk op dat na het toevoegen van validatieregels aan een validatietaak (in het geval dat er minimaal 1 datasetbestand aanwezig is), de status van de validatietaak verandert naar 'ready_to_validate'.
 
 ![validatietaken_screenshot](../../images/44193ae5-83ca-490a-9459-b51289cfdadd.png)
 
 ## 7. Een validatietaak starten
 
-Een validatie kan pas gestart worden als de status van een taak in de taaktabel op 'ready_to_validate' staat. Hiervoor is minimaal 1 dataset-bestand en 1 validatieregel nodig. De knop 'Start validatietaak' onderaan de werkruimte voor taakbeheer is dan actief. Je kunt erop klikken om de validatie te starten.
+Een validatie kan pas gestart worden als de status van een taak in de taaktabel op 'ready_to_validate' staat. Hiervoor is minimaal 1 datasetbestand en 1 validatieregel nodig. De knop 'Start validatietaak' onderaan de werkruimte voor taakbeheer is dan actief. Je kunt erop klikken om de validatie te starten.
 
 ![validatietakenbeheer_screenshot](../../images/bde456da-8fb1-4b63-a1d0-62188ef721a2.png)
 
-Als je ‘Start validatietaak' drukt verandert de status van de geselecteerde taak naar ‘pending’. Afhankelijk van de beschikbare capaciteit in de online rekenomgeving wordt de validatietaak direct gestart of in een wachtrij geplaatst. Er kunnen maximaal drie validatietaken tegelijk worden uitgevoerd. De status wijzigt dan naar ‘validating’.
+Als je op ‘Start validatietaak' drukt verandert de status van de geselecteerde taak naar ‘pending’. Afhankelijk van de beschikbare capaciteit in de online rekenomgeving wordt de validatietaak direct gestart of in een wachtrij geplaatst. Er kunnen maximaal drie validatietaken tegelijk worden uitgevoerd. De status wijzigt dan naar ‘validating’.
 
-De validatietaak is afgerond als de status verandert van ‘validating' in ‘finished’. De validatietaak is dan zonder foutmelding tot een goed einde gekomen. Als 'error’ getoond wordt is de validatie voortijdig gestopt door een fout.
+De validatietaak is afgerond als de status verandert van ‘validating' in ‘finished’. De validatietaak is dan zonder foutmelding tot een goed einde gekomen. Als 'error’ getoond wordt, is de validatie voortijdig gestopt door een fout.
 
 ## 8. De validatielog uitlezen
 
-Wanneer de status van een validatietaak finished of error is, is de uitvoering beëindigd. Bekijk in beide gevallen eerst de metadata van de validatie-taak. Klik op icoon ![bekijkmetadatasymbool](../../images/e4cfed32-dfad-43df-b6a7-921a68cc593f.png) in de rij van de betreffende taak (in de kolom 'Acties’). Er verschijnt een popup-venster met daarin informatie over de validatie.
+Wanneer de status van een validatietaak 'finished' of 'error' is, is de uitvoering beëindigd. Bekijk in beide gevallen eerst de metadata van de validatietaak. Klik op het icoon ![bekijkmetadatasymbool](../../images/e4cfed32-dfad-43df-b6a7-921a68cc593f.png) in de rij van de betreffende taak (in de kolom 'Acties’). Er verschijnt een pop-up-venster met daarin informatie over de validatie.
 
 ![metadatatabel_screenshot](../../images/d79b2148-e544-42ee-ab2d-648d8c099394.png)
 
@@ -250,32 +250,32 @@ De volgende informatie wordt in de metadata getoond (van boven naar beneden):
 - **task_started**: datum en tijd waarop de validatietaak is gestart,
 - **task_finished**: datum en tijd waarop de validatietaak is geëindigd,
 - **success**: indicator of de validatietaak succesvol is uitgevoerd ('true') of niet ('false'),
-- **module_version**: de versie van de HyDAMO Validatiemodule die gebruikt is,
+- **module_version**: de versie van de HyDAMO-validatiemodule die gebruikt is,
 - **duration**: de tijd die nodig was om de validatietaak uit te voeren,
 - **status**: de status van de validatietaak,
 - **dataset_layers**: een overzicht van de objectlagen die aanwezig waren in de invoerdataset,
-- **result_layers**: de objectlagen die aanwezig waren in de invoerdataset en waarvoor een validatie resultaat is behaald. Hiervan kunnen de resultaten gedownload worden,
+- **result_layers**: de objectlagen die aanwezig waren in de invoerdataset en waarvoor een validatieresultaat is behaald. Hiervan kunnen de resultaten gedownload worden,
 - **missing layers**: de objectlagen die onderdeel zijn van het DAMO-datamodel maar niet aanwezig waren in de invoerdataset,
 - **error_layers**: de objectlagen die aanwezig waren in de invoerdataset, maar die niet gevalideerd konden worden,
-- **syntax_result**: de objectlagen die aanwezig waren in de invoerdataset en waarvoor een syntax validatie resultaat beschikbaar is,
+- **syntax_result**: de objectlagen die aanwezig waren in de invoerdataset en waarvoor een syntaxvalidatieresultaat beschikbaar is,
 - **validation_result**: de objectlagen die aanwezig waren in de invoerdataset en waarvoor een (topo-)logisch validatieresultaat beschikbaar is,
 - **error**: een foutmelding als de validatietaak niet uitgevoerd kon worden,
 - **warnings**: waarschuwingen die tijdens de validatie zijn opgetreden,
 - **log**: een volledige log van de verschillende stappen tijdens de uitvoering van de validatietaak.
 
-Als een validatietaak succesvol is uitgevoerd kan je het validatieresultaat bekijken op de kaart of in tabelvorm. Ook kan je de resultaten direct downloaden met de knop ![downloadresultatensymbool](../../images/92c420f0-e246-4470-a930-62e7b3d10353.png) in de kolom 'Acties'. Er wordt een zip-bestand (naam gelijk aan de id en naam van de validatietaak) gedownload met daarin:
+Als een validatietaak succesvol is uitgevoerd, kun je het validatieresultaat bekijken op de kaart of in tabelvorm. Ook kun je de resultaten direct downloaden met de knop ![downloadresultatensymbool](../../images/92c420f0-e246-4470-a930-62e7b3d10353.png) in de kolom 'Acties'. Er wordt een zip-bestand (naam gelijk aan de id en naam van de validatietaak) gedownload met daarin:
 
-- validator.log met de volledige inhoud van de validatietaak-log.
-- valiation_result.json met de volledige inhoud van de metadata van de validatietaak.
-- results.gpkg met alle validatie resultaten voor alle objectlagen in Geopackage formaat.
-- submap 'geosjon' met daarin voor elke objectlaag een GeoJSON met de validatie resultaten van de betreffende objectlaag.
+- validator.log met de volledige inhoud van de validatietaaklog.
+- validation_result.json met de volledige inhoud van de metadata van de validatietaak.
+- results.gpkg met alle validatieresultaten voor alle objectlagen in GeoPackage-formaat.
+- submap 'geojson' met daarin voor elke objectlaag een GeoJSON met de validatieresultaten van de betreffende objectlaag.
 
-Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaat-objectlagen kan interpreteren.
+Lees in [dit hoofdstuk](05%20Resultaten%20interpreteren.md) hoe je de gedownloade resultaatobjectlagen kunt interpreteren.
 
 
 ## 9. Bekijken van resultaten op de kaart
 
-Om de validatieresultaten op de kaart te bekijken druk in de takentabel of in de verticale menu-balk op de icoon ![taakviusaliserenopkaartsymbool](../../images/0cc87fb7-6e34-4ded-8d7e-6412689f0c89.png).
+Om de validatieresultaten op de kaart te bekijken druk je in de takentabel of in de verticale menubalk op het icoon ![taakviusaliserenopkaartsymbool](../../images/0cc87fb7-6e34-4ded-8d7e-6412689f0c89.png).
 
 Er verschijnt een kaartlaag met daarin alle objecten uit de verschillende objectlagen die gevalideerd zijn. Dit kunnen zijn (zie ook de legenda in de kaart voor de gebruikte iconen per objectlaag):
 
@@ -291,15 +291,15 @@ Er verschijnt een kaartlaag met daarin alle objecten uit de verschillende object
 
 ![validatieresultaatkaart_screenshot](../../images/a006ada7-ef19-450a-a45c-94938c5dfd64.png)
 
-Iconen krijgen een kleur afhankelijk van het validatieresultaat. Standaard wordt een kleurverloop van rood naar groen toegepast, maar voor gebruikers die kleurenblind zijn is er ook een optie op het kleurverloop aan te passen zodat deze loopt van blauw naar rood. Deze ‘Kleurenblind modus' kan geactiveerd worden in het paneel met de filteropties (bovenin onder het item 'Map opties’).
+Iconen krijgen een kleur afhankelijk van het validatieresultaat. Standaard wordt een kleurverloop van rood naar groen toegepast, maar voor gebruikers die kleurenblind zijn is er ook een optie om het kleurverloop aan te passen zodat deze loopt van blauw naar rood. Deze ‘kleurenblindmodus' kan worden geactiveerd in het paneel met de filteropties (bovenin onder het item 'Map opties’).
 
-### Object-clusters
+### Objectclusters
 
-Om de hoeveelheid iconen op de kaart overzichtelijk te houden worden iconen van hetzelfde objecttype die dicht bij elkaar liggen geclusterd weergegeven. Met een getal boven het icoon wordt aangeduid hoeveel objecten in de cluster zitten. De kleur van het geclusterde icoon toont altijd het slechtste validatieresultaat van de individuele objecten.
+Om de hoeveelheid iconen op de kaart overzichtelijk te houden, worden iconen van hetzelfde objecttype die dicht bij elkaar liggen geclusterd weergegeven. Met een getal boven het icoon wordt aangeduid hoeveel objecten in het cluster zitten. De kleur van het geclusterde icoon toont altijd het slechtste validatieresultaat van de individuele objecten.
 
 ![geclusterdicoon](../../images/907dcd9e-d26a-4a03-ab29-b9901f21f617.png)
 
-Wanneer je de muis boven een cluster-icoon plaatst, verschijnt een overzicht met aanvullende informatie: het aantal geclusterde objecten, het gemiddelde rapportcijfer en het laagste en hoogte rapportcijfer.
+Wanneer je de muis boven een clustericoon plaatst, verschijnt een overzicht met aanvullende informatie: het aantal geclusterde objecten, het gemiddelde rapportcijfer en het laagste en hoogste rapportcijfer.
 
 ![geclusterdicoonhoover](../../images/09fa8da3-3504-4f06-9578-f2feefec180e.png)
 
@@ -311,21 +311,21 @@ Door vervolgens de muis boven een individueel icoon te plaatsen, verschijnt een 
 
 ![geclusterdicoonuitgepakthoover](../../images/f12cf678-9432-46de-9b3d-658c878482b2.png)
 
-Door de kaart in te zoomen zal een cluster van objecten 'vanzelf' worden opgeheven zodra er voldoende ruimte is om deze als individuele objecten op de kaart te kunnen tekenen. Als objecten fysiek op dezelfde locatie liggen (bijvoorbeeld een gemaal met een regelmiddel) wordt bij elk zoomniveau een clustericoon getoond. Door op het cluster-icoon te klikken worden de individuele objecten vooralsnog zichtbaar.
+Door de kaart in te zoomen zal een cluster van objecten 'vanzelf' worden opgeheven zodra er voldoende ruimte is om deze als individuele objecten op de kaart te kunnen tekenen. Als objecten fysiek op dezelfde locatie liggen (bijvoorbeeld een gemaal met een regelmiddel), wordt bij elk zoomniveau een clustericoon getoond. Door op het clustericoon te klikken worden de individuele objecten vooralsnog zichtbaar.
 
-Het is mogelijk om de clustering van objecten uit te zetten. Dit kan door het vinkje bij ‘Cluster markers' in het paneel met de filteropties (bovenin onder het item 'Map opties’) te verwijderen. Let op: als er heel veel objecten in de databestanden zitten kan het uitzetten van de clustering ervoor zorgen dat de browser niet meer alle iconen op de kaart te tekenen, waardoor de applicatie 'vastloopt’. Zet de clustering alleen uit als de dataset beperkt is of als de kaart voldoende is ingezoomd.
+Het is mogelijk om de clustering van objecten uit te zetten. Dit kan door het vinkje bij ‘Cluster markers' in het paneel met de filteropties (bovenin onder het item 'Map opties’) te verwijderen. Let op: als er heel veel objecten in de databestanden zitten, kan het uitzetten van de clustering ervoor zorgen dat de browser niet meer alle iconen op de kaart kan tekenen, waardoor de applicatie 'vastloopt’. Zet de clustering alleen uit als de dataset beperkt is of als de kaart voldoende is ingezoomd.
 
 ### Rapportcijfers
 
-Bij het valideren van objecten worden rapportcijfers toegekend. Als alle validatieregels slagen dan is het rapportcijfer gelijk aan 10. Bij het falen van een niet-kritieke validatieregel wordt het rapportcijfer verminderd met 1. Bij het falen van een kritieke validatieregel wordt het rapportcijfer verminderd met 5. Afhankelijk van het uiteindelijke beoordelingscijfer van elk object, krijgen de iconen een unieke kleur volgens onderstaande kleurverloop:
+Bij het valideren van objecten worden rapportcijfers toegekend. Als alle validatieregels slagen, dan is het rapportcijfer gelijk aan 10. Bij het falen van een niet-kritieke validatieregel wordt het rapportcijfer verminderd met 1. Bij het falen van een kritieke validatieregel wordt het rapportcijfer verminderd met 5. Afhankelijk van het uiteindelijke beoordelingscijfer van elk object, krijgen de iconen een unieke kleur volgens onderstaand kleurverloop:
 
 - **groen**: voor beoordelingscijfer 10
 - van **geel naar oranje**: voor beoordelingscijfer 2-9
 - **rood**: voor beoordelingscijfer 0-1
 
-Door op een object te klikken open je een popup met daarin een tabel met alle validatieregels voor het betreffende object inclusief het validatieresultaat per validatieregel. Bovendien worden de berekende waarden van de parameters uit de 'general_rules' gepresenteerd.
+Door op een object te klikken open je een pop-up met daarin een tabel met alle validatieregels voor het betreffende object inclusief het validatieresultaat per validatieregel. Bovendien worden de berekende waarden van de parameters uit de 'general_rules' gepresenteerd.
 
-![popuptabelbijklikopobject_screenshot](../../images/afd878cc-d6d8-4275-8f9f-82bcc2889c13.png)
+![pop-uptabelbijklikopobject_screenshot](../../images/afd878cc-d6d8-4275-8f9f-82bcc2889c13.png)
 
 ### Het paneel met filteropties
 
@@ -334,31 +334,31 @@ Aan de linkerzijde van het scherm zit een paneel met filteropties voor de object
 ![kaartfilterpaneel](../../images/db4f7a68-7db3-4e74-9345-f6e396cb7058.png){ width="180" }
 
 
-### De map opties
+### De mapopties
 
-Naast het clusteren van iconen en het activeren van een kleurenblind-modus, is er nog de optie ‘Zoom (initieel) naar objecten'. Deze optie staat standaard aan maar kan uitgezet worden door het vinkje te verwijderen. Als deze optie geactiveerd is zal de kaart bij het wisselen van schermen (bijvoorbeeld van en naar de werkruimte voor resultaten in tabellen) altijd weer uitgezoomd worden naar de extent van alle objecten. Door deze optie uit te schakelen, wordt het laatste zoomniveau van de kaart 'vastgehouden’ als er tussen werkruimtes wordt gewisseld.
+Naast het clusteren van iconen en het activeren van een kleurenblindmodus, is er nog de optie ‘Zoom (initieel) naar objecten'. Deze optie staat standaard aan, maar kan uitgezet worden door het vinkje te verwijderen. Als deze optie geactiveerd is, zal de kaart bij het wisselen van schermen (bijvoorbeeld van en naar de werkruimte voor resultaten in tabellen) altijd weer uitgezoomd worden naar de extent van alle objecten. Door deze optie uit te schakelen, wordt het laatste zoomniveau van de kaart 'vastgehouden’ als er tussen werkruimtes wordt gewisseld.
 
 ### Filteren
 
-Met name bij grotere dataset met veel objectlagen is het gebruik van de filter-opties in de kaart handig. Met filters kan je objecten op de kaart op basis van een specifiek criterium uitschakelen. Er zijn zes verschillende filtermogelijkheden beschikbaar die je met elkaar kan combineren. Elk filter is opgenomen in een inklapbare container. Met ![minimaliserensymbool](../../images/7631a441-1187-49cb-8a09-54af82917758.png) kan een item geminimaliseerd worden en met ![maximaliserensymbool](../../images/0bea3783-4e26-446d-8503-e10c5fc5268b.png) kan het item gemaximaliseerd worden zodat alle opties zichtbaar zijn.
+Met name bij grotere datasets met veel objectlagen is het gebruik van de filteropties in de kaart handig. Met filters kun je objecten op de kaart op basis van een specifiek criterium uitschakelen. Er zijn zes verschillende filtermogelijkheden beschikbaar die je met elkaar kunt combineren. Elk filter is opgenomen in een inklapbare container. Met ![minimaliserensymbool](../../images/7631a441-1187-49cb-8a09-54af82917758.png) kan een item geminimaliseerd worden en met ![maximaliserensymbool](../../images/0bea3783-4e26-446d-8503-e10c5fc5268b.png) kan het item gemaximaliseerd worden zodat alle opties zichtbaar zijn.
 
 <u>Filter op objecttype</u>
 
-Dit filter staat automatisch aangevinkt en standaard zijn alle type objecten actief. Verwijder het vinkje bij een specifieke objectentype om de gewenste selectie uit de kaart te laten verdwijnen. In onderstaand voorbeeld worden alle duiker, sifons en hevels en bruggen getoond in de kaart (en de overige objecten niet).
+Dit filter staat automatisch aangevinkt en standaard zijn alle typen objecten actief. Verwijder het vinkje bij een specifiek objecttype om de gewenste selectie uit de kaart te laten verdwijnen. In onderstaand voorbeeld worden alle duikers, sifons, hevels en bruggen getoond in de kaart (en de overige objecten niet).
 
 ![objectfilter](../../images/5d72d9b6-69ae-4415-92c9-113e51753642.png){ width="280" }
 
 <u>Filter op rapportcijfer</u>
 
-Met dit filter kan je objecten op de kaart op basis van het rapportcijfer filteren. Plaats eerst een vinkje bij het filter om het filter actief te maken! Met de slider stel je de range van de rapportcijfers in om te reguleren welke objecten weergegeven moeten worden. Standaard worden alle rapportcijfers weergegeven. In onderstaand voorbeeld worden alleen de objecten met een rapportcijfer van 4 tot en met 7 weergeven.
+Met dit filter kun je objecten op de kaart op basis van het rapportcijfer filteren. Plaats eerst een vinkje bij het filter om het filter actief te maken! Met de slider stel je de range van de rapportcijfers in om te reguleren welke objecten weergegeven moeten worden. Standaard worden alle rapportcijfers weergegeven. In onderstaand voorbeeld worden alleen de objecten met een rapportcijfer van 4 tot en met 7 weergegeven.
 
 ![rapportcijferfilter](../../images/7801c477-1472-40fd-84d5-963e160fb79e.png){ width="280" }
 
-*Tip: Door bijvoorbeeld dit filter te combineren met het filter op type objecten kan je alleen alle stuwen zichtbaar maken met een rapportcijfer vanaf 4 tot en met 7.*
+*Tip: Door bijvoorbeeld dit filter te combineren met het filter op type objecten kun je alleen alle stuwen zichtbaar maken met een rapportcijfer vanaf 4 tot en met 7.*
 
 <u>Filter op falende validatieregel</u>
 
-Met dit filter kan je objecten op de kaart filteren die alleen gevalideerd zijn volgens een specifieke *falende* validatieregel. Plaats eerst een vinkje bij het filter om het filter actief te maken! Voer vervolgens de naam of een gedeelte uit de naam van een validatieregel in. Alleen die objecten waarvoor een validatieregel *faalt* EN waarvan (een gedeelte) van de naam overeenkomt met uw definitie, worden op de kaart getoond.
+Met dit filter kun je objecten op de kaart filteren die alleen gevalideerd zijn volgens een specifieke *falende* validatieregel. Plaats eerst een vinkje bij het filter om het filter actief te maken! Voer vervolgens de naam of een gedeelte uit de naam van een validatieregel in. Alleen die objecten waarvoor een validatieregel *faalt* EN waarvan (een gedeelte) van de naam overeenkomt met je definitie, worden op de kaart getoond.
 
 ![validatieregelfilter](../../images/b50e0c88-7ec6-466c-9cf2-95ac410658fb.png){ width="280" }
 
@@ -368,17 +368,17 @@ Met dit filter kunnen objecten op de kaart gefilterd worden die *falen* volgens 
 
 ![falenopgewichtfilter](../../images/1f009572-c68b-4a95-b598-6f67a099bc70.png){ width="280" }
 
-*Tip: Door beide voorwaarden in dit filter aan te vinken kan je een overzicht op de kaart krijgen van alle objecten die falen. Dit is overigens ook te realiseren door het filter op rapportcijfer gelijk te kiezen aan 9 of lager.*
+*Tip: Door beide voorwaarden in dit filter aan te vinken kun je een overzicht op de kaart krijgen van alle objecten die falen. Dit is overigens ook te realiseren door het filter op rapportcijfer gelijk te kiezen aan 9 of lager.*
 
 <u>Filter op id-match</u>
 
-Met dit filter kan je snel een specifiek object zoeken op de kaart. Plaats eerst een vinkje bij het filter om het filter actief te maken! Vul vervolgens een (gedeelte) van de NEN3610id in om een object te filteren op de kaart.
+Met dit filter kun je snel een specifiek object zoeken op de kaart. Plaats eerst een vinkje bij het filter om het filter actief te maken! Vul vervolgens een (gedeelte) van de NEN3610id in om een object te filteren op de kaart.
 
 ![idmatchfilter](../../images/d9e5e1e3-cf35-43c4-b1be-1597faeb20d6.png){ width="280" }
 
-<u>Filter op categorie oppervlakte waterlichaam</u>
+<u>Filter op categorie oppervlaktewaterlichaam</u>
 
-Dit laatste filter is alleen van toepassing op de waterlopen. Plaats eerst een vinkje bij het filter om het filter actief te maken! Selecteer vervolgens de gewenste categorie van het waterlichaam (Primair, Secundair, Tertiar en Overige) dat op de kaart getoond moet worden.
+Dit laatste filter is alleen van toepassing op de waterlopen. Plaats eerst een vinkje bij het filter om het filter actief te maken! Selecteer vervolgens de gewenste categorie van het waterlichaam (primair, secundair, tertiair en overig) die op de kaart getoond moet worden.
 
 ![categorieoppervlaktewaterlichaamfilter](../../images/796ba901-6c41-4d06-b60b-6ddd8879a189.png){ width="280" }
 
@@ -390,21 +390,21 @@ Aan de rechterzijde van het scherm zit een paneel met de kaartlagen.
 
 <u>Kaartlagen met objecten</u>
 
-De bovenste blok geeft de kaartlagen van de verschillende objectensoorten weer. Door een vinkje te verwijderen kan je de weergave op de kaart uitgezetten. Dit heeft overlap met het filter op objecttype! Met de zes puntjes voor een kaartlaag ![kaartlaagslepensymbool](../../images//89f85c8e-fca6-43a5-bd59-b44f1c242a6b.png) kan je een kaartlaag ‘oppakken' en naar een andere positie 'slepen’. Hiermee beïnvloedt je de opbouw van de kaartlagen in de kaart: de onderste kaartlaag wordt als eerste getekend en de bovenste als laatste.
+Het bovenste blok geeft de kaartlagen van de verschillende objectensoorten weer. Door een vinkje te verwijderen kun je de weergave op de kaart uitgezetten. Dit heeft overlap met het filter op objecttype! Met de zes puntjes voor een kaartlaag ![kaartlaagslepensymbool](../../images//89f85c8e-fca6-43a5-bd59-b44f1c242a6b.png) kun je een kaartlaag ‘oppakken' en naar een andere positie 'slepen’. Hiermee beïnvloed je de opbouw van de kaartlagen in de kaart: de onderste kaartlaag wordt als eerste getekend en de bovenste als laatste.
 
-Met de drie puntjes achter een kaartlaag open je een popup waarin onder andere de transparantie van de kaartlaag aangepast kan worden (met de slider). Met de optie 'Centreer kaartlaag' wordt de kaart in-/uitgezoomd zodat alle elementen van de betreffende kaartlaag in beeld zijn.
+Met de drie puntjes achter een kaartlaag open je een pop-up waarin onder andere de transparantie van de kaartlaag aangepast kan worden (met de slider). Met de optie 'Centreer kaartlaag' wordt de kaart in-/uitgezoomd zodat alle elementen van de betreffende kaartlaag in beeld zijn.
 
 ![centreerkaartlaag](../../images/90b43102-6d84-4687-8dc6-e11311d19cd5.png){ width="280" }
 
 <u>Overige kaartlagen</u>
 
-Dit blok toont alle kaartlagen die wel in de datasets voorkomen maar niet gevalideerd worden omdat daarvoor geen validatieregels beschikbaar zijn. Daarnaast wordt hier - indien beschikbaar - een referentie-kaartlaag met de waterlichamen (Hydro-objecten) toegevoegd. Deze referentielaag zet je aan om bijvoorbeeld te beoordelen of sommige objecten (zoals een stuw) samenvallen met een waterlichaam.
+Dit blok toont alle kaartlagen die wel in de datasets voorkomen maar niet gevalideerd worden omdat daarvoor geen validatieregels beschikbaar zijn. Daarnaast wordt hier - indien beschikbaar - een referentiekaartlaag met de waterlichamen (Hydro-objecten) toegevoegd. Deze referentielaag zet je aan om bijvoorbeeld te beoordelen of sommige objecten (zoals een stuw) samenvallen met een waterlichaam.
 
-Standaard staan de overige kaartlagen niet aan. Plaats een vinkje om deze zichtbaar te maken op de kaart. Ook voor deze kaartlagen kan je de teken-volgorde en transparantie aanpassen. Het is zelfs mogelijk om de volgorde van de overige kaartlagen met de object-kaartlagen om te wisselen. Gebruik hiervoor de drie puntjes voor de naam van het blok.
+Standaard staan de overige kaartlagen niet aan. Plaats een vinkje om deze zichtbaar te maken op de kaart. Ook voor deze kaartlagen kun je de tekenvolgorde en transparantie aanpassen. Het is zelfs mogelijk om de volgorde van de overige kaartlagen met de objectkaartlagen om te wisselen. Gebruik hiervoor de drie puntjes voor de naam van het blok.
 
 <u>Achtergrondkaartlagen</u>
 
-Je kan vier achtergrondkaartlagen kiezen (allen afkomstig van [PDOK](https://www.pdok.nl/achtergrondkaarten1)):
+Je kunt vier achtergrondkaartlagen kiezen (allen afkomstig van [PDOK](https://www.pdok.nl/achtergrondkaarten1)):
 
 - Topografie: de basisregistratie (BRT) achtergrondkaartlaag in kleur.
 - Topografie water: de basisregistratie (BRT) achtergrondkaartlaag met watervlakken (standaard geselecteerd).
@@ -415,13 +415,13 @@ Daarnaast is het mogelijk om de achtergrondkaartlaag uit te schakelen. Kies dan 
 
 ## 10. Bekijken van resultaten in tabelvorm
 
-Om de validatieresultaten in tabelvorm te bekijken druk in de takentabel of in de verticale menu-balk op de icoon ![taakviusaliserenalstabelsymbool](../../images//dd0532cb-2d44-43c2-8c9e-fa2ece5991b1.png).
+Om de validatieresultaten in tabelvorm te bekijken druk je in de takentabel of in de verticale menubalk op het icoon ![taakviusaliserenalstabelsymbool](../../images//dd0532cb-2d44-43c2-8c9e-fa2ece5991b1.png).
 
 Er verschijnt een tabel met daarin alle objecten uit de verschillende objectlagen die gevalideerd zijn. Voor elk object is weergegeven: de unieke NEN3610id, het type object, het rapportcijfer en een beknopte toelichting op de falende validatieregels.
 
 ![validatietaakalstabel_screenshot](../../images/d9ea4395-ac95-443c-ba23-f3c3be7a4314.png)
 
-Onder de tabel kan je het aantal regels dat per pagina weergegeven moet worden aanpassen en door de verschillende pagina’s van de tabel navigeren. Ja kan de inhoud van deze tabel downloaden als CSV-bestand door de knop 'Download tabel' te gebruiken. Om meer detailinformatie over een object te verkrijgen, selecteert je een rij in de tabel. Er verschijnt een tweede tabel waarin voor het betreffende object de uitkomsten van de validatieregels.
+Onder de tabel kun je het aantal regels dat per pagina weergegeven moet worden aanpassen en door de verschillende pagina’s van de tabel navigeren. Je kunt de inhoud van deze tabel downloaden als CSV-bestand door de knop 'Download tabel' te gebruiken. Om meer detailinformatie over een object te verkrijgen, selecteer je een rij in de tabel. Er verschijnt een tweede tabel waarin de uitkomsten voor het betreffende object worden weergegeven.
 
 ![validatietaakalstabeldetail_screenshot](../../images/4ce6c6f2-09fd-4eb1-9360-605a387f74cf.png)
 
@@ -434,7 +434,7 @@ Hierin zijn voor elke validatieregel opgenomen:
 - de functie van de validatieregel,
 - het validatieresultaat (de uitkomst).
 
-Wanneer beide tabellen zichtbaar zijn (objecten en validatieregels) kan je de inhoud van deze tabellen downloaden middels de knop 'Download tabellen'. Er worden dan - voor elke tabel een - twee CSV-bestanden gedownload.
+Wanneer beide tabellen zichtbaar zijn (objecten en validatieregels) kun je de inhoud van deze tabellen downloaden middels de knop 'Download tabellen'. Er worden dan - voor elke tabel één - twee CSV-bestanden gedownload.
 
 Met de knop 'Exporteer resultaat naar CSV' exporteer je altijd alle informatie (voor alle objecten, ongeacht een gemaakte selectie en filter).
 

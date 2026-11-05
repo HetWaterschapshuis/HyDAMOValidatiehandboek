@@ -46,13 +46,13 @@ Welkom bij het handboek van de HyDAMO-validatietool. Hier is alle informatie ver
 
 <div class="landing-content" markdown="1">
 
-<div class="notification_bar"><a href="../Ondersteuning/01 Ondersteuning/#gebruikers">Het volgende <b>HyDAMO-validator werkatelier</b> staat gepland op 26. november 2026</a></div>
+<div class="notification_bar"><a href="../Ondersteuning/01 Ondersteuning/#gebruikers">Het volgende <b>HyDAMO-validator werkatelier</b> staat gepland op 26 november 2026</a></div>
 
 HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
 
-Ben je beniuewd naar de kwaliteit van de door de waterschappen aangeleverde HyDAMO-datasets? Bekijk dan de [GkW-kwaliteitsrapportages](https://datastromen.hetwaterschapshuis.nl){ target="_blank" }. De landelijke HyDAMO-dataset (gkw-hydamo-package.zip) is te downloaden op de site van [NHI](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }.
+Ben je benieuwd naar de kwaliteit van de door de waterschappen aangeleverde HyDAMO-datasets? Bekijk dan de [GkW-kwaliteitsrapportages](https://datastromen.hetwaterschapshuis.nl){ target="_blank" }. De landelijke HyDAMO-dataset (gkw-hydamo-package.zip) is te downloaden op de site van [NHI](https://nhi.nu/data/oppervlaktewater/hydamo-regionaal){ target="_blank" }.
 
-Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologsche data werken.
+Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende kernregistratiedata van waterschappen**, die eenvoudig kunnen worden ingezet in modelgeneratoren en andere toepassingen. Hoewel de tool primair is ontwikkeld voor waterschappen, is deze ook waardevol voor provincies, Rijkswaterstaat, kennisinstellingen en adviesbureaus die met hydrologische data werken.
 
 ![](../images/hydamo_cyclisch_modelleren.png){ .plaatje_met_margin }
 
@@ -65,7 +65,7 @@ Het uiteindelijke doel is de beschikbaarheid van **betrouwbare en landsdekkende 
 <div class="component-mini-text" markdown="1">
 **Overzicht**
 
-Ontdek de drie componentlagen van de validatietool en alle essentiele onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
+Ontdek de drie componentlagen van de validatietool en alle essentiële onderdelen van een validatie onder [de validatietool in een oogopslag](../Introductie tool/01 In een oogopslag)
 </div>
 </div>
 
@@ -77,7 +77,7 @@ Ontdek de drie componentlagen van de validatietool en alle essentiele onderdelen
 <div class="component-text" markdown="1">
 **Gebruikersregistratie**
 
-Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) aan te maken.
+Om van de webclient en API gebruik te kunnen maken is het nodig om een [gebruikersaccount en wachtwoord](../Aan de slag/01 Gebruikersregistratie) aan te maken.
 </div>
 </div>
 
@@ -89,7 +89,7 @@ Om van de Webclient en API gebruik te kunnen maken is het nodig om een [gebruike
 <div class="component-text" markdown="1">
 **Aan de slag**
 
-Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [Webclient](../Aan de slag/02 De Webclient) kan gebruiken, als [API](../Aan de slag/03 De API) kan benaderen of als developer met de [Python-module](../Aan de slag/04 De Validatiemodule) als rekenhart aan de slag kan.
+Er zijn verschillende manieren om je data te valideren. Hier is uitgelegd hoe je de validatietool via de [webclient](../Aan de slag/02 De Webclient) kunt gebruiken, als [API](../Aan de slag/03 De API) kunt benaderen of als developer met de [Python-module](../Aan de slag/04 De Validatiemodule) als rekenhart aan de slag kunt.
 </div>
 </div>
 
@@ -135,7 +135,7 @@ Vind hier informatie over [contact, evenementen en mee-ontwikkelen](../Ondersteu
 ### Ondersteuning
 - [Contact](../Ondersteuning/01 Ondersteuning/#contact)
 - [Gebruikers en presentaties](../Ondersteuning/01 Ondersteuning/#gebruikers)
-- [Mee-ontwikklen](../Ondersteuning/01 Ondersteuning/#mee-ontwikkelen)
+- [Mee-ontwikkelen](../Ondersteuning/01 Ondersteuning/#mee-ontwikkelen)
 
 
 </div>
