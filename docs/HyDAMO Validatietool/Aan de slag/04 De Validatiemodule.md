@@ -47,9 +47,9 @@ project_map/
 │   └──  <datasetnaam>.gpkg
 └── validationrules.json
 ```
-Voor een eerste run kan je bijvoorbeeld een [testdataset](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/main/tests/data/tasks/test_wrij){:target="_blank"} van de GitHub-repository downloaden en lokaal neerzetten.
+Voor een eerste run kun je bijvoorbeeld een [testdataset](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/main/tests/data/tasks/test_wrij){:target="_blank"} van de GitHub-repository downloaden en lokaal opslaan.
 
-Met de opdracht-prompt kan je vervolgens de validatie uitvoeren.
+Vervolgens kun je de validatie uitvoeren vanuit de opdrachtprompt.
 
 1. Activeer het aangemaakte environment in de opdrachtpromt:
 ```console

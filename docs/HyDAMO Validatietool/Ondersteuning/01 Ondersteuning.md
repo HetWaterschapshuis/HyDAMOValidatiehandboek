@@ -7,28 +7,28 @@ hide:
 
 ### Helpdesk
 
-Heb je vragen, fouten ontdekt of verzoeken tot ondersteuning? Stuur dan een e-mail aan [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
+Heb je vragen, fouten ontdekt of ondersteuning nodig? Stuur dan een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
 
 
 ### Functioneel Beheer hWh
 
-We vragen om wensen met betrekking tot het gebruik van de HyDAMO-validatietool, bestaande validatieregels of behoeften aan nieuwe validatieregels te melden aan de helpdesk ([hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)), zodat een compleet beeld blijft bestaan over de gebruikerswensen en behoeve van verdere doorontwikkeling van de HyDAMO-validatietool.
+Meld wensen over het gebruik van de HyDAMO-validatietool, bestaande validatieregels of nieuwe validatieregels bij de helpdesk ([hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl)). Zo houden we een compleet overzicht van de wensen van gebruikers en kunnen we de tool verder ontwikkelen.
 
 ## Gebruikers
 
-Vierjaarlijks wordt het **HyDAMO Validator werkatelier** door het Waterschapshuis georganiseerd. De werkateliers zijn een online-bijeenkomst van gebruikers om ervaring op te doen met HyDAMO, nieuwe ontwikkelingen onder de aandacht te brengen en best practices uit te wisselen.
+Het Waterschapshuis organiseert vierjaarlijks het **HyDAMO-validator-werkatelier**. De werkateliers zijn onlinebijeenkomsten waarin gebruikers ervaringen met HyDAMO uitwisselen, nieuwe ontwikkelingen bespreken en best practices delen.
 
-Het volgende atelier staat gepland voor:
+Het volgende atelier vindt plaats op:
 
-**Donderdagmiddag 26 november 2026 van 14-16 uur**, de agenda volgt.
+**Donderdag 26 november 2026, van 14-16 uur**. De agenda volgt.
 
-Ben je geinteresseerd om bij het werkatelier aan te sluiten? Stuur dan een mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl) om aan de mailing-lijst toegevoegd te worden.
+Wil je deelnemen aan het werkatelier? Stuur dan een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl) om aan de mailing-lijst toegevoegd te worden.
 
-Samen met een groep acieve gebruikers probeert het Waterschapshuis dieper op inhoudelijke vraagstukken in te gaan en zo vanuit de praktijkervaring aan de verbetering van HyDAMO, de validatieregels en de Validatietool te werken. Ben je geinteresseerd om **superuser** te worden? Stuur dan een mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
+Samen met een groep acieve gebruikers verdiept het Waterschapshuis zich in inhoudelijke vraagstukken. Op basis van praktijkervaring werken zij aan de verbetering van HyDAMO, de validatieregels en de validatietool. Ben je geinteresseerd om **superuser** te worden? Stuur dan een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl).
 
 ## Presentaties 
 
-Onderstaande presentaties en documenten zijn van de HyDAMO-validator gebruikersbijeenkomst (9 februari 2023).
+De onderstaande presentaties en documenten zijn afkomstig van de gebruikersbijeenkomst van de HyDAMO-validator op 9 februari 2023.
 
 ### Algemeen
 
@@ -44,10 +44,10 @@ Onderstaande presentaties en documenten zijn van de HyDAMO-validator gebruikersb
 
 ## Mee-ontwikkelen
 
-Je kan bijdragen aan de ontwikkeling van de [Validatieregels](../Introductie%20tool/02%20Validatieregels.md) en [HyDAMO Validatiemodule](../Aan%20de%20slag/04%20De%20Validatiemodule.md). Zowel de validatiemodule als de validatieregels zijn openbaar beschikbaar op de GitHub repositories van het [Waterschapshuis](https://github.com/HetWaterschapshuis){:target="_blank"}.
+Je kunt bijdragen aan de ontwikkeling van de [validatieregels](../Introductie%20tool/02%20Validatieregels.md) en [HyDAMO-validatiemodule](../Aan%20de%20slag/04%20De%20Validatiemodule.md). Zowel de validatiemodule als de validatieregels zijn openbaar beschikbaar op de GitHub repositories van het [Waterschapshuis](https://github.com/HetWaterschapshuis){:target="_blank"}.
 
-Je kan bijdragen aan de ontwikkeling van de validatie-tool door:
+Je kunt op de volgende manieren bijdragen aan de ontwikkeling van de validatietool:
 
-- De validatieregels te verbeteren, uit te breiden en te delen in het daarvoor ingerichte [Validatiehandboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules){:target="_blank"}. Hierop vind je ook een [handleiding voor het editten van validatieregels (Engels)](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/blob/main/validation_rules/validatieregels_editten.md){:target="_blank"},
-- Functionaliteit van de validatiemodule te verbeteren, uit te breiden en te delen op de [GitHub-pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} van de validatiemodule. Ook hiervoor is een [handleiding (Engels)](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule){:target="_blank"} beschikbaar.
+- De validatieregels te verbeteren, uit te breiden en te delen in het daarvoor ingerichte [validatiehandboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules){:target="_blank"}. Hier vind je ook een [handleiding voor het editten van validatieregels (Engels)](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/blob/main/validation_rules/validatieregels_editten.md){:target="_blank"},
+- Door de functionaliteit van de validatiemodule te verbeteren, uit te breiden en te delen via de [GitHub-pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} van de module. Ook hiervoor is een [handleiding (Engels)](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule){:target="_blank"} beschikbaar.
 
