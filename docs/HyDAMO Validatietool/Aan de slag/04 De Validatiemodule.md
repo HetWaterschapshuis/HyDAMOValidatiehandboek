@@ -44,13 +44,13 @@ Als PowerShell het uitvoeren van scripts blokkeert, kun je ook zonder activatie 
 
 ### Validatiemodule installeren
 
-Download [requirements.lock](https://raw.githubusercontent.com/HetWaterschapshuis/HyDAMOValidatieModule/v1.6.0/requirements.lock) van release `v1.6.0` en sla het bestand op in de werkmap.
+Download [requirements.lock](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/releases/latest/download/requirements.lock) uit de laatste release en sla het bestand op in de werkmap.
 
 Installeer de vastgepinde packageversies uit `requirements.lock` en vervolgens de bijbehorende versie van de validatiemodule:
 
 ```console
 uv pip sync requirements.lock
-uv pip install --no-deps hydamo-validation==1.6.0
+uv pip install --no-deps hydamo-validation
 ```
 
 Controleer de installatie:
@@ -80,11 +80,11 @@ De map `datasets` bevat één of meer GeoPackages met HyDAMO-objectlagen. Het be
 
 ### Voorbeeldgegevens
 
-Voor een eerste validatie gebruiken we de [WRIJ-testdataset](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/v1.6.0/tests/data/tasks/test_wrij){:target="_blank"} uit de GitHub-repository. Deze bevat zowel een GeoPackage als bijbehorende validatieregels.
+Voor een eerste validatie gebruiken we de [WRIJ-testdataset](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/v1.6.0/tests/data/tasks/test_wrij){:target="_blank"} uit de GitHub-repository. Deze bevat een GeoPackage en bijbehorende validatieregels.
 
-De dataset gebruikt ook AHN-hoogtemodellen voor een aantal validatieregels. Deze zijn beschikbaar in de [AHN-testgegevens](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/v1.6.0/tests/data/dtm){:target="_blank"}.
+Een aantal validatieregels gebruikt daarnaast AHN-hoogtemodellen. Deze staan in de [AHN-testgegevens](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/tree/v1.6.0/tests/data/dtm){:target="_blank"}.
 
-Download de bestanden uit beide mappen. Je kunt hiervoor ook de [broncode van release v1.6.0](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/archive/refs/tags/v1.6.0.zip){:target="_blank"} als ZIP downloaden en de benodigde bestanden daaruit kopiëren.
+Download de benodigde bestanden uit beide mappen, bijvoorbeeld via de [broncode als ZIP](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/archive/refs/tags/v1.6.0.zip){:target="_blank"}.
 
 Plaats de validatieset in `D:\validatiemap` en de AHN-hoogtemodellen afzonderlijk in `D:\data\ahn`:
 
