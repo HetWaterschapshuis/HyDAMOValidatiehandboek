@@ -7,9 +7,9 @@ hide:
 
 ## Wat is de HyDAMO-validatietool?
 
-De HyDAMO-validatietool is in de basis een (online) webservice (validation as a service) waarmee hydrologische datasets in GeoPackage-formaat gevalideerd kunnen worden. De tool valideert de datasets aan de hand van het gespecificeerde HyDAMO-datamodel en de opgegeven validatieregels. 
+De HyDAMO-validatietool is een (online) webservice (validation as a service) waarmee hydrologische datasets in GeoPackage-formaat gevalideerd kunnen worden. De tool valideert de datasets aan de hand van het gespecificeerde HyDAMO-datamodel en de opgegeven validatieregels. 
 
-De tool is opgebouwd uit drie componentlagen:
+De tool is opgebouwd uit drie componentlagen die in samenhang (via webclient) of afzondelijk kunnen worden aangeroepen:
 
 <div class="component-list" markdown="1">
 
