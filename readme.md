@@ -1,6 +1,7 @@
 # HyDAMO Validatiehandboek
 
-Deze repository bevat de MkDocs-documentatie voor het HyDAMO Validatiehandboek.
+Deze repository bevat de MkDocs-documentatie voor het HyDAMO Validatiehandboek op:
+https://hetwaterschapshuis.github.io/HyDAMOValidatiehandboek
 
 ## Installeer UV
 
