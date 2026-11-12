@@ -20,7 +20,11 @@ Het Waterschapshuis organiseert vierjaarlijks het **HyDAMO-validator-werkatelier
 
 Het volgende atelier vindt plaats op:
 
-**Donderdag 26 november 2026, van 14-16 uur**. De agenda volgt.
+**Donderdag 26 november 2026, van 14-16 uur**. De volgende agendapunten komen aan bod:
+
+- HyDAMO-validatietool: Nieuwe wiki/gebruikershandboek
+- Praktijkvoorbeelden van het ebruik van landlijke datasets HyDAMO/GkW
+- Gebruikersgroep; hoe verzamelen we de juiste input?
 
 Wil je deelnemen aan het werkatelier? Stuur dan een e-mail naar [hydamo-validatietool@hetwaterschapshuis.nl](mailto:hydamo-validatietool@hetwaterschapshuis.nl) om aan de mailinglijst toegevoegd te worden.
 
