@@ -9,14 +9,15 @@ Op deze pagina vind je de actuele versies van de verschillende componenten van d
 
 |  **Component**             |  **Versie**                                                                         |  **Releasedatum**    |
 |:---------------------------|:------------------------------------------------------------------------------------|:---------------------|
-| HyDAMO-validatiemodule     | 1.6.0 (ondersteuning voor HyDAMO 2.5) <br/> LET OP: zie opmerking onder deze tabel! | 17-08-2026           |
-| HyDAMO-validatie-API       | 1.2.4.2 (verwerken grote invoerbestanden)                                           | 31-08-2026           |
+| HyDAMO-validatiemodule     | 1.7.0 (ondersteuning voor HyDAMO 2.6)**\*\*** <br/>                                       | 17-11-2026           |
+| HyDAMO-validatie-API       | 1.2.5.3 (ondersteuning SWAGGER documentatie)                                         | 17-11-2026           |
 | HyDAMO-validatie-webclient | 2.0.22 (facelift Webclient, verwerken grote invoerbestanden)                        | 31-08-2026           |
 
-Let op: als je rekenmodule **versie 1.3.0** of hoger gebruikt, moet je het JSON-bestand met validatieregels als volgt aanpassen:
+\*\* Let op: als je rekenmodule versie 1.3.0 of hoger gebruikt, moet je het JSON-bestand met **validatieregels** als volgt aanpassen:
 
-- verwijs bovenin naar de laatste versie van het schema → "schema": "1.5",
-- Voor het attribuut hydamo_version kun je nu de waarde 2.2, 2.3, 2.4 of 2.5 kiezen.
+- verwijs bovenin naar de juiste combinatie van schema en HyDAMO-datamodel (bijv. "schema": "1.6" en "hydamo_version": "2.6")
+- bekijk voor de mogelijke combinaties de [regel-schema's](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/regel_schemas){ target="_blank" }
+- Voor het attribuut hydamo_version kun je nu de waarde 2.2, 2.3, 2.4, 2.5 of 2.6 kiezen.
 
 ## Release notes
 
@@ -26,6 +27,7 @@ Zie ook de uitgebreide [release notes](https://github.com/HetWaterschapshuis/HyD
 
 |  **Versie**    |  **Status**    |
 |:---------------|:---------------|
+| **Versie 1.7.0** <br/> 21.11.2026 | HyDAMO 2.6-ondersteuning toegevoegd <br>Een-op-een relatie van regelschema en HyDAMO-datamodelversie geimplementeerd.|
 | **Versie 1.6.0** <br/> 21.07.2026 | HyDAMO 2.5-ondersteuning toegevoegd |
 | **Versie 1.5.0** <br/> 26.02.2026 | Ondersteuning voor Python 3.12 toegevoegd en overgestapt op omgevingsbeheer met pyproject en uv.<br>Python-bibliotheken bijgewerkt.<br> Kolom voor filteren van resultaten op categorie waterlichaam toegevoegd. |
 | **Versie 1.4.0** <br/> 13.05.2025 | HyDAMO 2.4 ondersteuning toegevoegd.<br/>Filteren op de categorie van het oppervlaktewaterlichaam (primair/secundair) toegevoegd aan de validatieregel 'splitted_at_junction' voor hydro-objecten.|
@@ -41,7 +43,7 @@ Zie ook de uitgebreide [release notes](https://github.com/HetWaterschapshuis/HyD
 
 |  **Versie**    |  **Status**    |
 |:---------------|----------------|
-| **Versie 1.2.5 en 1.2.6**  <br/> 18.08.2026 | Aangepaste GeoJSON-generatie i.v.m. het verwerken van grote invoerbestanden |
+| **Versie 1.2.5**  <br/> 18.08.2026 | Aangepaste GeoJSON-generatie i.v.m. het verwerken van grote invoerbestanden <br> Gebruik rekenmodule v1.7.0 ter ondersteuning van HyDAMO 2.6-datamodel <br> Ondersteuning volle functionaliteit van Swagger UI incl. authenticatie |
 | **Versie 1.2.4**  <br/> 20.07.2026 | Ondersteuning nieuwe versie webclient |
 | **Versie 1.2.3**  <br/> 06.07.2026 | Modernisering Docker-imagegeneratie, update Python-versie naar 3.12, update libraries |
 | **Versie 1.2.1 en 1.2.2**  <br/> 18.02.2026 | Bijwerken metadata o.a. met aangepast mailadres helpdesk |
