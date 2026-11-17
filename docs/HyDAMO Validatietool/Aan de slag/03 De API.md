@@ -51,7 +51,7 @@ if response.status_code == 200:
 
 Het resultaat is:
 
-*{"version":"1.2.4","validation_module":"1.6.0","title":"HyDAMO Validationtool","description": ... "}*
+*{"version":"1.2.5","validation_module":"1.7.0","title":"HyDAMO Validationtool","description": ... "}*
 
 ### 2. Inloggen en authentiseren
 
@@ -114,7 +114,7 @@ Het resultaat is:
 
 Je kunt aan een validatietaak een of meerdere invoerdatasets toevoegen. Hiervoor moet eerst een verwijzing naar deze databestanden gemaakt worden. Een invoerdataset kan een of meerdere objectlagen (stuwen, gemalen, hydro-objecten, etc.) bevatten. Het is mogelijk om meerdere bestanden met elk één objectlaag toe te voegen aan een validatietaak. De bestanden moeten voldoen aan:
 
-- een versie van het HyDAMO-datamodel, bijvoorbeeld *DAMO 2.5*. Zie voor meer informatie [HyDAMO Datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
+- een versie van het HyDAMO-datamodel, bijvoorbeeld *DAMO 2.6*. Zie voor meer informatie [HyDAMO Datamodel](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_schemas/datamodellen_hydamo){:target="_blank"}.
 - het dataformaat GeoPackage (extensie \*.gpkg). Zie voor meer informatie [Geopackage](https://www.geopackage.org/){:target="_blank"}.
 
 In onderstaand voorbeeld worden meerdere invoerbestanden (met duikersifonhevels, hydro-objecten en regelmiddelen) toegevoegd aan een bestaande validatietaak. Hiervoor wordt de lijst *datasets* gedefinieerd met daarin de namen van de te gebruiken GeoPackage-bestanden. De locatie van de lokale map met deze bestanden wordt opgegeven in de padvariabele 'file_path'. Verder heb je de id ('taak_id') van de validatietaak nodig waaraan je de datasets wilt toevoegen. Deze id kan uit de response van het aanmaken van een nieuwe taak komen (zie voorgaande paragraaf).
