@@ -1,22 +1,16 @@
 # HyDAMO-validatiemodule
 
-De HyDAMO-validatiemodule is het rekenhart van de HyDAMO-validatietool. De module valideert een dataset, aangeleverd als GeoPackage, conform het HyDAMO-datamodel en de bijbehorende [validatieregels](../Introductie%20tool/02%20Validatieregels.md). Een volledige validatie bestaat uit syntaxvalidatie, logische validatie en topologische validatie.
+De HyDAMO-validatiemodule is het rekenhart van de HyDAMO-validatietool. De module valideert een dataset, aangeleverd als GeoPackage, conform het HyDAMO-datamodel en de bijbehorende [validatieregels](../Introductie%20tool/02%20Validatieregels.md).
 
-Binnen de validatiecloudservice wordt de module aangestuurd via de API, maar de module kan ook zelfstandig als Python-module worden uitgevoerd. De broncode is open source beschikbaar op [GitHub](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"}. De validatiemodule is ook beschikbaar als [Python-package](https://pypi.org/project/hydamo-validation){:target="_blank"}.
+Binnen de validatiecloudservice wordt de module aangestuurd via de API, maar de module kan ook zelfstandig als Python-module worden uitgevoerd. De validatiemodule is beschikbaar als [Python-package](https://pypi.org/project/hydamo-validation){:target="_blank"} en de broncode is openbaar op [GitHub](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"}. 
 
-Deze pagina beschrijft het lokaal installeren en uitvoeren van een validatie met de validatiemodule binnen een Python-omgeving:
-
-1. **Installatie:** een Python-omgeving opzetten en de validatiemodule installeren.
-2. **Invoergegevens:** datasets en validatieregels klaarzetten.
-3. **Commandline:** validaties uitvoeren zonder tussenkomst van de API of webclient.
-4. **Python:** de validatiemodule aanroepen vanuit eigen Python-code.
-5. **Validatieresultaten:** de uitvoerbestanden bekijken en interpreteren.
+Onderstaande instructies beschrijven het lokale gebruik van de rekenmodule op basis van de laatst gepubliceerde release van de Python-package **hydamo-validation**.
 
 ## 1. Installatie van de validatiemodule
 
-Voor lokaal gebruik installeren we de HyDAMO-validatiemodule in een virtuele Python-omgeving met [uv](https://docs.astral.sh/uv/){:target="_blank"}, met vastgepinde versies van de ondersteunende Python-packages. In dit voorbeeld gebruiken we versie `1.6.0` van de validatiemodule.
+Voor lokaal gebruik van de module moet eerst een virtuele Python-omgeving worden opgetuigd en een vooraf vastgelegde set dependencies worden geïnstalleerd. Vervolgens installeer je de gepubliceerde Pyhton-package **hydamo-validation**. Door **--no-deps** op te geven worden de dependencies van **hydamo-validation** niet opnieuw opgelost of aangepast.
 
-### Python-omgeving aanmaken
+### Python-omgeving optuigen
 
 Installeer zo nodig [uv](https://docs.astral.sh/uv/getting-started/installation/){:target="_blank"} en open een opdrachtprompt (cmd) of PowerShell in de gewenste werkmap.
 
@@ -42,11 +36,11 @@ Of in PowerShell:
 
 Als PowerShell het uitvoeren van scripts blokkeert, kun je ook zonder activatie werken door de Python-interpreter rechtstreeks aan te roepen, bijvoorbeeld met `.venv\Scripts\python.exe`.
 
-### Validatiemodule installeren
+### Dependencies en validatiemodule installeren
 
 Download [requirements.lock](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule/releases/latest/download/requirements.lock) uit de laatste release en sla het bestand op in de werkmap.
 
-Installeer de vastgepinde packageversies uit `requirements.lock` en vervolgens de bijbehorende versie van de validatiemodule:
+Installeer de vastgepinde packageversies uit `requirements.lock` en vervolgens de laatst gepubliceerde versie van de validatiemodule:
 
 ```console
 uv pip sync requirements.lock
@@ -63,7 +57,7 @@ De validatiemodule is nu klaar voor gebruik.
 
 ### Ontwikkelaarsinstallatie
 
-Volg de [handleiding voor ontwikkelen en bijdragen](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule/guides/contribute/) om de ontwikkelomgeving op te zetten. Daar vind je ook instructies voor het uitvoeren van tests en het indienen van een pull request, en de voorwaarden voor codebijdragen.
+Met bovenstaande aanpak gebruik je de validatiemodule in de vorm van de officieel gepubliceerde Python-package maar werk je niet rechtstreeks met de actuele broncode uit de Git-repository. Door de Git-repository te klonen, kan daarentegen een lokale ontwikkelomgeving worden opgezet. Daarmee kun je de broncode aanpassen, wijzigingen direct testen en eventueel bijdragen aan een volgende release. Volg de [handleiding voor ontwikkelen en bijdragen](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule/guides/contribute/){:target="_blank"} om de ontwikkelomgeving op te zetten. Daar vind je ook instructies voor het uitvoeren van tests en het indienen van een pull request, en de voorwaarden voor codebijdragen.
 
 ## 2. Invoergegevens voorbereiden
 
