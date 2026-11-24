@@ -63,7 +63,7 @@ De validatiemodule is nu klaar voor gebruik.
 
 ### Ontwikkelaarsinstallatie
 
-Wil je de broncode aanpassen, tests draaien of bijdragen aan de ontwikkeling? Clone dan de [GitHub-repository](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} en gebruik `requirements-dev.lock` voor de ontwikkelomgeving. Zie de [ontwikkelaarsdocumentatie](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule/){:target="_blank"} voor meer informatie.
+Volg de [handleiding voor ontwikkelen en bijdragen](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule/guides/contribute/) om de ontwikkelomgeving op te zetten. Daar vind je ook instructies voor het uitvoeren van tests en het indienen van een pull request, en de voorwaarden voor codebijdragen.
 
 ## 2. Invoergegevens voorbereiden
 
