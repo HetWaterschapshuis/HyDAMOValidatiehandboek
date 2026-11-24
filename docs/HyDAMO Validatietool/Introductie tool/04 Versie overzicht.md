@@ -9,9 +9,9 @@ Op deze pagina vind je de actuele versies van de verschillende componenten van d
 
 |  **Component**             |  **Versie**                                                                         |  **Releasedatum**    |
 |:---------------------------|:------------------------------------------------------------------------------------|:---------------------|
-| HyDAMO-validatiemodule     | 1.7.0 (ondersteuning voor HyDAMO 2.6)**\*\*** <br/>                                       | 17-11-2026           |
-| HyDAMO-validatie-API       | 1.2.5.3 (ondersteuning SWAGGER documentatie)                                         | 17-11-2026           |
-| HyDAMO-validatie-webclient | 2.0.22 (facelift Webclient, verwerken grote invoerbestanden)                        | 31-08-2026           |
+| HyDAMO-validatiemodule     | 1.7.0 (ondersteuning voor HyDAMO 2.6)**\*\*** <br/>                                 | 17-11-2026           |
+| HyDAMO-validatie-API       | 1.2.6.0 (ondersteuning SWAGGER documentatie, monitoring gebruik webclient)          | 23-11-2026           |
+| HyDAMO-validatie-webclient | 2.0.4 (verwerken grote invoerbestanden, monitoring gebruik webclient)               | 23-11-2026           |
 
 \*\* Let op: als je rekenmodule versie 1.3.0 of hoger gebruikt, moet je het JSON-bestand met **validatieregels** als volgt aanpassen:
 
@@ -43,6 +43,7 @@ Zie ook de uitgebreide [release notes](https://github.com/HetWaterschapshuis/HyD
 
 |  **Versie**    |  **Status**    |
 |:---------------|----------------|
+| **Versie 1.2.6**  <br/> 23.11.2026 | Uitlezen van 'flag' bij gebruik van webclient voor een validatie t.b.v. monitoring webclientgebruik |
 | **Versie 1.2.5**  <br/> 18.08.2026 | Aangepaste GeoJSON-generatie i.v.m. het verwerken van grote invoerbestanden <br> Gebruik rekenmodule v1.7.0 ter ondersteuning van HyDAMO 2.6-datamodel <br> Ondersteuning volle functionaliteit van Swagger UI incl. authenticatie |
 | **Versie 1.2.4**  <br/> 20.07.2026 | Ondersteuning nieuwe versie webclient |
 | **Versie 1.2.3**  <br/> 06.07.2026 | Modernisering Docker-imagegeneratie, update Python-versie naar 3.12, update libraries |
@@ -58,7 +59,9 @@ Zie ook de uitgebreide [release notes](https://github.com/HetWaterschapshuis/HyD
 
 |  **Versie**  |  **Status**   |
 |:-------------|:--------------|
-| **Versie 2.0.22** <br/> 31.08.2026 | Een volledige vernieuwing van de webclient, waarin verschillende wensen van gebruikers zijn verwerkt, zoals het kunnen bekijken van datasets voordat een validatie is gestart, het 'vasthouden' van het kaartzoombereik bij het wisselen tussen schermen, etc. |
+| **Versie 2.0.4** <br/> 23.11.2026 | Toevoegen van 'flag' bij gebruik van webclient voor requests naar de API t.b.v. monitoring gebruik webclient |
+| **Versie 2.0.3** <br/> 31.08.2026 | Aangepaste GeoJSON-generatie i.v.m. het verwerken van grote invoerbestanden |
+| **Versie 2.0.22** <br/> 15.06.2026 | Een volledige vernieuwing van de webclient, waarin verschillende wensen van gebruikers zijn verwerkt, zoals het kunnen bekijken van datasets voordat een validatie is gestart, het 'vasthouden' van het kaartzoombereik bij het wisselen tussen schermen, etc. |
 | **Versie 1.2.2** <br/> 24.11.2022 | Download van alle resultaatbestanden nu in een ZIP-bestand. Wait cursor toegevoegd bij het uploaden van een GeoPackage-databestand.  |
 | **Versie 1.2.0** <br/> 01.11.2022 | Voor elke taak is een downloadknop toegevoegd waarmee het volledige resultaat van een validatie kan worden gedownload (metadatabestand (JSON) + validatieresutlaten in GeoPackage, CSV-bestanden en GeoJSON-bestanden voor elk objecttype). <br/> Het inladen van grote datasets kan enige tijd duren. Om weer te geven dat de Webclient bezig is de data te laden, is een loading spinner toegevoegd. Dit is ook het geval bij het downloaden van CSV-bestanden uit de tabellen. <br/> Bij grote gebieden gaat de performance van de kaart omlaag. Om die reden is standaard de objectlaag met profielpunten uitgezet in de Webclient. |
 | **Versie 1.1.3** <br/> 28.03.2022 | Sturing en profielen toegevoegd <br/> Bug opgelost bij uploaden van datasets bij meer dan 1 taak in takenoverzicht <br/> Bug in filter op rapportcijfer van hydro-objecten opgelost  |
