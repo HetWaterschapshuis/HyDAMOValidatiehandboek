@@ -53,5 +53,5 @@ Je kunt bijdragen aan de ontwikkeling van de [validatieregels](../Introductie%20
 Je kunt op de volgende manieren bijdragen aan de ontwikkeling van de validatietool:
 
 - De validatieregels te verbeteren, uit te breiden en te delen in het daarvoor ingerichte [validatiehandboek](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/tree/main/validation_rules){:target="_blank"}. Hier vind je ook een [handleiding voor het bewerken van validatieregels (Engels)](https://github.com/HetWaterschapshuis/HyDAMOValidatiehandboek/blob/main/validation_rules/validatieregels_editten.md){:target="_blank"},
-- Door de functionaliteit van de validatiemodule te verbeteren, uit te breiden en te delen via de [GitHub-pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} van de module. Ook hiervoor is een [handleiding (Engels)](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule){:target="_blank"} beschikbaar.
+- Door de functionaliteit van de validatiemodule te verbeteren, uit te breiden en te delen via de [GitHub-pagina](https://github.com/HetWaterschapshuis/HyDAMOValidatieModule){:target="_blank"} van de module. Ook hiervoor is een [handleiding ](https://hetwaterschapshuis.github.io/HyDAMOValidatieModule/guides/contribute/){:target="_blank"} beschikbaar.
 
