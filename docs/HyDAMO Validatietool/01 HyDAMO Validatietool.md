@@ -46,7 +46,7 @@ Welkom bij het handboek van de HyDAMO-validatietool. Hier is alle informatie ver
 
 <div class="landing-content" markdown="1">
 
-<div class="notification_bar"><a href="../Ondersteuning/01 Ondersteuning/#gebruikers">Het volgende <b>HyDAMO-validator werkatelier</b> staat gepland op 26 november 2026</a></div>
+<div class="notification_bar"><a href="../Ondersteuning/01 Ondersteuning/#gebruikers">Het volgende <b>HyDAMO-validator werkatelier</b> staat gepland op 4 maart 2027</a></div>
 
 HyDAMO is een standaard met [DAMO](https://damo.hetwaterschapshuis.nl){ target="_blank" } als uitgangspunt voor het eenvoudige modelleren van het oppervlaktewatersysteem. De HyDAMO-validatietool ondersteunt een **circulair modelleerproces** waarin brongegevens continu worden gevalideerd, teruggekoppeld en verbeterd. Hierdoor groeit de kwaliteit en actualiteit van HyDAMO-data met iedere cyclus.
 
