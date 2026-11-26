@@ -27,6 +27,7 @@ Het volgende atelier vindt plaats op:
 - Gebruikersgroep: hoe verzamelen we de juiste input?
 
 Verdere werkateliers zijn gepland op:
+
 - Donderdag 4 maart 2027, van 14-16 uur
 - Donderdag 3 juni 2027, van 14-16 uur
 - Donderdag 16 september 2027, van 14-16 uur
